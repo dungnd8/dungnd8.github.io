@@ -5,7 +5,7 @@
 //              alert(this.responseText);
 //          }
 //     };
-//     xhttp.open("GET", "http://localhost:8000/all-trade-order-24h", true);
+//     xhttp.open("GET", "http://14.225.44.34:9090/all-trade-order-24h", true);
 //     xhttp.setRequestHeader("Content-type", "application/json");
 //     xhttp.send("Your JSON Data Here");
 // }
@@ -56,7 +56,7 @@ function follow(order_id) {
     xhttp.onreadystatechange = function () {};
     xhttp.open(
       "POST",
-      "http://localhost:8000/unfollow-trade-order/" + order_id,
+      "http://14.225.44.34:9090/unfollow-trade-order/" + order_id,
       true
     );
     xhttp.setRequestHeader("Content-type", "application/json");
@@ -77,7 +77,7 @@ function follow(order_id) {
     xhttp.onreadystatechange = function () {};
     xhttp.open(
       "POST",
-      "http://localhost:8000/follow-trade-order/" + order_id,
+      "http://14.225.44.34:9090/follow-trade-order/" + order_id,
       true
     );
     xhttp.setRequestHeader("Content-type", "application/json");
@@ -163,6 +163,6 @@ xhttp.onreadystatechange = function () {
   }
 };
 
-xhttp.open("GET", "http://localhost:8000/all-trade-order-24h", true);
+xhttp.open("GET", "http://14.225.44.34:9090/all-trade-order-24h", true);
 xhttp.setRequestHeader("Content-type", "application/json");
 xhttp.send("Your JSON Data Here");
