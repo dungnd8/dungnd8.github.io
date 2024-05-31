@@ -5,7 +5,7 @@
 //              alert(this.responseText);
 //          }
 //     };
-//     xhttp.open("GET", "https://14.225.44.34:9090/bot/all-trade-order-24h", true);
+//     xhttp.open("GET", "https://chainstation.io/bot/all-trade-order-24h", true);
 //     xhttp.setRequestHeader("Content-type", "application/json");
 //     xhttp.send("Your JSON Data Here");
 // }
@@ -56,7 +56,7 @@ function follow(order_id) {
     xhttp.onreadystatechange = function () {};
     xhttp.open(
       "POST",
-      "https://14.225.44.34:9090/bot/unfollow-trade-order/" + order_id,
+      "https://chainstation.io/bot/unfollow-trade-order/" + order_id,
       true
     );
     xhttp.setRequestHeader("Content-type", "application/json");
@@ -77,7 +77,7 @@ function follow(order_id) {
     xhttp.onreadystatechange = function () {};
     xhttp.open(
       "POST",
-      "https://14.225.44.34:9090/bot/follow-trade-order/" + order_id,
+      "https://chainstation.io/bot/follow-trade-order/" + order_id,
       true
     );
     xhttp.setRequestHeader("Content-type", "application/json");
@@ -163,6 +163,6 @@ xhttp.onreadystatechange = function () {
   }
 };
 
-xhttp.open("GET", "https://14.225.44.34:9090/bot/all-trade-order-24h", true);
+xhttp.open("GET", "https://chainstation.io/bot/all-trade-order-24h", true);
 xhttp.setRequestHeader("Content-type", "application/json");
 xhttp.send("Your JSON Data Here");
