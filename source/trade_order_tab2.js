@@ -5,7 +5,7 @@
 //              alert(this.responseText);
 //          }
 //     };
-//     xhttp.open("GET", "http://14.225.44.34:9090/all-trade-order-24h", true);
+//     xhttp.open("GET", "https://14.225.44.34:9090/bot/all-trade-order-24h", true);
 //     xhttp.setRequestHeader("Content-type", "application/json");
 //     xhttp.send("Your JSON Data Here");
 // }
@@ -87,6 +87,6 @@ xhttp.onreadystatechange = function() {
      }
 };
 
-xhttp.open("GET", "http://14.225.44.34:9090/follow-trade-order-24h", true);
+xhttp.open("GET", "https://14.225.44.34:9090/bot/follow-trade-order-24h", true);
 xhttp.setRequestHeader("Content-type", "application/json");
 xhttp.send("Your JSON Data Here");
