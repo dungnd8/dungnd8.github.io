@@ -38,6 +38,11 @@ function getStatus(status) {
     else return status
 }
 
+const user_id = Telegram.WebApp.initDataUnsafe.user.id
+const username = Telegram.WebApp.initDataUnsafe.user.username
+
+console.log(user_id, username)
+
 var orderIdFollow = []
 var xhttp = new XMLHttpRequest();
 xhttp.onreadystatechange = function() {
@@ -87,6 +92,6 @@ xhttp.onreadystatechange = function() {
      }
 };
 
-xhttp.open("GET", "https://chainstation.io/bot/follow-trade-order-24h", true);
+xhttp.open("GET", "https://chainstation.io/bot/follow-trade-order-24h/" + user_id, true);
 xhttp.setRequestHeader("Content-type", "application/json");
 xhttp.send("Your JSON Data Here");

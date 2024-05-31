@@ -41,6 +41,11 @@ function calcPnl(type, entry, price) {
   } else return Math.round(((entry - price) * 100) / entry);
 }
 
+const user_id = Telegram.WebApp.initDataUnsafe.user.id
+const username = Telegram.WebApp.initDataUnsafe.user.username
+
+console.log(user_id, username)
+
 function follow(order_id) {
   if (orderIdFollow.includes(order_id)) {
     $(`#${order_id}`).html(
@@ -56,7 +61,7 @@ function follow(order_id) {
     xhttp.onreadystatechange = function () {};
     xhttp.open(
       "POST",
-      "https://chainstation.io/bot/unfollow-trade-order/" + order_id,
+      "https://chainstation.io/bot/unfollow-trade-order/" + user_id + "/" + order_id,
       true
     );
     xhttp.setRequestHeader("Content-type", "application/json");
@@ -77,7 +82,7 @@ function follow(order_id) {
     xhttp.onreadystatechange = function () {};
     xhttp.open(
       "POST",
-      "https://chainstation.io/bot/follow-trade-order/" + order_id,
+      "https://chainstation.io/bot/follow-trade-order/"  + user_id + "/" +  order_id,
       true
     );
     xhttp.setRequestHeader("Content-type", "application/json");
@@ -163,6 +168,7 @@ xhttp.onreadystatechange = function () {
   }
 };
 
-xhttp.open("GET", "https://chainstation.io/bot/all-trade-order-24h", true);
+xhttp.open("GET", "https://chainstation.io/bot/all-trade-order-24h/" + user_id, true);
 xhttp.setRequestHeader("Content-type", "application/json");
 xhttp.send("Your JSON Data Here");
+
