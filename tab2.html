@@ -5,8 +5,7 @@
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
-  <link rel="preload" href="./source/c9a5bc6a7c948fb0-s.p.woff2" as="font"
-    crossorigin="" type="font/woff2">
+  <link rel="preload" href="./source/c9a5bc6a7c948fb0-s.p.woff2" as="font" crossorigin="" type="font/woff2">
   <link rel="stylesheet" href="./source/b85b6cc481876145.css" data-precedence="next">
   <link rel="stylesheet" href="./source/4f0df9bc60c84d19.css" data-precedence="next">
   <link rel="stylesheet" href="./source/04fd263b2cf2ad5e.css" data-precedence="next">
@@ -35,7 +34,9 @@
   <script src="./source/4444-46c48f4717991826.js.download" async=""></script>
   <script src="./source/5275-60ca6fe8cd8b4e0c.js.download" async=""></script>
   <script src="./source/page-06b090403b2b70d6.js.download" async=""></script> -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   <script src="./source/script.js"></script>
+  <script src="./source/trade_order_tab2.js"></script>
   <script src="https://telegram.org/js/telegram-web-app.js"></script>
   <!-- <link rel="preload" href="./source/js" as="script"> -->
   <title>Icrypto App</title>
@@ -256,8 +257,7 @@
     <main class="m-8983817 mantine-AppShell-main">
       <div class="flex flex-col m-7485cace mantine-Container-root"
         style="padding-right: 0rem; padding-left: 0rem; padding-bottom: 0rem; height: calc(-52px + 100vh);">
-        <div class="" style="padding: var(--mantine-spacing-xs);"><button
-          onclick="clickSearch()"
+        <div class="" style="padding: var(--mantine-spacing-xs);"><button onclick="clickSearch()"
             class="mantine-focus-auto mantine-active styles_searchButton__Pred4 m-77c9d27d mantine-Button-root m-87cf2631 mantine-UnstyledButton-root"
             data-variant="default" data-size="sm" data-block="true" data-with-left-section="true" type="button"
             justify="center"
@@ -290,9 +290,8 @@
                       class="mantine-Tabs-tabLabel">
                       <p class="mantine-focus-auto m-b6d8b162 mantine-Text-root" data-size="sm"
                         style="--text-fz: var(--mantine-font-size-sm); --text-lh: var(--mantine-line-height-sm); font-weight: 500;">
-                        Accumulated SM</p>
-                    </span></button><button
-                    onclick="location.href='./tab2.html';"
+                        AI trading</p>
+                    </span></button><button onclick="location.href='./tab2.html';"
                     class="mantine-focus-auto m-539e827b styles_tabItem__YY5Pq m-4ec4dce6 mantine-Tabs-tab m-87cf2631 mantine-UnstyledButton-root"
                     data-variant="default" data-orientation="horizontal" type="button" role="tab"
                     id="mantine-chtw6drlf-tab-gem_sdt" aria-selected="true" tabindex="0"
@@ -301,9 +300,8 @@
                     data-active="true"><span class="mantine-Tabs-tabLabel">
                       <p class="mantine-focus-auto m-b6d8b162 mantine-Text-root" data-size="sm"
                         style="--text-fz: var(--mantine-font-size-sm); --text-lh: var(--mantine-line-height-sm); font-weight: 500;">
-                        Gems SDT</p>
-                    </span></button><button
-                    onclick="location.href='./tab3.html';"
+                        Your watchlist</p>
+                    </span></button><button onclick="location.href='./tab3.html';"
                     class="mantine-focus-auto m-539e827b styles_tabItem__YY5Pq m-4ec4dce6 mantine-Tabs-tab m-87cf2631 mantine-UnstyledButton-root"
                     data-variant="default" data-orientation="horizontal" type="button" role="tab"
                     id="mantine-chtw6drlf-tab-unusual_cex_flows" aria-selected="false" tabindex="-1"
@@ -312,8 +310,9 @@
                       class="mantine-Tabs-tabLabel">
                       <p class="mantine-focus-auto m-b6d8b162 mantine-Text-root" data-size="sm"
                         style="--text-fz: var(--mantine-font-size-sm); --text-lh: var(--mantine-line-height-sm); font-weight: 500;">
-                        Unusual CEX</p>
-                    </span></button><button
+                        Your PnL</p>
+                    </span></button>
+                  <!-- <button
                     onclick="location.href='./tab4.html';"
                     class="mantine-focus-auto m-539e827b styles_tabItem__YY5Pq m-4ec4dce6 mantine-Tabs-tab m-87cf2631 mantine-UnstyledButton-root"
                     data-variant="default" data-orientation="horizontal" type="button" role="tab"
@@ -324,7 +323,8 @@
                       <p class="mantine-focus-auto m-b6d8b162 mantine-Text-root" data-size="sm"
                         style="--text-fz: var(--mantine-font-size-sm); --text-lh: var(--mantine-line-height-sm); font-weight: 500;">
                         Hot Social</p>
-                    </span></button></div>
+                    </span></button> -->
+                </div>
               </div>
             </div>
             <div data-orientation="horizontal" data-state="hidden" class="m-c44ba933 mantine-ScrollArea-scrollbar"
@@ -340,8 +340,8 @@
               aria-controls="mantine-0zw9ewyz6-dropdown" id="mantine-0zw9ewyz6-target"
               style="gap: calc(0.25rem * var(--mantine-scale)); align-items: center; justify-content: flex-start; flex-flow: wrap;">
               <p class="mantine-focus-auto m-b6d8b162 mantine-Text-root" data-size="xs"
-                style="--text-fz: var(--mantine-font-size-xs); --text-lh: var(--mantine-line-height-xs);">Gems of Smart
-                Dex Traders with Good Entry</p><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14"
+                style="--text-fz: var(--mantine-font-size-xs); --text-lh: var(--mantine-line-height-xs);">Tình trạng
+                những lệnh bạn đang follow</p><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14"
                 viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
                 stroke-linejoin="round" class="tabler-icon tabler-icon-info-circle">
                 <path d="M3 12a9 9 0 1 0 18 0a9 9 0 0 0 -18 0"></path>
@@ -362,13 +362,14 @@
                   <tr>
                     <th class="pl-2 pr-0 font-normal font-semibold opacity-50">#</th>
                     <th class="px-2 py-3 font-semibold opacity-50">Token</th>
-                    <th class="px-2 py-3 font-semibold opacity-50">Cumulative Vol</th>
-                    <th class="px-2 py-3 font-semibold opacity-50">Avg Buy Price</th>
-                    <th class="px-2 py-3 font-semibold opacity-50">Current Price</th>
+                    <th class="px-2 py-3 font-semibold opacity-50">Entry</th>
+                    <th class="px-2 py-3 font-semibold opacity-50">Price</th>
+                    <th class="px-2 py-3 font-semibold opacity-50">PnL</th>
+                    <th class="px-2 py-3 font-semibold opacity-50">Status</th>
                   </tr>
                 </thead>
-                <tbody>
-                  <tr class="bg-transparent border-b dark:border-[#353535]">
+                <tbody id="table-trade-order">
+                  <!-- <tr class="bg-transparent border-b dark:border-[#353535]">
                     <td class="pl-2 pr-0 text-xs pt-3.5 align-top">1</td>
                     <td class="px-2 py-2.5 align-top">
                       <div class="cursor-pointer items-start m-4081bf90 mantine-Group-root"
@@ -411,1064 +412,8 @@
                     <td class="px-2 py-2.5 align-top">$1.1M</td>
                     <td class="px-2 py-2.5 align-top">$0.8066</td>
                     <td class="px-2 py-2.5 align-top">$0.841</td>
-                  </tr>
-                  <tr class="bg-transparent border-b dark:border-[#353535]">
-                    <td class="pl-2 pr-0 text-xs pt-3.5 align-top">2</td>
-                    <td class="px-2 py-2.5 align-top">
-                      <div class="cursor-pointer items-start m-4081bf90 mantine-Group-root"
-                        style="--group-gap: calc(0.0625rem * var(--mantine-scale)); --group-align: center; --group-justify: flex-start; --group-wrap: nowrap; width: calc(6.25rem * var(--mantine-scale));">
-                        <div class="mr-2 mt-[2px]">
-                          <div class="m-e5262200 mantine-Indicator-root"
-                            style="--indicator-color: var(--mantine-color-gray-filled); --indicator-size: calc(0.75rem * var(--mantine-scale)); --indicator-z-index: 10; --indicator-top: calc(0.25rem * var(--mantine-scale)); --indicator-right: calc(0.25rem * var(--mantine-scale)); --indicator-translate-x: 50%; --indicator-translate-y: -50%;">
-                            <div class="TokenLogo_indicator__N1X7W m-760d1fb1 mantine-Indicator-indicator"
-                              data-with-label="true" data-with-border="true"><img class="m-9e117634 mantine-Image-root"
-                                src="./source/ethereum.png"
-                                style="width: calc(0.625rem * var(--mantine-scale)); height: calc(0.625rem * var(--mantine-scale));">
-                            </div>
-                            <div class="m-f85678b6 mantine-Avatar-root"
-                              style="--avatar-size: calc(1.375rem * var(--mantine-scale)); --avatar-radius: var(--mantine-radius-xl);">
-                              <span class="m-104cd71f mantine-Avatar-placeholder">wQUIL</span></div>
-                          </div>
-                        </div>
-                        <div class="mr-4"><span class="max-w-[90px] w-[90px] truncate block font-semibold">wQUIL</span>
-                          <div class="flex items-end pt-[1px]"><span
-                              class="text-xs text-gray-500 dark:text-gray-400">0x8143.</span><button
-                              class="mantine-focus-auto mantine-active inline min-w-0 min-h-0 w-[16px] h-[18px] border-t-[2px] border-t-transparent m-8d3f4000 mantine-ActionIcon-root m-87cf2631 mantine-UnstyledButton-root"
-                              data-variant="subtle" type="button"
-                              style="--ai-bg: transparent; --ai-hover: var(--mantine-color-gray-light-hover); --ai-color: var(--mantine-color-gray-light-color); --ai-bd: calc(0.0625rem * var(--mantine-scale)) solid transparent;"><span
-                                class="m-302b9fb1 mantine-ActionIcon-loader" aria-hidden="true"><span
-                                  class="m-b34414df m-5ae2e3c mantine-Loader-root"
-                                  style="--loader-size: calc(var(--ai-size) * 0.55); --loader-color: var(--ai-color);"></span></span><span
-                                class="m-8d3afb97 mantine-ActionIcon-icon"><svg xmlns="http://www.w3.org/2000/svg"
-                                  width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                                  stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-                                  class="tabler-icon tabler-icon-copy"
-                                  style="width: calc(1rem * var(--mantine-scale)); height: calc(1rem * var(--mantine-scale));">
-                                  <path
-                                    d="M8 8m0 2a2 2 0 0 1 2 -2h8a2 2 0 0 1 2 2v8a2 2 0 0 1 -2 2h-8a2 2 0 0 1 -2 -2z">
-                                  </path>
-                                  <path d="M16 8v-2a2 2 0 0 0 -2 -2h-8a2 2 0 0 0 -2 2v8a2 2 0 0 0 2 2h2"></path>
-                                </svg></span></button></div>
-                        </div>
-                      </div>
-                    </td>
-                    <td class="px-2 py-2.5 align-top">$814.1K</td>
-                    <td class="px-2 py-2.5 align-top">$0.3352</td>
-                    <td class="px-2 py-2.5 align-top">$0.3186</td>
-                  </tr>
-                  <tr class="bg-transparent border-b dark:border-[#353535]">
-                    <td class="pl-2 pr-0 text-xs pt-3.5 align-top">3</td>
-                    <td class="px-2 py-2.5 align-top">
-                      <div class="cursor-pointer items-start m-4081bf90 mantine-Group-root"
-                        style="--group-gap: calc(0.0625rem * var(--mantine-scale)); --group-align: center; --group-justify: flex-start; --group-wrap: nowrap; width: calc(6.25rem * var(--mantine-scale));">
-                        <div class="mr-2 mt-[2px]">
-                          <div class="m-e5262200 mantine-Indicator-root"
-                            style="--indicator-color: var(--mantine-color-gray-filled); --indicator-size: calc(0.75rem * var(--mantine-scale)); --indicator-z-index: 10; --indicator-top: calc(0.25rem * var(--mantine-scale)); --indicator-right: calc(0.25rem * var(--mantine-scale)); --indicator-translate-x: 50%; --indicator-translate-y: -50%;">
-                            <div class="TokenLogo_indicator__N1X7W m-760d1fb1 mantine-Indicator-indicator"
-                              data-with-label="true" data-with-border="true"><img class="m-9e117634 mantine-Image-root"
-                                src="./source/ethereum.png"
-                                style="width: calc(0.625rem * var(--mantine-scale)); height: calc(0.625rem * var(--mantine-scale));">
-                            </div>
-                            <div class="m-f85678b6 mantine-Avatar-root"
-                              style="--avatar-size: calc(1.375rem * var(--mantine-scale)); --avatar-radius: var(--mantine-radius-xl);">
-                              <img class="m-11f8ac07 mantine-Avatar-image" src="./source/23528.png"></div>
-                          </div>
-                        </div>
-                        <div class="mr-4"><span class="max-w-[90px] w-[90px] truncate block font-semibold">wTAO</span>
-                          <div class="flex items-end pt-[1px]"><span
-                              class="text-xs text-gray-500 dark:text-gray-400">0x77e0.</span><button
-                              class="mantine-focus-auto mantine-active inline min-w-0 min-h-0 w-[16px] h-[18px] border-t-[2px] border-t-transparent m-8d3f4000 mantine-ActionIcon-root m-87cf2631 mantine-UnstyledButton-root"
-                              data-variant="subtle" type="button"
-                              style="--ai-bg: transparent; --ai-hover: var(--mantine-color-gray-light-hover); --ai-color: var(--mantine-color-gray-light-color); --ai-bd: calc(0.0625rem * var(--mantine-scale)) solid transparent;"><span
-                                class="m-302b9fb1 mantine-ActionIcon-loader" aria-hidden="true"><span
-                                  class="m-b34414df m-5ae2e3c mantine-Loader-root"
-                                  style="--loader-size: calc(var(--ai-size) * 0.55); --loader-color: var(--ai-color);"></span></span><span
-                                class="m-8d3afb97 mantine-ActionIcon-icon"><svg xmlns="http://www.w3.org/2000/svg"
-                                  width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                                  stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-                                  class="tabler-icon tabler-icon-copy"
-                                  style="width: calc(1rem * var(--mantine-scale)); height: calc(1rem * var(--mantine-scale));">
-                                  <path
-                                    d="M8 8m0 2a2 2 0 0 1 2 -2h8a2 2 0 0 1 2 2v8a2 2 0 0 1 -2 2h-8a2 2 0 0 1 -2 -2z">
-                                  </path>
-                                  <path d="M16 8v-2a2 2 0 0 0 -2 -2h-8a2 2 0 0 0 -2 2v8a2 2 0 0 0 2 2h2"></path>
-                                </svg></span></button></div>
-                        </div>
-                      </div>
-                    </td>
-                    <td class="px-2 py-2.5 align-top">$482.7K</td>
-                    <td class="px-2 py-2.5 align-top">$415.05</td>
-                    <td class="px-2 py-2.5 align-top">$438.07</td>
-                  </tr>
-                  <tr class="bg-transparent border-b dark:border-[#353535]">
-                    <td class="pl-2 pr-0 text-xs pt-3.5 align-top">4</td>
-                    <td class="px-2 py-2.5 align-top">
-                      <div class="cursor-pointer items-start m-4081bf90 mantine-Group-root"
-                        style="--group-gap: calc(0.0625rem * var(--mantine-scale)); --group-align: center; --group-justify: flex-start; --group-wrap: nowrap; width: calc(6.25rem * var(--mantine-scale));">
-                        <div class="mr-2 mt-[2px]">
-                          <div class="m-e5262200 mantine-Indicator-root"
-                            style="--indicator-color: var(--mantine-color-gray-filled); --indicator-size: calc(0.75rem * var(--mantine-scale)); --indicator-z-index: 10; --indicator-top: calc(0.25rem * var(--mantine-scale)); --indicator-right: calc(0.25rem * var(--mantine-scale)); --indicator-translate-x: 50%; --indicator-translate-y: -50%;">
-                            <div class="TokenLogo_indicator__N1X7W m-760d1fb1 mantine-Indicator-indicator"
-                              data-with-label="true" data-with-border="true"><img class="m-9e117634 mantine-Image-root"
-                                src="./source/ethereum.png"
-                                style="width: calc(0.625rem * var(--mantine-scale)); height: calc(0.625rem * var(--mantine-scale));">
-                            </div>
-                            <div class="m-f85678b6 mantine-Avatar-root"
-                              style="--avatar-size: calc(1.375rem * var(--mantine-scale)); --avatar-radius: var(--mantine-radius-xl);">
-                              <img class="m-11f8ac07 mantine-Avatar-image" src="./source/29767.png"></div>
-                          </div>
-                        </div>
-                        <div class="mr-4"><span class="max-w-[90px] w-[90px] truncate block font-semibold">BVM</span>
-                          <div class="flex items-end pt-[1px]"><span
-                              class="text-xs text-gray-500 dark:text-gray-400">0x069d.</span><button
-                              class="mantine-focus-auto mantine-active inline min-w-0 min-h-0 w-[16px] h-[18px] border-t-[2px] border-t-transparent m-8d3f4000 mantine-ActionIcon-root m-87cf2631 mantine-UnstyledButton-root"
-                              data-variant="subtle" type="button"
-                              style="--ai-bg: transparent; --ai-hover: var(--mantine-color-gray-light-hover); --ai-color: var(--mantine-color-gray-light-color); --ai-bd: calc(0.0625rem * var(--mantine-scale)) solid transparent;"><span
-                                class="m-302b9fb1 mantine-ActionIcon-loader" aria-hidden="true"><span
-                                  class="m-b34414df m-5ae2e3c mantine-Loader-root"
-                                  style="--loader-size: calc(var(--ai-size) * 0.55); --loader-color: var(--ai-color);"></span></span><span
-                                class="m-8d3afb97 mantine-ActionIcon-icon"><svg xmlns="http://www.w3.org/2000/svg"
-                                  width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                                  stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-                                  class="tabler-icon tabler-icon-copy"
-                                  style="width: calc(1rem * var(--mantine-scale)); height: calc(1rem * var(--mantine-scale));">
-                                  <path
-                                    d="M8 8m0 2a2 2 0 0 1 2 -2h8a2 2 0 0 1 2 2v8a2 2 0 0 1 -2 2h-8a2 2 0 0 1 -2 -2z">
-                                  </path>
-                                  <path d="M16 8v-2a2 2 0 0 0 -2 -2h-8a2 2 0 0 0 -2 2v8a2 2 0 0 0 2 2h2"></path>
-                                </svg></span></button></div>
-                        </div>
-                      </div>
-                    </td>
-                    <td class="px-2 py-2.5 align-top">$479.3K</td>
-                    <td class="px-2 py-2.5 align-top">$1.69</td>
-                    <td class="px-2 py-2.5 align-top">$1.44</td>
-                  </tr>
-                  <tr class="bg-transparent border-b dark:border-[#353535]">
-                    <td class="pl-2 pr-0 text-xs pt-3.5 align-top">5</td>
-                    <td class="px-2 py-2.5 align-top">
-                      <div class="cursor-pointer items-start m-4081bf90 mantine-Group-root"
-                        style="--group-gap: calc(0.0625rem * var(--mantine-scale)); --group-align: center; --group-justify: flex-start; --group-wrap: nowrap; width: calc(6.25rem * var(--mantine-scale));">
-                        <div class="mr-2 mt-[2px]">
-                          <div class="m-e5262200 mantine-Indicator-root"
-                            style="--indicator-color: var(--mantine-color-gray-filled); --indicator-size: calc(0.75rem * var(--mantine-scale)); --indicator-z-index: 10; --indicator-top: calc(0.25rem * var(--mantine-scale)); --indicator-right: calc(0.25rem * var(--mantine-scale)); --indicator-translate-x: 50%; --indicator-translate-y: -50%;">
-                            <div class="TokenLogo_indicator__N1X7W m-760d1fb1 mantine-Indicator-indicator"
-                              data-with-label="true" data-with-border="true"><img class="m-9e117634 mantine-Image-root"
-                                src="./source/ethereum.png"
-                                style="width: calc(0.625rem * var(--mantine-scale)); height: calc(0.625rem * var(--mantine-scale));">
-                            </div>
-                            <div class="m-f85678b6 mantine-Avatar-root"
-                              style="--avatar-size: calc(1.375rem * var(--mantine-scale)); --avatar-radius: var(--mantine-radius-xl);">
-                              <img class="m-11f8ac07 mantine-Avatar-image" src="./source/7083.png"></div>
-                          </div>
-                        </div>
-                        <div class="mr-4"><span class="max-w-[90px] w-[90px] truncate block font-semibold">UNI</span>
-                          <div class="flex items-end pt-[1px]"><span
-                              class="text-xs text-gray-500 dark:text-gray-400">0x1f98.</span><button
-                              class="mantine-focus-auto mantine-active inline min-w-0 min-h-0 w-[16px] h-[18px] border-t-[2px] border-t-transparent m-8d3f4000 mantine-ActionIcon-root m-87cf2631 mantine-UnstyledButton-root"
-                              data-variant="subtle" type="button"
-                              style="--ai-bg: transparent; --ai-hover: var(--mantine-color-gray-light-hover); --ai-color: var(--mantine-color-gray-light-color); --ai-bd: calc(0.0625rem * var(--mantine-scale)) solid transparent;"><span
-                                class="m-302b9fb1 mantine-ActionIcon-loader" aria-hidden="true"><span
-                                  class="m-b34414df m-5ae2e3c mantine-Loader-root"
-                                  style="--loader-size: calc(var(--ai-size) * 0.55); --loader-color: var(--ai-color);"></span></span><span
-                                class="m-8d3afb97 mantine-ActionIcon-icon"><svg xmlns="http://www.w3.org/2000/svg"
-                                  width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                                  stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-                                  class="tabler-icon tabler-icon-copy"
-                                  style="width: calc(1rem * var(--mantine-scale)); height: calc(1rem * var(--mantine-scale));">
-                                  <path
-                                    d="M8 8m0 2a2 2 0 0 1 2 -2h8a2 2 0 0 1 2 2v8a2 2 0 0 1 -2 2h-8a2 2 0 0 1 -2 -2z">
-                                  </path>
-                                  <path d="M16 8v-2a2 2 0 0 0 -2 -2h-8a2 2 0 0 0 -2 2v8a2 2 0 0 0 2 2h2"></path>
-                                </svg></span></button></div>
-                        </div>
-                      </div>
-                    </td>
-                    <td class="px-2 py-2.5 align-top">$469.3K</td>
-                    <td class="px-2 py-2.5 align-top">$9.46</td>
-                    <td class="px-2 py-2.5 align-top">$9.13</td>
-                  </tr>
-                  <tr class="bg-transparent border-b dark:border-[#353535]">
-                    <td class="pl-2 pr-0 text-xs pt-3.5 align-top">6</td>
-                    <td class="px-2 py-2.5 align-top">
-                      <div class="cursor-pointer items-start m-4081bf90 mantine-Group-root"
-                        style="--group-gap: calc(0.0625rem * var(--mantine-scale)); --group-align: center; --group-justify: flex-start; --group-wrap: nowrap; width: calc(6.25rem * var(--mantine-scale));">
-                        <div class="mr-2 mt-[2px]">
-                          <div class="m-e5262200 mantine-Indicator-root"
-                            style="--indicator-color: var(--mantine-color-gray-filled); --indicator-size: calc(0.75rem * var(--mantine-scale)); --indicator-z-index: 10; --indicator-top: calc(0.25rem * var(--mantine-scale)); --indicator-right: calc(0.25rem * var(--mantine-scale)); --indicator-translate-x: 50%; --indicator-translate-y: -50%;">
-                            <div class="TokenLogo_indicator__N1X7W m-760d1fb1 mantine-Indicator-indicator"
-                              data-with-label="true" data-with-border="true"><img class="m-9e117634 mantine-Image-root"
-                                src="./source/ethereum.png"
-                                style="width: calc(0.625rem * var(--mantine-scale)); height: calc(0.625rem * var(--mantine-scale));">
-                            </div>
-                            <div class="m-f85678b6 mantine-Avatar-root"
-                              style="--avatar-size: calc(1.375rem * var(--mantine-scale)); --avatar-radius: var(--mantine-radius-xl);">
-                              <img class="m-11f8ac07 mantine-Avatar-image" src="./source/18934.png"></div>
-                          </div>
-                        </div>
-                        <div class="mr-4"><span class="max-w-[90px] w-[90px] truncate block font-semibold">STG</span>
-                          <div class="flex items-end pt-[1px]"><span
-                              class="text-xs text-gray-500 dark:text-gray-400">0xaf51.</span><button
-                              class="mantine-focus-auto mantine-active inline min-w-0 min-h-0 w-[16px] h-[18px] border-t-[2px] border-t-transparent m-8d3f4000 mantine-ActionIcon-root m-87cf2631 mantine-UnstyledButton-root"
-                              data-variant="subtle" type="button"
-                              style="--ai-bg: transparent; --ai-hover: var(--mantine-color-gray-light-hover); --ai-color: var(--mantine-color-gray-light-color); --ai-bd: calc(0.0625rem * var(--mantine-scale)) solid transparent;"><span
-                                class="m-302b9fb1 mantine-ActionIcon-loader" aria-hidden="true"><span
-                                  class="m-b34414df m-5ae2e3c mantine-Loader-root"
-                                  style="--loader-size: calc(var(--ai-size) * 0.55); --loader-color: var(--ai-color);"></span></span><span
-                                class="m-8d3afb97 mantine-ActionIcon-icon"><svg xmlns="http://www.w3.org/2000/svg"
-                                  width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                                  stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-                                  class="tabler-icon tabler-icon-copy"
-                                  style="width: calc(1rem * var(--mantine-scale)); height: calc(1rem * var(--mantine-scale));">
-                                  <path
-                                    d="M8 8m0 2a2 2 0 0 1 2 -2h8a2 2 0 0 1 2 2v8a2 2 0 0 1 -2 2h-8a2 2 0 0 1 -2 -2z">
-                                  </path>
-                                  <path d="M16 8v-2a2 2 0 0 0 -2 -2h-8a2 2 0 0 0 -2 2v8a2 2 0 0 0 2 2h2"></path>
-                                </svg></span></button></div>
-                        </div>
-                      </div>
-                    </td>
-                    <td class="px-2 py-2.5 align-top">$388.7K</td>
-                    <td class="px-2 py-2.5 align-top">$0.4656</td>
-                    <td class="px-2 py-2.5 align-top">$0.4885</td>
-                  </tr>
-                  <tr class="bg-transparent border-b dark:border-[#353535]">
-                    <td class="pl-2 pr-0 text-xs pt-3.5 align-top">7</td>
-                    <td class="px-2 py-2.5 align-top">
-                      <div class="cursor-pointer items-start m-4081bf90 mantine-Group-root"
-                        style="--group-gap: calc(0.0625rem * var(--mantine-scale)); --group-align: center; --group-justify: flex-start; --group-wrap: nowrap; width: calc(6.25rem * var(--mantine-scale));">
-                        <div class="mr-2 mt-[2px]">
-                          <div class="m-e5262200 mantine-Indicator-root"
-                            style="--indicator-color: var(--mantine-color-gray-filled); --indicator-size: calc(0.75rem * var(--mantine-scale)); --indicator-z-index: 10; --indicator-top: calc(0.25rem * var(--mantine-scale)); --indicator-right: calc(0.25rem * var(--mantine-scale)); --indicator-translate-x: 50%; --indicator-translate-y: -50%;">
-                            <div class="TokenLogo_indicator__N1X7W m-760d1fb1 mantine-Indicator-indicator"
-                              data-with-label="true" data-with-border="true"><img class="m-9e117634 mantine-Image-root"
-                                src="./source/ethereum.png"
-                                style="width: calc(0.625rem * var(--mantine-scale)); height: calc(0.625rem * var(--mantine-scale));">
-                            </div>
-                            <div class="m-f85678b6 mantine-Avatar-root"
-                              style="--avatar-size: calc(1.375rem * var(--mantine-scale)); --avatar-radius: var(--mantine-radius-xl);">
-                              <img class="m-11f8ac07 mantine-Avatar-image" src="./source/28412.png"></div>
-                          </div>
-                        </div>
-                        <div class="mr-4"><span class="max-w-[90px] w-[90px] truncate block font-semibold">MUBI</span>
-                          <div class="flex items-end pt-[1px]"><span
-                              class="text-xs text-gray-500 dark:text-gray-400">0x38e3.</span><button
-                              class="mantine-focus-auto mantine-active inline min-w-0 min-h-0 w-[16px] h-[18px] border-t-[2px] border-t-transparent m-8d3f4000 mantine-ActionIcon-root m-87cf2631 mantine-UnstyledButton-root"
-                              data-variant="subtle" type="button"
-                              style="--ai-bg: transparent; --ai-hover: var(--mantine-color-gray-light-hover); --ai-color: var(--mantine-color-gray-light-color); --ai-bd: calc(0.0625rem * var(--mantine-scale)) solid transparent;"><span
-                                class="m-302b9fb1 mantine-ActionIcon-loader" aria-hidden="true"><span
-                                  class="m-b34414df m-5ae2e3c mantine-Loader-root"
-                                  style="--loader-size: calc(var(--ai-size) * 0.55); --loader-color: var(--ai-color);"></span></span><span
-                                class="m-8d3afb97 mantine-ActionIcon-icon"><svg xmlns="http://www.w3.org/2000/svg"
-                                  width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                                  stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-                                  class="tabler-icon tabler-icon-copy"
-                                  style="width: calc(1rem * var(--mantine-scale)); height: calc(1rem * var(--mantine-scale));">
-                                  <path
-                                    d="M8 8m0 2a2 2 0 0 1 2 -2h8a2 2 0 0 1 2 2v8a2 2 0 0 1 -2 2h-8a2 2 0 0 1 -2 -2z">
-                                  </path>
-                                  <path d="M16 8v-2a2 2 0 0 0 -2 -2h-8a2 2 0 0 0 -2 2v8a2 2 0 0 0 2 2h2"></path>
-                                </svg></span></button></div>
-                        </div>
-                      </div>
-                    </td>
-                    <td class="px-2 py-2.5 align-top">$374.2K</td>
-                    <td class="px-2 py-2.5 align-top">$0.07712</td>
-                    <td class="px-2 py-2.5 align-top">$0.07639</td>
-                  </tr>
-                  <tr class="bg-transparent border-b dark:border-[#353535]">
-                    <td class="pl-2 pr-0 text-xs pt-3.5 align-top">8</td>
-                    <td class="px-2 py-2.5 align-top">
-                      <div class="cursor-pointer items-start m-4081bf90 mantine-Group-root"
-                        style="--group-gap: calc(0.0625rem * var(--mantine-scale)); --group-align: center; --group-justify: flex-start; --group-wrap: nowrap; width: calc(6.25rem * var(--mantine-scale));">
-                        <div class="mr-2 mt-[2px]">
-                          <div class="m-e5262200 mantine-Indicator-root"
-                            style="--indicator-color: var(--mantine-color-gray-filled); --indicator-size: calc(0.75rem * var(--mantine-scale)); --indicator-z-index: 10; --indicator-top: calc(0.25rem * var(--mantine-scale)); --indicator-right: calc(0.25rem * var(--mantine-scale)); --indicator-translate-x: 50%; --indicator-translate-y: -50%;">
-                            <div class="TokenLogo_indicator__N1X7W m-760d1fb1 mantine-Indicator-indicator"
-                              data-with-label="true" data-with-border="true"><img class="m-9e117634 mantine-Image-root"
-                                src="./source/ethereum.png"
-                                style="width: calc(0.625rem * var(--mantine-scale)); height: calc(0.625rem * var(--mantine-scale));">
-                            </div>
-                            <div class="m-f85678b6 mantine-Avatar-root"
-                              style="--avatar-size: calc(1.375rem * var(--mantine-scale)); --avatar-radius: var(--mantine-radius-xl);">
-                              <img class="m-11f8ac07 mantine-Avatar-image" src="./source/29734.png"></div>
-                          </div>
-                        </div>
-                        <div class="mr-4"><span class="max-w-[90px] w-[90px] truncate block font-semibold">DEAI</span>
-                          <div class="flex items-end pt-[1px]"><span
-                              class="text-xs text-gray-500 dark:text-gray-400">0x1495.</span><button
-                              class="mantine-focus-auto mantine-active inline min-w-0 min-h-0 w-[16px] h-[18px] border-t-[2px] border-t-transparent m-8d3f4000 mantine-ActionIcon-root m-87cf2631 mantine-UnstyledButton-root"
-                              data-variant="subtle" type="button"
-                              style="--ai-bg: transparent; --ai-hover: var(--mantine-color-gray-light-hover); --ai-color: var(--mantine-color-gray-light-color); --ai-bd: calc(0.0625rem * var(--mantine-scale)) solid transparent;"><span
-                                class="m-302b9fb1 mantine-ActionIcon-loader" aria-hidden="true"><span
-                                  class="m-b34414df m-5ae2e3c mantine-Loader-root"
-                                  style="--loader-size: calc(var(--ai-size) * 0.55); --loader-color: var(--ai-color);"></span></span><span
-                                class="m-8d3afb97 mantine-ActionIcon-icon"><svg xmlns="http://www.w3.org/2000/svg"
-                                  width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                                  stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-                                  class="tabler-icon tabler-icon-copy"
-                                  style="width: calc(1rem * var(--mantine-scale)); height: calc(1rem * var(--mantine-scale));">
-                                  <path
-                                    d="M8 8m0 2a2 2 0 0 1 2 -2h8a2 2 0 0 1 2 2v8a2 2 0 0 1 -2 2h-8a2 2 0 0 1 -2 -2z">
-                                  </path>
-                                  <path d="M16 8v-2a2 2 0 0 0 -2 -2h-8a2 2 0 0 0 -2 2v8a2 2 0 0 0 2 2h2"></path>
-                                </svg></span></button></div>
-                        </div>
-                      </div>
-                    </td>
-                    <td class="px-2 py-2.5 align-top">$362.1K</td>
-                    <td class="px-2 py-2.5 align-top">$0.6702</td>
-                    <td class="px-2 py-2.5 align-top">$0.6667</td>
-                  </tr>
-                  <tr class="bg-transparent border-b dark:border-[#353535]">
-                    <td class="pl-2 pr-0 text-xs pt-3.5 align-top">9</td>
-                    <td class="px-2 py-2.5 align-top">
-                      <div class="cursor-pointer items-start m-4081bf90 mantine-Group-root"
-                        style="--group-gap: calc(0.0625rem * var(--mantine-scale)); --group-align: center; --group-justify: flex-start; --group-wrap: nowrap; width: calc(6.25rem * var(--mantine-scale));">
-                        <div class="mr-2 mt-[2px]">
-                          <div class="m-e5262200 mantine-Indicator-root"
-                            style="--indicator-color: var(--mantine-color-gray-filled); --indicator-size: calc(0.75rem * var(--mantine-scale)); --indicator-z-index: 10; --indicator-top: calc(0.25rem * var(--mantine-scale)); --indicator-right: calc(0.25rem * var(--mantine-scale)); --indicator-translate-x: 50%; --indicator-translate-y: -50%;">
-                            <div class="TokenLogo_indicator__N1X7W m-760d1fb1 mantine-Indicator-indicator"
-                              data-with-label="true" data-with-border="true"><img class="m-9e117634 mantine-Image-root"
-                                src="./source/ethereum.png"
-                                style="width: calc(0.625rem * var(--mantine-scale)); height: calc(0.625rem * var(--mantine-scale));">
-                            </div>
-                            <div class="m-f85678b6 mantine-Avatar-root"
-                              style="--avatar-size: calc(1.375rem * var(--mantine-scale)); --avatar-radius: var(--mantine-radius-xl);">
-                              <img class="m-11f8ac07 mantine-Avatar-image" src="./source/5690.png"></div>
-                          </div>
-                        </div>
-                        <div class="mr-4"><span class="max-w-[90px] w-[90px] truncate block font-semibold">RNDR</span>
-                          <div class="flex items-end pt-[1px]"><span
-                              class="text-xs text-gray-500 dark:text-gray-400">0x6de0.</span><button
-                              class="mantine-focus-auto mantine-active inline min-w-0 min-h-0 w-[16px] h-[18px] border-t-[2px] border-t-transparent m-8d3f4000 mantine-ActionIcon-root m-87cf2631 mantine-UnstyledButton-root"
-                              data-variant="subtle" type="button"
-                              style="--ai-bg: transparent; --ai-hover: var(--mantine-color-gray-light-hover); --ai-color: var(--mantine-color-gray-light-color); --ai-bd: calc(0.0625rem * var(--mantine-scale)) solid transparent;"><span
-                                class="m-302b9fb1 mantine-ActionIcon-loader" aria-hidden="true"><span
-                                  class="m-b34414df m-5ae2e3c mantine-Loader-root"
-                                  style="--loader-size: calc(var(--ai-size) * 0.55); --loader-color: var(--ai-color);"></span></span><span
-                                class="m-8d3afb97 mantine-ActionIcon-icon"><svg xmlns="http://www.w3.org/2000/svg"
-                                  width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                                  stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-                                  class="tabler-icon tabler-icon-copy"
-                                  style="width: calc(1rem * var(--mantine-scale)); height: calc(1rem * var(--mantine-scale));">
-                                  <path
-                                    d="M8 8m0 2a2 2 0 0 1 2 -2h8a2 2 0 0 1 2 2v8a2 2 0 0 1 -2 2h-8a2 2 0 0 1 -2 -2z">
-                                  </path>
-                                  <path d="M16 8v-2a2 2 0 0 0 -2 -2h-8a2 2 0 0 0 -2 2v8a2 2 0 0 0 2 2h2"></path>
-                                </svg></span></button></div>
-                        </div>
-                      </div>
-                    </td>
-                    <td class="px-2 py-2.5 align-top">$294.1K</td>
-                    <td class="px-2 py-2.5 align-top">$11.10</td>
-                    <td class="px-2 py-2.5 align-top">$10.04</td>
-                  </tr>
-                  <tr class="bg-transparent border-b dark:border-[#353535]">
-                    <td class="pl-2 pr-0 text-xs pt-3.5 align-top">10</td>
-                    <td class="px-2 py-2.5 align-top">
-                      <div class="cursor-pointer items-start m-4081bf90 mantine-Group-root"
-                        style="--group-gap: calc(0.0625rem * var(--mantine-scale)); --group-align: center; --group-justify: flex-start; --group-wrap: nowrap; width: calc(6.25rem * var(--mantine-scale));">
-                        <div class="mr-2 mt-[2px]">
-                          <div class="m-e5262200 mantine-Indicator-root"
-                            style="--indicator-color: var(--mantine-color-gray-filled); --indicator-size: calc(0.75rem * var(--mantine-scale)); --indicator-z-index: 10; --indicator-top: calc(0.25rem * var(--mantine-scale)); --indicator-right: calc(0.25rem * var(--mantine-scale)); --indicator-translate-x: 50%; --indicator-translate-y: -50%;">
-                            <div class="TokenLogo_indicator__N1X7W m-760d1fb1 mantine-Indicator-indicator"
-                              data-with-label="true" data-with-border="true"><img class="m-9e117634 mantine-Image-root"
-                                src="./source/ethereum.png"
-                                style="width: calc(0.625rem * var(--mantine-scale)); height: calc(0.625rem * var(--mantine-scale));">
-                            </div>
-                            <div class="m-f85678b6 mantine-Avatar-root"
-                              style="--avatar-size: calc(1.375rem * var(--mantine-scale)); --avatar-radius: var(--mantine-radius-xl);">
-                              <span class="m-104cd71f mantine-Avatar-placeholder">FET</span></div>
-                          </div>
-                        </div>
-                        <div class="mr-4"><span class="max-w-[90px] w-[90px] truncate block font-semibold">FET</span>
-                          <div class="flex items-end pt-[1px]"><span
-                              class="text-xs text-gray-500 dark:text-gray-400">0xaea4.</span><button
-                              class="mantine-focus-auto mantine-active inline min-w-0 min-h-0 w-[16px] h-[18px] border-t-[2px] border-t-transparent m-8d3f4000 mantine-ActionIcon-root m-87cf2631 mantine-UnstyledButton-root"
-                              data-variant="subtle" type="button"
-                              style="--ai-bg: transparent; --ai-hover: var(--mantine-color-gray-light-hover); --ai-color: var(--mantine-color-gray-light-color); --ai-bd: calc(0.0625rem * var(--mantine-scale)) solid transparent;"><span
-                                class="m-302b9fb1 mantine-ActionIcon-loader" aria-hidden="true"><span
-                                  class="m-b34414df m-5ae2e3c mantine-Loader-root"
-                                  style="--loader-size: calc(var(--ai-size) * 0.55); --loader-color: var(--ai-color);"></span></span><span
-                                class="m-8d3afb97 mantine-ActionIcon-icon"><svg xmlns="http://www.w3.org/2000/svg"
-                                  width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                                  stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-                                  class="tabler-icon tabler-icon-copy"
-                                  style="width: calc(1rem * var(--mantine-scale)); height: calc(1rem * var(--mantine-scale));">
-                                  <path
-                                    d="M8 8m0 2a2 2 0 0 1 2 -2h8a2 2 0 0 1 2 2v8a2 2 0 0 1 -2 2h-8a2 2 0 0 1 -2 -2z">
-                                  </path>
-                                  <path d="M16 8v-2a2 2 0 0 0 -2 -2h-8a2 2 0 0 0 -2 2v8a2 2 0 0 0 2 2h2"></path>
-                                </svg></span></button></div>
-                        </div>
-                      </div>
-                    </td>
-                    <td class="px-2 py-2.5 align-top">$284.0K</td>
-                    <td class="px-2 py-2.5 align-top">$2.46</td>
-                    <td class="px-2 py-2.5 align-top">$2.29</td>
-                  </tr>
-                  <tr class="bg-transparent border-b dark:border-[#353535]">
-                    <td class="pl-2 pr-0 text-xs pt-3.5 align-top">11</td>
-                    <td class="px-2 py-2.5 align-top">
-                      <div class="cursor-pointer items-start m-4081bf90 mantine-Group-root"
-                        style="--group-gap: calc(0.0625rem * var(--mantine-scale)); --group-align: center; --group-justify: flex-start; --group-wrap: nowrap; width: calc(6.25rem * var(--mantine-scale));">
-                        <div class="mr-2 mt-[2px]">
-                          <div class="m-e5262200 mantine-Indicator-root"
-                            style="--indicator-color: var(--mantine-color-gray-filled); --indicator-size: calc(0.75rem * var(--mantine-scale)); --indicator-z-index: 10; --indicator-top: calc(0.25rem * var(--mantine-scale)); --indicator-right: calc(0.25rem * var(--mantine-scale)); --indicator-translate-x: 50%; --indicator-translate-y: -50%;">
-                            <div class="TokenLogo_indicator__N1X7W m-760d1fb1 mantine-Indicator-indicator"
-                              data-with-label="true" data-with-border="true"><img class="m-9e117634 mantine-Image-root"
-                                src="./source/ethereum.png"
-                                style="width: calc(0.625rem * var(--mantine-scale)); height: calc(0.625rem * var(--mantine-scale));">
-                            </div>
-                            <div class="m-f85678b6 mantine-Avatar-root"
-                              style="--avatar-size: calc(1.375rem * var(--mantine-scale)); --avatar-radius: var(--mantine-radius-xl);">
-                              <img class="m-11f8ac07 mantine-Avatar-image" src="./source/11841.png"></div>
-                          </div>
-                        </div>
-                        <div class="mr-4"><span class="max-w-[90px] w-[90px] truncate block font-semibold">ARB</span>
-                          <div class="flex items-end pt-[1px]"><span
-                              class="text-xs text-gray-500 dark:text-gray-400">0xb507.</span><button
-                              class="mantine-focus-auto mantine-active inline min-w-0 min-h-0 w-[16px] h-[18px] border-t-[2px] border-t-transparent m-8d3f4000 mantine-ActionIcon-root m-87cf2631 mantine-UnstyledButton-root"
-                              data-variant="subtle" type="button"
-                              style="--ai-bg: transparent; --ai-hover: var(--mantine-color-gray-light-hover); --ai-color: var(--mantine-color-gray-light-color); --ai-bd: calc(0.0625rem * var(--mantine-scale)) solid transparent;"><span
-                                class="m-302b9fb1 mantine-ActionIcon-loader" aria-hidden="true"><span
-                                  class="m-b34414df m-5ae2e3c mantine-Loader-root"
-                                  style="--loader-size: calc(var(--ai-size) * 0.55); --loader-color: var(--ai-color);"></span></span><span
-                                class="m-8d3afb97 mantine-ActionIcon-icon"><svg xmlns="http://www.w3.org/2000/svg"
-                                  width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                                  stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-                                  class="tabler-icon tabler-icon-copy"
-                                  style="width: calc(1rem * var(--mantine-scale)); height: calc(1rem * var(--mantine-scale));">
-                                  <path
-                                    d="M8 8m0 2a2 2 0 0 1 2 -2h8a2 2 0 0 1 2 2v8a2 2 0 0 1 -2 2h-8a2 2 0 0 1 -2 -2z">
-                                  </path>
-                                  <path d="M16 8v-2a2 2 0 0 0 -2 -2h-8a2 2 0 0 0 -2 2v8a2 2 0 0 0 2 2h2"></path>
-                                </svg></span></button></div>
-                        </div>
-                      </div>
-                    </td>
-                    <td class="px-2 py-2.5 align-top">$253.9K</td>
-                    <td class="px-2 py-2.5 align-top">$1.13</td>
-                    <td class="px-2 py-2.5 align-top">$1.14</td>
-                  </tr>
-                  <tr class="bg-transparent border-b dark:border-[#353535]">
-                    <td class="pl-2 pr-0 text-xs pt-3.5 align-top">12</td>
-                    <td class="px-2 py-2.5 align-top">
-                      <div class="cursor-pointer items-start m-4081bf90 mantine-Group-root"
-                        style="--group-gap: calc(0.0625rem * var(--mantine-scale)); --group-align: center; --group-justify: flex-start; --group-wrap: nowrap; width: calc(6.25rem * var(--mantine-scale));">
-                        <div class="mr-2 mt-[2px]">
-                          <div class="m-e5262200 mantine-Indicator-root"
-                            style="--indicator-color: var(--mantine-color-gray-filled); --indicator-size: calc(0.75rem * var(--mantine-scale)); --indicator-z-index: 10; --indicator-top: calc(0.25rem * var(--mantine-scale)); --indicator-right: calc(0.25rem * var(--mantine-scale)); --indicator-translate-x: 50%; --indicator-translate-y: -50%;">
-                            <div class="TokenLogo_indicator__N1X7W m-760d1fb1 mantine-Indicator-indicator"
-                              data-with-label="true" data-with-border="true"><img class="m-9e117634 mantine-Image-root"
-                                src="./source/ethereum.png"
-                                style="width: calc(0.625rem * var(--mantine-scale)); height: calc(0.625rem * var(--mantine-scale));">
-                            </div>
-                            <div class="m-f85678b6 mantine-Avatar-root"
-                              style="--avatar-size: calc(1.375rem * var(--mantine-scale)); --avatar-radius: var(--mantine-radius-xl);">
-                              <img class="m-11f8ac07 mantine-Avatar-image" src="./source/28394.png"></div>
-                          </div>
-                        </div>
-                        <div class="mr-4"><span class="max-w-[90px] w-[90px] truncate block font-semibold">GROK</span>
-                          <div class="flex items-end pt-[1px]"><span
-                              class="text-xs text-gray-500 dark:text-gray-400">0x8390.</span><button
-                              class="mantine-focus-auto mantine-active inline min-w-0 min-h-0 w-[16px] h-[18px] border-t-[2px] border-t-transparent m-8d3f4000 mantine-ActionIcon-root m-87cf2631 mantine-UnstyledButton-root"
-                              data-variant="subtle" type="button"
-                              style="--ai-bg: transparent; --ai-hover: var(--mantine-color-gray-light-hover); --ai-color: var(--mantine-color-gray-light-color); --ai-bd: calc(0.0625rem * var(--mantine-scale)) solid transparent;"><span
-                                class="m-302b9fb1 mantine-ActionIcon-loader" aria-hidden="true"><span
-                                  class="m-b34414df m-5ae2e3c mantine-Loader-root"
-                                  style="--loader-size: calc(var(--ai-size) * 0.55); --loader-color: var(--ai-color);"></span></span><span
-                                class="m-8d3afb97 mantine-ActionIcon-icon"><svg xmlns="http://www.w3.org/2000/svg"
-                                  width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                                  stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-                                  class="tabler-icon tabler-icon-copy"
-                                  style="width: calc(1rem * var(--mantine-scale)); height: calc(1rem * var(--mantine-scale));">
-                                  <path
-                                    d="M8 8m0 2a2 2 0 0 1 2 -2h8a2 2 0 0 1 2 2v8a2 2 0 0 1 -2 2h-8a2 2 0 0 1 -2 -2z">
-                                  </path>
-                                  <path d="M16 8v-2a2 2 0 0 0 -2 -2h-8a2 2 0 0 0 -2 2v8a2 2 0 0 0 2 2h2"></path>
-                                </svg></span></button></div>
-                        </div>
-                      </div>
-                    </td>
-                    <td class="px-2 py-2.5 align-top">$249.2K</td>
-                    <td class="px-2 py-2.5 align-top">$0.01371</td>
-                    <td class="px-2 py-2.5 align-top">$0.0136</td>
-                  </tr>
-                  <tr class="bg-transparent border-b dark:border-[#353535]">
-                    <td class="pl-2 pr-0 text-xs pt-3.5 align-top">13</td>
-                    <td class="px-2 py-2.5 align-top">
-                      <div class="cursor-pointer items-start m-4081bf90 mantine-Group-root"
-                        style="--group-gap: calc(0.0625rem * var(--mantine-scale)); --group-align: center; --group-justify: flex-start; --group-wrap: nowrap; width: calc(6.25rem * var(--mantine-scale));">
-                        <div class="mr-2 mt-[2px]">
-                          <div class="m-e5262200 mantine-Indicator-root"
-                            style="--indicator-color: var(--mantine-color-gray-filled); --indicator-size: calc(0.75rem * var(--mantine-scale)); --indicator-z-index: 10; --indicator-top: calc(0.25rem * var(--mantine-scale)); --indicator-right: calc(0.25rem * var(--mantine-scale)); --indicator-translate-x: 50%; --indicator-translate-y: -50%;">
-                            <div class="TokenLogo_indicator__N1X7W m-760d1fb1 mantine-Indicator-indicator"
-                              data-with-label="true" data-with-border="true"><img class="m-9e117634 mantine-Image-root"
-                                src="./source/ethereum.png"
-                                style="width: calc(0.625rem * var(--mantine-scale)); height: calc(0.625rem * var(--mantine-scale));">
-                            </div>
-                            <div class="m-f85678b6 mantine-Avatar-root"
-                              style="--avatar-size: calc(1.375rem * var(--mantine-scale)); --avatar-radius: var(--mantine-radius-xl);">
-                              <img class="m-11f8ac07 mantine-Avatar-image" src="./source/15056.png"></div>
-                          </div>
-                        </div>
-                        <div class="mr-4"><span class="max-w-[90px] w-[90px] truncate block font-semibold">WOOL</span>
-                          <div class="flex items-end pt-[1px]"><span
-                              class="text-xs text-gray-500 dark:text-gray-400">0x8355.</span><button
-                              class="mantine-focus-auto mantine-active inline min-w-0 min-h-0 w-[16px] h-[18px] border-t-[2px] border-t-transparent m-8d3f4000 mantine-ActionIcon-root m-87cf2631 mantine-UnstyledButton-root"
-                              data-variant="subtle" type="button"
-                              style="--ai-bg: transparent; --ai-hover: var(--mantine-color-gray-light-hover); --ai-color: var(--mantine-color-gray-light-color); --ai-bd: calc(0.0625rem * var(--mantine-scale)) solid transparent;"><span
-                                class="m-302b9fb1 mantine-ActionIcon-loader" aria-hidden="true"><span
-                                  class="m-b34414df m-5ae2e3c mantine-Loader-root"
-                                  style="--loader-size: calc(var(--ai-size) * 0.55); --loader-color: var(--ai-color);"></span></span><span
-                                class="m-8d3afb97 mantine-ActionIcon-icon"><svg xmlns="http://www.w3.org/2000/svg"
-                                  width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                                  stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-                                  class="tabler-icon tabler-icon-copy"
-                                  style="width: calc(1rem * var(--mantine-scale)); height: calc(1rem * var(--mantine-scale));">
-                                  <path
-                                    d="M8 8m0 2a2 2 0 0 1 2 -2h8a2 2 0 0 1 2 2v8a2 2 0 0 1 -2 2h-8a2 2 0 0 1 -2 -2z">
-                                  </path>
-                                  <path d="M16 8v-2a2 2 0 0 0 -2 -2h-8a2 2 0 0 0 -2 2v8a2 2 0 0 0 2 2h2"></path>
-                                </svg></span></button></div>
-                        </div>
-                      </div>
-                    </td>
-                    <td class="px-2 py-2.5 align-top">$223.7K</td>
-                    <td class="px-2 py-2.5 align-top">$0.02482</td>
-                    <td class="px-2 py-2.5 align-top">$0.0228</td>
-                  </tr>
-                  <tr class="bg-transparent border-b dark:border-[#353535]">
-                    <td class="pl-2 pr-0 text-xs pt-3.5 align-top">14</td>
-                    <td class="px-2 py-2.5 align-top">
-                      <div class="cursor-pointer items-start m-4081bf90 mantine-Group-root"
-                        style="--group-gap: calc(0.0625rem * var(--mantine-scale)); --group-align: center; --group-justify: flex-start; --group-wrap: nowrap; width: calc(6.25rem * var(--mantine-scale));">
-                        <div class="mr-2 mt-[2px]">
-                          <div class="m-e5262200 mantine-Indicator-root"
-                            style="--indicator-color: var(--mantine-color-gray-filled); --indicator-size: calc(0.75rem * var(--mantine-scale)); --indicator-z-index: 10; --indicator-top: calc(0.25rem * var(--mantine-scale)); --indicator-right: calc(0.25rem * var(--mantine-scale)); --indicator-translate-x: 50%; --indicator-translate-y: -50%;">
-                            <div class="TokenLogo_indicator__N1X7W m-760d1fb1 mantine-Indicator-indicator"
-                              data-with-label="true" data-with-border="true"><img class="m-9e117634 mantine-Image-root"
-                                src="./source/ethereum.png"
-                                style="width: calc(0.625rem * var(--mantine-scale)); height: calc(0.625rem * var(--mantine-scale));">
-                            </div>
-                            <div class="m-f85678b6 mantine-Avatar-root"
-                              style="--avatar-size: calc(1.375rem * var(--mantine-scale)); --avatar-radius: var(--mantine-radius-xl);">
-                              <img class="m-11f8ac07 mantine-Avatar-image" src="./source/11557.png"></div>
-                          </div>
-                        </div>
-                        <div class="mr-4"><span class="max-w-[90px] w-[90px] truncate block font-semibold">DOG</span>
-                          <div class="flex items-end pt-[1px]"><span
-                              class="text-xs text-gray-500 dark:text-gray-400">0xbaac.</span><button
-                              class="mantine-focus-auto mantine-active inline min-w-0 min-h-0 w-[16px] h-[18px] border-t-[2px] border-t-transparent m-8d3f4000 mantine-ActionIcon-root m-87cf2631 mantine-UnstyledButton-root"
-                              data-variant="subtle" type="button"
-                              style="--ai-bg: transparent; --ai-hover: var(--mantine-color-gray-light-hover); --ai-color: var(--mantine-color-gray-light-color); --ai-bd: calc(0.0625rem * var(--mantine-scale)) solid transparent;"><span
-                                class="m-302b9fb1 mantine-ActionIcon-loader" aria-hidden="true"><span
-                                  class="m-b34414df m-5ae2e3c mantine-Loader-root"
-                                  style="--loader-size: calc(var(--ai-size) * 0.55); --loader-color: var(--ai-color);"></span></span><span
-                                class="m-8d3afb97 mantine-ActionIcon-icon"><svg xmlns="http://www.w3.org/2000/svg"
-                                  width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                                  stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-                                  class="tabler-icon tabler-icon-copy"
-                                  style="width: calc(1rem * var(--mantine-scale)); height: calc(1rem * var(--mantine-scale));">
-                                  <path
-                                    d="M8 8m0 2a2 2 0 0 1 2 -2h8a2 2 0 0 1 2 2v8a2 2 0 0 1 -2 2h-8a2 2 0 0 1 -2 -2z">
-                                  </path>
-                                  <path d="M16 8v-2a2 2 0 0 0 -2 -2h-8a2 2 0 0 0 -2 2v8a2 2 0 0 0 2 2h2"></path>
-                                </svg></span></button></div>
-                        </div>
-                      </div>
-                    </td>
-                    <td class="px-2 py-2.5 align-top">$203.8K</td>
-                    <td class="px-2 py-2.5 align-top">$0.01176</td>
-                    <td class="px-2 py-2.5 align-top">$0.01106</td>
-                  </tr>
-                  <tr class="bg-transparent border-b dark:border-[#353535]">
-                    <td class="pl-2 pr-0 text-xs pt-3.5 align-top">15</td>
-                    <td class="px-2 py-2.5 align-top">
-                      <div class="cursor-pointer items-start m-4081bf90 mantine-Group-root"
-                        style="--group-gap: calc(0.0625rem * var(--mantine-scale)); --group-align: center; --group-justify: flex-start; --group-wrap: nowrap; width: calc(6.25rem * var(--mantine-scale));">
-                        <div class="mr-2 mt-[2px]">
-                          <div class="m-e5262200 mantine-Indicator-root"
-                            style="--indicator-color: var(--mantine-color-gray-filled); --indicator-size: calc(0.75rem * var(--mantine-scale)); --indicator-z-index: 10; --indicator-top: calc(0.25rem * var(--mantine-scale)); --indicator-right: calc(0.25rem * var(--mantine-scale)); --indicator-translate-x: 50%; --indicator-translate-y: -50%;">
-                            <div class="TokenLogo_indicator__N1X7W m-760d1fb1 mantine-Indicator-indicator"
-                              data-with-label="true" data-with-border="true"><img class="m-9e117634 mantine-Image-root"
-                                src="./source/ethereum.png"
-                                style="width: calc(0.625rem * var(--mantine-scale)); height: calc(0.625rem * var(--mantine-scale));">
-                            </div>
-                            <div class="m-f85678b6 mantine-Avatar-root"
-                              style="--avatar-size: calc(1.375rem * var(--mantine-scale)); --avatar-radius: var(--mantine-radius-xl);">
-                              <img class="m-11f8ac07 mantine-Avatar-image" src="./source/10804.png"></div>
-                          </div>
-                        </div>
-                        <div class="mr-4"><span class="max-w-[90px] w-[90px] truncate block font-semibold">FLOKI</span>
-                          <div class="flex items-end pt-[1px]"><span
-                              class="text-xs text-gray-500 dark:text-gray-400">0xcf0c.</span><button
-                              class="mantine-focus-auto mantine-active inline min-w-0 min-h-0 w-[16px] h-[18px] border-t-[2px] border-t-transparent m-8d3f4000 mantine-ActionIcon-root m-87cf2631 mantine-UnstyledButton-root"
-                              data-variant="subtle" type="button"
-                              style="--ai-bg: transparent; --ai-hover: var(--mantine-color-gray-light-hover); --ai-color: var(--mantine-color-gray-light-color); --ai-bd: calc(0.0625rem * var(--mantine-scale)) solid transparent;"><span
-                                class="m-302b9fb1 mantine-ActionIcon-loader" aria-hidden="true"><span
-                                  class="m-b34414df m-5ae2e3c mantine-Loader-root"
-                                  style="--loader-size: calc(var(--ai-size) * 0.55); --loader-color: var(--ai-color);"></span></span><span
-                                class="m-8d3afb97 mantine-ActionIcon-icon"><svg xmlns="http://www.w3.org/2000/svg"
-                                  width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                                  stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-                                  class="tabler-icon tabler-icon-copy"
-                                  style="width: calc(1rem * var(--mantine-scale)); height: calc(1rem * var(--mantine-scale));">
-                                  <path
-                                    d="M8 8m0 2a2 2 0 0 1 2 -2h8a2 2 0 0 1 2 2v8a2 2 0 0 1 -2 2h-8a2 2 0 0 1 -2 -2z">
-                                  </path>
-                                  <path d="M16 8v-2a2 2 0 0 0 -2 -2h-8a2 2 0 0 0 -2 2v8a2 2 0 0 0 2 2h2"></path>
-                                </svg></span></button></div>
-                        </div>
-                      </div>
-                    </td>
-                    <td class="px-2 py-2.5 align-top">$201.5K</td>
-                    <td class="px-2 py-2.5 align-top">$0.0₃2234</td>
-                    <td class="px-2 py-2.5 align-top">$0.0₃2168</td>
-                  </tr>
-                  <tr class="bg-transparent border-b dark:border-[#353535]">
-                    <td class="pl-2 pr-0 text-xs pt-3.5 align-top">16</td>
-                    <td class="px-2 py-2.5 align-top">
-                      <div class="cursor-pointer items-start m-4081bf90 mantine-Group-root"
-                        style="--group-gap: calc(0.0625rem * var(--mantine-scale)); --group-align: center; --group-justify: flex-start; --group-wrap: nowrap; width: calc(6.25rem * var(--mantine-scale));">
-                        <div class="mr-2 mt-[2px]">
-                          <div class="m-e5262200 mantine-Indicator-root"
-                            style="--indicator-color: var(--mantine-color-gray-filled); --indicator-size: calc(0.75rem * var(--mantine-scale)); --indicator-z-index: 10; --indicator-top: calc(0.25rem * var(--mantine-scale)); --indicator-right: calc(0.25rem * var(--mantine-scale)); --indicator-translate-x: 50%; --indicator-translate-y: -50%;">
-                            <div class="TokenLogo_indicator__N1X7W m-760d1fb1 mantine-Indicator-indicator"
-                              data-with-label="true" data-with-border="true"><img class="m-9e117634 mantine-Image-root"
-                                src="./source/ethereum.png"
-                                style="width: calc(0.625rem * var(--mantine-scale)); height: calc(0.625rem * var(--mantine-scale));">
-                            </div>
-                            <div class="m-f85678b6 mantine-Avatar-root"
-                              style="--avatar-size: calc(1.375rem * var(--mantine-scale)); --avatar-radius: var(--mantine-radius-xl);">
-                              <span class="m-104cd71f mantine-Avatar-placeholder">FTM</span></div>
-                          </div>
-                        </div>
-                        <div class="mr-4"><span class="max-w-[90px] w-[90px] truncate block font-semibold">FTM</span>
-                          <div class="flex items-end pt-[1px]"><span
-                              class="text-xs text-gray-500 dark:text-gray-400">0x4e15.</span><button
-                              class="mantine-focus-auto mantine-active inline min-w-0 min-h-0 w-[16px] h-[18px] border-t-[2px] border-t-transparent m-8d3f4000 mantine-ActionIcon-root m-87cf2631 mantine-UnstyledButton-root"
-                              data-variant="subtle" type="button"
-                              style="--ai-bg: transparent; --ai-hover: var(--mantine-color-gray-light-hover); --ai-color: var(--mantine-color-gray-light-color); --ai-bd: calc(0.0625rem * var(--mantine-scale)) solid transparent;"><span
-                                class="m-302b9fb1 mantine-ActionIcon-loader" aria-hidden="true"><span
-                                  class="m-b34414df m-5ae2e3c mantine-Loader-root"
-                                  style="--loader-size: calc(var(--ai-size) * 0.55); --loader-color: var(--ai-color);"></span></span><span
-                                class="m-8d3afb97 mantine-ActionIcon-icon"><svg xmlns="http://www.w3.org/2000/svg"
-                                  width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                                  stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-                                  class="tabler-icon tabler-icon-copy"
-                                  style="width: calc(1rem * var(--mantine-scale)); height: calc(1rem * var(--mantine-scale));">
-                                  <path
-                                    d="M8 8m0 2a2 2 0 0 1 2 -2h8a2 2 0 0 1 2 2v8a2 2 0 0 1 -2 2h-8a2 2 0 0 1 -2 -2z">
-                                  </path>
-                                  <path d="M16 8v-2a2 2 0 0 0 -2 -2h-8a2 2 0 0 0 -2 2v8a2 2 0 0 0 2 2h2"></path>
-                                </svg></span></button></div>
-                        </div>
-                      </div>
-                    </td>
-                    <td class="px-2 py-2.5 align-top">$168.5K</td>
-                    <td class="px-2 py-2.5 align-top">$0.9601</td>
-                    <td class="px-2 py-2.5 align-top">$0.8069</td>
-                  </tr>
-                  <tr class="bg-transparent border-b dark:border-[#353535]">
-                    <td class="pl-2 pr-0 text-xs pt-3.5 align-top">17</td>
-                    <td class="px-2 py-2.5 align-top">
-                      <div class="cursor-pointer items-start m-4081bf90 mantine-Group-root"
-                        style="--group-gap: calc(0.0625rem * var(--mantine-scale)); --group-align: center; --group-justify: flex-start; --group-wrap: nowrap; width: calc(6.25rem * var(--mantine-scale));">
-                        <div class="mr-2 mt-[2px]">
-                          <div class="m-e5262200 mantine-Indicator-root"
-                            style="--indicator-color: var(--mantine-color-gray-filled); --indicator-size: calc(0.75rem * var(--mantine-scale)); --indicator-z-index: 10; --indicator-top: calc(0.25rem * var(--mantine-scale)); --indicator-right: calc(0.25rem * var(--mantine-scale)); --indicator-translate-x: 50%; --indicator-translate-y: -50%;">
-                            <div class="TokenLogo_indicator__N1X7W m-760d1fb1 mantine-Indicator-indicator"
-                              data-with-label="true" data-with-border="true"><img class="m-9e117634 mantine-Image-root"
-                                src="./source/ethereum.png"
-                                style="width: calc(0.625rem * var(--mantine-scale)); height: calc(0.625rem * var(--mantine-scale));">
-                            </div>
-                            <div class="m-f85678b6 mantine-Avatar-root"
-                              style="--avatar-size: calc(1.375rem * var(--mantine-scale)); --avatar-radius: var(--mantine-radius-xl);">
-                              <img class="m-11f8ac07 mantine-Avatar-image" src="./source/22113.png"></div>
-                          </div>
-                        </div>
-                        <div class="mr-4"><span class="max-w-[90px] w-[90px] truncate block font-semibold">KAP</span>
-                          <div class="flex items-end pt-[1px]"><span
-                              class="text-xs text-gray-500 dark:text-gray-400">0x9625.</span><button
-                              class="mantine-focus-auto mantine-active inline min-w-0 min-h-0 w-[16px] h-[18px] border-t-[2px] border-t-transparent m-8d3f4000 mantine-ActionIcon-root m-87cf2631 mantine-UnstyledButton-root"
-                              data-variant="subtle" type="button"
-                              style="--ai-bg: transparent; --ai-hover: var(--mantine-color-gray-light-hover); --ai-color: var(--mantine-color-gray-light-color); --ai-bd: calc(0.0625rem * var(--mantine-scale)) solid transparent;"><span
-                                class="m-302b9fb1 mantine-ActionIcon-loader" aria-hidden="true"><span
-                                  class="m-b34414df m-5ae2e3c mantine-Loader-root"
-                                  style="--loader-size: calc(var(--ai-size) * 0.55); --loader-color: var(--ai-color);"></span></span><span
-                                class="m-8d3afb97 mantine-ActionIcon-icon"><svg xmlns="http://www.w3.org/2000/svg"
-                                  width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                                  stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-                                  class="tabler-icon tabler-icon-copy"
-                                  style="width: calc(1rem * var(--mantine-scale)); height: calc(1rem * var(--mantine-scale));">
-                                  <path
-                                    d="M8 8m0 2a2 2 0 0 1 2 -2h8a2 2 0 0 1 2 2v8a2 2 0 0 1 -2 2h-8a2 2 0 0 1 -2 -2z">
-                                  </path>
-                                  <path d="M16 8v-2a2 2 0 0 0 -2 -2h-8a2 2 0 0 0 -2 2v8a2 2 0 0 0 2 2h2"></path>
-                                </svg></span></button></div>
-                        </div>
-                      </div>
-                    </td>
-                    <td class="px-2 py-2.5 align-top">$167.5K</td>
-                    <td class="px-2 py-2.5 align-top">$0.2446</td>
-                    <td class="px-2 py-2.5 align-top">$0.2181</td>
-                  </tr>
-                  <tr class="bg-transparent border-b dark:border-[#353535]">
-                    <td class="pl-2 pr-0 text-xs pt-3.5 align-top">18</td>
-                    <td class="px-2 py-2.5 align-top">
-                      <div class="cursor-pointer items-start m-4081bf90 mantine-Group-root"
-                        style="--group-gap: calc(0.0625rem * var(--mantine-scale)); --group-align: center; --group-justify: flex-start; --group-wrap: nowrap; width: calc(6.25rem * var(--mantine-scale));">
-                        <div class="mr-2 mt-[2px]">
-                          <div class="m-e5262200 mantine-Indicator-root"
-                            style="--indicator-color: var(--mantine-color-gray-filled); --indicator-size: calc(0.75rem * var(--mantine-scale)); --indicator-z-index: 10; --indicator-top: calc(0.25rem * var(--mantine-scale)); --indicator-right: calc(0.25rem * var(--mantine-scale)); --indicator-translate-x: 50%; --indicator-translate-y: -50%;">
-                            <div class="TokenLogo_indicator__N1X7W m-760d1fb1 mantine-Indicator-indicator"
-                              data-with-label="true" data-with-border="true"><img class="m-9e117634 mantine-Image-root"
-                                src="./source/ethereum.png"
-                                style="width: calc(0.625rem * var(--mantine-scale)); height: calc(0.625rem * var(--mantine-scale));">
-                            </div>
-                            <div class="m-f85678b6 mantine-Avatar-root"
-                              style="--avatar-size: calc(1.375rem * var(--mantine-scale)); --avatar-radius: var(--mantine-radius-xl);">
-                              <img class="m-11f8ac07 mantine-Avatar-image" src="./source/21585.png"></div>
-                          </div>
-                        </div>
-                        <div class="mr-4"><span class="max-w-[90px] w-[90px] truncate block font-semibold">SAFE</span>
-                          <div class="flex items-end pt-[1px]"><span
-                              class="text-xs text-gray-500 dark:text-gray-400">0x5afe.</span><button
-                              class="mantine-focus-auto mantine-active inline min-w-0 min-h-0 w-[16px] h-[18px] border-t-[2px] border-t-transparent m-8d3f4000 mantine-ActionIcon-root m-87cf2631 mantine-UnstyledButton-root"
-                              data-variant="subtle" type="button"
-                              style="--ai-bg: transparent; --ai-hover: var(--mantine-color-gray-light-hover); --ai-color: var(--mantine-color-gray-light-color); --ai-bd: calc(0.0625rem * var(--mantine-scale)) solid transparent;"><span
-                                class="m-302b9fb1 mantine-ActionIcon-loader" aria-hidden="true"><span
-                                  class="m-b34414df m-5ae2e3c mantine-Loader-root"
-                                  style="--loader-size: calc(var(--ai-size) * 0.55); --loader-color: var(--ai-color);"></span></span><span
-                                class="m-8d3afb97 mantine-ActionIcon-icon"><svg xmlns="http://www.w3.org/2000/svg"
-                                  width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                                  stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-                                  class="tabler-icon tabler-icon-copy"
-                                  style="width: calc(1rem * var(--mantine-scale)); height: calc(1rem * var(--mantine-scale));">
-                                  <path
-                                    d="M8 8m0 2a2 2 0 0 1 2 -2h8a2 2 0 0 1 2 2v8a2 2 0 0 1 -2 2h-8a2 2 0 0 1 -2 -2z">
-                                  </path>
-                                  <path d="M16 8v-2a2 2 0 0 0 -2 -2h-8a2 2 0 0 0 -2 2v8a2 2 0 0 0 2 2h2"></path>
-                                </svg></span></button></div>
-                        </div>
-                      </div>
-                    </td>
-                    <td class="px-2 py-2.5 align-top">$163.0K</td>
-                    <td class="px-2 py-2.5 align-top">$2.36</td>
-                    <td class="px-2 py-2.5 align-top">$2.23</td>
-                  </tr>
-                  <tr class="bg-transparent border-b dark:border-[#353535]">
-                    <td class="pl-2 pr-0 text-xs pt-3.5 align-top">19</td>
-                    <td class="px-2 py-2.5 align-top">
-                      <div class="cursor-pointer items-start m-4081bf90 mantine-Group-root"
-                        style="--group-gap: calc(0.0625rem * var(--mantine-scale)); --group-align: center; --group-justify: flex-start; --group-wrap: nowrap; width: calc(6.25rem * var(--mantine-scale));">
-                        <div class="mr-2 mt-[2px]">
-                          <div class="m-e5262200 mantine-Indicator-root"
-                            style="--indicator-color: var(--mantine-color-gray-filled); --indicator-size: calc(0.75rem * var(--mantine-scale)); --indicator-z-index: 10; --indicator-top: calc(0.25rem * var(--mantine-scale)); --indicator-right: calc(0.25rem * var(--mantine-scale)); --indicator-translate-x: 50%; --indicator-translate-y: -50%;">
-                            <div class="TokenLogo_indicator__N1X7W m-760d1fb1 mantine-Indicator-indicator"
-                              data-with-label="true" data-with-border="true"><img class="m-9e117634 mantine-Image-root"
-                                src="./source/ethereum.png"
-                                style="width: calc(0.625rem * var(--mantine-scale)); height: calc(0.625rem * var(--mantine-scale));">
-                            </div>
-                            <div class="m-f85678b6 mantine-Avatar-root"
-                              style="--avatar-size: calc(1.375rem * var(--mantine-scale)); --avatar-radius: var(--mantine-radius-xl);">
-                              <img class="m-11f8ac07 mantine-Avatar-image" src="./source/31327.png"></div>
-                          </div>
-                        </div>
-                        <div class="mr-4"><span class="max-w-[90px] w-[90px] truncate block font-semibold">CROW</span>
-                          <div class="flex items-end pt-[1px]"><span
-                              class="text-xs text-gray-500 dark:text-gray-400">0xaa2b.</span><button
-                              class="mantine-focus-auto mantine-active inline min-w-0 min-h-0 w-[16px] h-[18px] border-t-[2px] border-t-transparent m-8d3f4000 mantine-ActionIcon-root m-87cf2631 mantine-UnstyledButton-root"
-                              data-variant="subtle" type="button"
-                              style="--ai-bg: transparent; --ai-hover: var(--mantine-color-gray-light-hover); --ai-color: var(--mantine-color-gray-light-color); --ai-bd: calc(0.0625rem * var(--mantine-scale)) solid transparent;"><span
-                                class="m-302b9fb1 mantine-ActionIcon-loader" aria-hidden="true"><span
-                                  class="m-b34414df m-5ae2e3c mantine-Loader-root"
-                                  style="--loader-size: calc(var(--ai-size) * 0.55); --loader-color: var(--ai-color);"></span></span><span
-                                class="m-8d3afb97 mantine-ActionIcon-icon"><svg xmlns="http://www.w3.org/2000/svg"
-                                  width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                                  stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-                                  class="tabler-icon tabler-icon-copy"
-                                  style="width: calc(1rem * var(--mantine-scale)); height: calc(1rem * var(--mantine-scale));">
-                                  <path
-                                    d="M8 8m0 2a2 2 0 0 1 2 -2h8a2 2 0 0 1 2 2v8a2 2 0 0 1 -2 2h-8a2 2 0 0 1 -2 -2z">
-                                  </path>
-                                  <path d="M16 8v-2a2 2 0 0 0 -2 -2h-8a2 2 0 0 0 -2 2v8a2 2 0 0 0 2 2h2"></path>
-                                </svg></span></button></div>
-                        </div>
-                      </div>
-                    </td>
-                    <td class="px-2 py-2.5 align-top">$138.9K</td>
-                    <td class="px-2 py-2.5 align-top">$0.0₂2241</td>
-                    <td class="px-2 py-2.5 align-top">$0.0₂2329</td>
-                  </tr>
-                  <tr class="bg-transparent border-b dark:border-[#353535]">
-                    <td class="pl-2 pr-0 text-xs pt-3.5 align-top">20</td>
-                    <td class="px-2 py-2.5 align-top">
-                      <div class="cursor-pointer items-start m-4081bf90 mantine-Group-root"
-                        style="--group-gap: calc(0.0625rem * var(--mantine-scale)); --group-align: center; --group-justify: flex-start; --group-wrap: nowrap; width: calc(6.25rem * var(--mantine-scale));">
-                        <div class="mr-2 mt-[2px]">
-                          <div class="m-e5262200 mantine-Indicator-root"
-                            style="--indicator-color: var(--mantine-color-gray-filled); --indicator-size: calc(0.75rem * var(--mantine-scale)); --indicator-z-index: 10; --indicator-top: calc(0.25rem * var(--mantine-scale)); --indicator-right: calc(0.25rem * var(--mantine-scale)); --indicator-translate-x: 50%; --indicator-translate-y: -50%;">
-                            <div class="TokenLogo_indicator__N1X7W m-760d1fb1 mantine-Indicator-indicator"
-                              data-with-label="true" data-with-border="true"><img class="m-9e117634 mantine-Image-root"
-                                src="./source/ethereum.png"
-                                style="width: calc(0.625rem * var(--mantine-scale)); height: calc(0.625rem * var(--mantine-scale));">
-                            </div>
-                            <div class="m-f85678b6 mantine-Avatar-root"
-                              style="--avatar-size: calc(1.375rem * var(--mantine-scale)); --avatar-radius: var(--mantine-radius-xl);">
-                              <img class="m-11f8ac07 mantine-Avatar-image" src="./source/28053.png"></div>
-                          </div>
-                        </div>
-                        <div class="mr-4"><span
-                            class="max-w-[90px] w-[90px] truncate block font-semibold">шайлушай</span>
-                          <div class="flex items-end pt-[1px]"><span
-                              class="text-xs text-gray-500 dark:text-gray-400">0xff83.</span><button
-                              class="mantine-focus-auto mantine-active inline min-w-0 min-h-0 w-[16px] h-[18px] border-t-[2px] border-t-transparent m-8d3f4000 mantine-ActionIcon-root m-87cf2631 mantine-UnstyledButton-root"
-                              data-variant="subtle" type="button"
-                              style="--ai-bg: transparent; --ai-hover: var(--mantine-color-gray-light-hover); --ai-color: var(--mantine-color-gray-light-color); --ai-bd: calc(0.0625rem * var(--mantine-scale)) solid transparent;"><span
-                                class="m-302b9fb1 mantine-ActionIcon-loader" aria-hidden="true"><span
-                                  class="m-b34414df m-5ae2e3c mantine-Loader-root"
-                                  style="--loader-size: calc(var(--ai-size) * 0.55); --loader-color: var(--ai-color);"></span></span><span
-                                class="m-8d3afb97 mantine-ActionIcon-icon"><svg xmlns="http://www.w3.org/2000/svg"
-                                  width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                                  stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-                                  class="tabler-icon tabler-icon-copy"
-                                  style="width: calc(1rem * var(--mantine-scale)); height: calc(1rem * var(--mantine-scale));">
-                                  <path
-                                    d="M8 8m0 2a2 2 0 0 1 2 -2h8a2 2 0 0 1 2 2v8a2 2 0 0 1 -2 2h-8a2 2 0 0 1 -2 -2z">
-                                  </path>
-                                  <path d="M16 8v-2a2 2 0 0 0 -2 -2h-8a2 2 0 0 0 -2 2v8a2 2 0 0 0 2 2h2"></path>
-                                </svg></span></button></div>
-                        </div>
-                      </div>
-                    </td>
-                    <td class="px-2 py-2.5 align-top">$130.7K</td>
-                    <td class="px-2 py-2.5 align-top">$0.0₃133</td>
-                    <td class="px-2 py-2.5 align-top">$0.0₃1408</td>
-                  </tr>
-                  <tr class="bg-transparent border-b dark:border-[#353535]">
-                    <td class="pl-2 pr-0 text-xs pt-3.5 align-top">21</td>
-                    <td class="px-2 py-2.5 align-top">
-                      <div class="cursor-pointer items-start m-4081bf90 mantine-Group-root"
-                        style="--group-gap: calc(0.0625rem * var(--mantine-scale)); --group-align: center; --group-justify: flex-start; --group-wrap: nowrap; width: calc(6.25rem * var(--mantine-scale));">
-                        <div class="mr-2 mt-[2px]">
-                          <div class="m-e5262200 mantine-Indicator-root"
-                            style="--indicator-color: var(--mantine-color-gray-filled); --indicator-size: calc(0.75rem * var(--mantine-scale)); --indicator-z-index: 10; --indicator-top: calc(0.25rem * var(--mantine-scale)); --indicator-right: calc(0.25rem * var(--mantine-scale)); --indicator-translate-x: 50%; --indicator-translate-y: -50%;">
-                            <div class="TokenLogo_indicator__N1X7W m-760d1fb1 mantine-Indicator-indicator"
-                              data-with-label="true" data-with-border="true"><img class="m-9e117634 mantine-Image-root"
-                                src="./source/ethereum.png"
-                                style="width: calc(0.625rem * var(--mantine-scale)); height: calc(0.625rem * var(--mantine-scale));">
-                            </div>
-                            <div class="m-f85678b6 mantine-Avatar-root"
-                              style="--avatar-size: calc(1.375rem * var(--mantine-scale)); --avatar-radius: var(--mantine-radius-xl);">
-                              <img class="m-11f8ac07 mantine-Avatar-image" src="./source/13855.png"></div>
-                          </div>
-                        </div>
-                        <div class="mr-4"><span class="max-w-[90px] w-[90px] truncate block font-semibold">ENS</span>
-                          <div class="flex items-end pt-[1px]"><span
-                              class="text-xs text-gray-500 dark:text-gray-400">0xc183.</span><button
-                              class="mantine-focus-auto mantine-active inline min-w-0 min-h-0 w-[16px] h-[18px] border-t-[2px] border-t-transparent m-8d3f4000 mantine-ActionIcon-root m-87cf2631 mantine-UnstyledButton-root"
-                              data-variant="subtle" type="button"
-                              style="--ai-bg: transparent; --ai-hover: var(--mantine-color-gray-light-hover); --ai-color: var(--mantine-color-gray-light-color); --ai-bd: calc(0.0625rem * var(--mantine-scale)) solid transparent;"><span
-                                class="m-302b9fb1 mantine-ActionIcon-loader" aria-hidden="true"><span
-                                  class="m-b34414df m-5ae2e3c mantine-Loader-root"
-                                  style="--loader-size: calc(var(--ai-size) * 0.55); --loader-color: var(--ai-color);"></span></span><span
-                                class="m-8d3afb97 mantine-ActionIcon-icon"><svg xmlns="http://www.w3.org/2000/svg"
-                                  width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                                  stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-                                  class="tabler-icon tabler-icon-copy"
-                                  style="width: calc(1rem * var(--mantine-scale)); height: calc(1rem * var(--mantine-scale));">
-                                  <path
-                                    d="M8 8m0 2a2 2 0 0 1 2 -2h8a2 2 0 0 1 2 2v8a2 2 0 0 1 -2 2h-8a2 2 0 0 1 -2 -2z">
-                                  </path>
-                                  <path d="M16 8v-2a2 2 0 0 0 -2 -2h-8a2 2 0 0 0 -2 2v8a2 2 0 0 0 2 2h2"></path>
-                                </svg></span></button></div>
-                        </div>
-                      </div>
-                    </td>
-                    <td class="px-2 py-2.5 align-top">$124.1K</td>
-                    <td class="px-2 py-2.5 align-top">$23.10</td>
-                    <td class="px-2 py-2.5 align-top">$22.70</td>
-                  </tr>
-                  <tr class="bg-transparent border-b dark:border-[#353535]">
-                    <td class="pl-2 pr-0 text-xs pt-3.5 align-top">22</td>
-                    <td class="px-2 py-2.5 align-top">
-                      <div class="cursor-pointer items-start m-4081bf90 mantine-Group-root"
-                        style="--group-gap: calc(0.0625rem * var(--mantine-scale)); --group-align: center; --group-justify: flex-start; --group-wrap: nowrap; width: calc(6.25rem * var(--mantine-scale));">
-                        <div class="mr-2 mt-[2px]">
-                          <div class="m-e5262200 mantine-Indicator-root"
-                            style="--indicator-color: var(--mantine-color-gray-filled); --indicator-size: calc(0.75rem * var(--mantine-scale)); --indicator-z-index: 10; --indicator-top: calc(0.25rem * var(--mantine-scale)); --indicator-right: calc(0.25rem * var(--mantine-scale)); --indicator-translate-x: 50%; --indicator-translate-y: -50%;">
-                            <div class="TokenLogo_indicator__N1X7W m-760d1fb1 mantine-Indicator-indicator"
-                              data-with-label="true" data-with-border="true"><img class="m-9e117634 mantine-Image-root"
-                                src="./source/ethereum.png"
-                                style="width: calc(0.625rem * var(--mantine-scale)); height: calc(0.625rem * var(--mantine-scale));">
-                            </div>
-                            <div class="m-f85678b6 mantine-Avatar-root"
-                              style="--avatar-size: calc(1.375rem * var(--mantine-scale)); --avatar-radius: var(--mantine-radius-xl);">
-                              <img class="m-11f8ac07 mantine-Avatar-image" src="./source/30369.png"></div>
-                          </div>
-                        </div>
-                        <div class="mr-4"><span class="max-w-[90px] w-[90px] truncate block font-semibold">HashAI</span>
-                          <div class="flex items-end pt-[1px]"><span
-                              class="text-xs text-gray-500 dark:text-gray-400">0x292f.</span><button
-                              class="mantine-focus-auto mantine-active inline min-w-0 min-h-0 w-[16px] h-[18px] border-t-[2px] border-t-transparent m-8d3f4000 mantine-ActionIcon-root m-87cf2631 mantine-UnstyledButton-root"
-                              data-variant="subtle" type="button"
-                              style="--ai-bg: transparent; --ai-hover: var(--mantine-color-gray-light-hover); --ai-color: var(--mantine-color-gray-light-color); --ai-bd: calc(0.0625rem * var(--mantine-scale)) solid transparent;"><span
-                                class="m-302b9fb1 mantine-ActionIcon-loader" aria-hidden="true"><span
-                                  class="m-b34414df m-5ae2e3c mantine-Loader-root"
-                                  style="--loader-size: calc(var(--ai-size) * 0.55); --loader-color: var(--ai-color);"></span></span><span
-                                class="m-8d3afb97 mantine-ActionIcon-icon"><svg xmlns="http://www.w3.org/2000/svg"
-                                  width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                                  stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-                                  class="tabler-icon tabler-icon-copy"
-                                  style="width: calc(1rem * var(--mantine-scale)); height: calc(1rem * var(--mantine-scale));">
-                                  <path
-                                    d="M8 8m0 2a2 2 0 0 1 2 -2h8a2 2 0 0 1 2 2v8a2 2 0 0 1 -2 2h-8a2 2 0 0 1 -2 -2z">
-                                  </path>
-                                  <path d="M16 8v-2a2 2 0 0 0 -2 -2h-8a2 2 0 0 0 -2 2v8a2 2 0 0 0 2 2h2"></path>
-                                </svg></span></button></div>
-                        </div>
-                      </div>
-                    </td>
-                    <td class="px-2 py-2.5 align-top">$123.7K</td>
-                    <td class="px-2 py-2.5 align-top">$0.0₂1844</td>
-                    <td class="px-2 py-2.5 align-top">$0.0₂1599</td>
-                  </tr>
-                  <tr class="bg-transparent border-b dark:border-[#353535]">
-                    <td class="pl-2 pr-0 text-xs pt-3.5 align-top">23</td>
-                    <td class="px-2 py-2.5 align-top">
-                      <div class="cursor-pointer items-start m-4081bf90 mantine-Group-root"
-                        style="--group-gap: calc(0.0625rem * var(--mantine-scale)); --group-align: center; --group-justify: flex-start; --group-wrap: nowrap; width: calc(6.25rem * var(--mantine-scale));">
-                        <div class="mr-2 mt-[2px]">
-                          <div class="m-e5262200 mantine-Indicator-root"
-                            style="--indicator-color: var(--mantine-color-gray-filled); --indicator-size: calc(0.75rem * var(--mantine-scale)); --indicator-z-index: 10; --indicator-top: calc(0.25rem * var(--mantine-scale)); --indicator-right: calc(0.25rem * var(--mantine-scale)); --indicator-translate-x: 50%; --indicator-translate-y: -50%;">
-                            <div class="TokenLogo_indicator__N1X7W m-760d1fb1 mantine-Indicator-indicator"
-                              data-with-label="true" data-with-border="true"><img class="m-9e117634 mantine-Image-root"
-                                src="./source/ethereum.png"
-                                style="width: calc(0.625rem * var(--mantine-scale)); height: calc(0.625rem * var(--mantine-scale));">
-                            </div>
-                            <div class="m-f85678b6 mantine-Avatar-root"
-                              style="--avatar-size: calc(1.375rem * var(--mantine-scale)); --avatar-radius: var(--mantine-radius-xl);">
-                              <img class="m-11f8ac07 mantine-Avatar-image" src="./source/17500.png"></div>
-                          </div>
-                        </div>
-                        <div class="mr-4"><span class="max-w-[90px] w-[90px] truncate block font-semibold">oSQTH</span>
-                          <div class="flex items-end pt-[1px]"><span
-                              class="text-xs text-gray-500 dark:text-gray-400">0xf1b9.</span><button
-                              class="mantine-focus-auto mantine-active inline min-w-0 min-h-0 w-[16px] h-[18px] border-t-[2px] border-t-transparent m-8d3f4000 mantine-ActionIcon-root m-87cf2631 mantine-UnstyledButton-root"
-                              data-variant="subtle" type="button"
-                              style="--ai-bg: transparent; --ai-hover: var(--mantine-color-gray-light-hover); --ai-color: var(--mantine-color-gray-light-color); --ai-bd: calc(0.0625rem * var(--mantine-scale)) solid transparent;"><span
-                                class="m-302b9fb1 mantine-ActionIcon-loader" aria-hidden="true"><span
-                                  class="m-b34414df m-5ae2e3c mantine-Loader-root"
-                                  style="--loader-size: calc(var(--ai-size) * 0.55); --loader-color: var(--ai-color);"></span></span><span
-                                class="m-8d3afb97 mantine-ActionIcon-icon"><svg xmlns="http://www.w3.org/2000/svg"
-                                  width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                                  stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-                                  class="tabler-icon tabler-icon-copy"
-                                  style="width: calc(1rem * var(--mantine-scale)); height: calc(1rem * var(--mantine-scale));">
-                                  <path
-                                    d="M8 8m0 2a2 2 0 0 1 2 -2h8a2 2 0 0 1 2 2v8a2 2 0 0 1 -2 2h-8a2 2 0 0 1 -2 -2z">
-                                  </path>
-                                  <path d="M16 8v-2a2 2 0 0 0 -2 -2h-8a2 2 0 0 0 -2 2v8a2 2 0 0 0 2 2h2"></path>
-                                </svg></span></button></div>
-                        </div>
-                      </div>
-                    </td>
-                    <td class="px-2 py-2.5 align-top">$122.6K</td>
-                    <td class="px-2 py-2.5 align-top">$228.22</td>
-                    <td class="px-2 py-2.5 align-top">$243.03</td>
-                  </tr>
-                  <tr class="bg-transparent border-b dark:border-[#353535]">
-                    <td class="pl-2 pr-0 text-xs pt-3.5 align-top">24</td>
-                    <td class="px-2 py-2.5 align-top">
-                      <div class="cursor-pointer items-start m-4081bf90 mantine-Group-root"
-                        style="--group-gap: calc(0.0625rem * var(--mantine-scale)); --group-align: center; --group-justify: flex-start; --group-wrap: nowrap; width: calc(6.25rem * var(--mantine-scale));">
-                        <div class="mr-2 mt-[2px]">
-                          <div class="m-e5262200 mantine-Indicator-root"
-                            style="--indicator-color: var(--mantine-color-gray-filled); --indicator-size: calc(0.75rem * var(--mantine-scale)); --indicator-z-index: 10; --indicator-top: calc(0.25rem * var(--mantine-scale)); --indicator-right: calc(0.25rem * var(--mantine-scale)); --indicator-translate-x: 50%; --indicator-translate-y: -50%;">
-                            <div class="TokenLogo_indicator__N1X7W m-760d1fb1 mantine-Indicator-indicator"
-                              data-with-label="true" data-with-border="true"><img class="m-9e117634 mantine-Image-root"
-                                src="./source/ethereum.png"
-                                style="width: calc(0.625rem * var(--mantine-scale)); height: calc(0.625rem * var(--mantine-scale));">
-                            </div>
-                            <div class="m-f85678b6 mantine-Avatar-root"
-                              style="--avatar-size: calc(1.375rem * var(--mantine-scale)); --avatar-radius: var(--mantine-radius-xl);">
-                              <img class="m-11f8ac07 mantine-Avatar-image" src="./source/25023.png"></div>
-                          </div>
-                        </div>
-                        <div class="mr-4"><span class="max-w-[90px] w-[90px] truncate block font-semibold">LADYS</span>
-                          <div class="flex items-end pt-[1px]"><span
-                              class="text-xs text-gray-500 dark:text-gray-400">0x1297.</span><button
-                              class="mantine-focus-auto mantine-active inline min-w-0 min-h-0 w-[16px] h-[18px] border-t-[2px] border-t-transparent m-8d3f4000 mantine-ActionIcon-root m-87cf2631 mantine-UnstyledButton-root"
-                              data-variant="subtle" type="button"
-                              style="--ai-bg: transparent; --ai-hover: var(--mantine-color-gray-light-hover); --ai-color: var(--mantine-color-gray-light-color); --ai-bd: calc(0.0625rem * var(--mantine-scale)) solid transparent;"><span
-                                class="m-302b9fb1 mantine-ActionIcon-loader" aria-hidden="true"><span
-                                  class="m-b34414df m-5ae2e3c mantine-Loader-root"
-                                  style="--loader-size: calc(var(--ai-size) * 0.55); --loader-color: var(--ai-color);"></span></span><span
-                                class="m-8d3afb97 mantine-ActionIcon-icon"><svg xmlns="http://www.w3.org/2000/svg"
-                                  width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                                  stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-                                  class="tabler-icon tabler-icon-copy"
-                                  style="width: calc(1rem * var(--mantine-scale)); height: calc(1rem * var(--mantine-scale));">
-                                  <path
-                                    d="M8 8m0 2a2 2 0 0 1 2 -2h8a2 2 0 0 1 2 2v8a2 2 0 0 1 -2 2h-8a2 2 0 0 1 -2 -2z">
-                                  </path>
-                                  <path d="M16 8v-2a2 2 0 0 0 -2 -2h-8a2 2 0 0 0 -2 2v8a2 2 0 0 0 2 2h2"></path>
-                                </svg></span></button></div>
-                        </div>
-                      </div>
-                    </td>
-                    <td class="px-2 py-2.5 align-top">$113.3K</td>
-                    <td class="px-2 py-2.5 align-top">$0.0₆1831</td>
-                    <td class="px-2 py-2.5 align-top">$0.0₆1828</td>
-                  </tr>
-                  <tr class="bg-transparent border-b dark:border-[#353535]">
-                    <td class="pl-2 pr-0 text-xs pt-3.5 align-top">25</td>
-                    <td class="px-2 py-2.5 align-top">
-                      <div class="cursor-pointer items-start m-4081bf90 mantine-Group-root"
-                        style="--group-gap: calc(0.0625rem * var(--mantine-scale)); --group-align: center; --group-justify: flex-start; --group-wrap: nowrap; width: calc(6.25rem * var(--mantine-scale));">
-                        <div class="mr-2 mt-[2px]">
-                          <div class="m-e5262200 mantine-Indicator-root"
-                            style="--indicator-color: var(--mantine-color-gray-filled); --indicator-size: calc(0.75rem * var(--mantine-scale)); --indicator-z-index: 10; --indicator-top: calc(0.25rem * var(--mantine-scale)); --indicator-right: calc(0.25rem * var(--mantine-scale)); --indicator-translate-x: 50%; --indicator-translate-y: -50%;">
-                            <div class="TokenLogo_indicator__N1X7W m-760d1fb1 mantine-Indicator-indicator"
-                              data-with-label="true" data-with-border="true"><img class="m-9e117634 mantine-Image-root"
-                                src="./source/ethereum.png"
-                                style="width: calc(0.625rem * var(--mantine-scale)); height: calc(0.625rem * var(--mantine-scale));">
-                            </div>
-                            <div class="m-f85678b6 mantine-Avatar-root"
-                              style="--avatar-size: calc(1.375rem * var(--mantine-scale)); --avatar-radius: var(--mantine-radius-xl);">
-                              <img class="m-11f8ac07 mantine-Avatar-image" src="./source/28298.png"></div>
-                          </div>
-                        </div>
-                        <div class="mr-4"><span class="max-w-[90px] w-[90px] truncate block font-semibold">BEAM</span>
-                          <div class="flex items-end pt-[1px]"><span
-                              class="text-xs text-gray-500 dark:text-gray-400">0x62d0.</span><button
-                              class="mantine-focus-auto mantine-active inline min-w-0 min-h-0 w-[16px] h-[18px] border-t-[2px] border-t-transparent m-8d3f4000 mantine-ActionIcon-root m-87cf2631 mantine-UnstyledButton-root"
-                              data-variant="subtle" type="button"
-                              style="--ai-bg: transparent; --ai-hover: var(--mantine-color-gray-light-hover); --ai-color: var(--mantine-color-gray-light-color); --ai-bd: calc(0.0625rem * var(--mantine-scale)) solid transparent;"><span
-                                class="m-302b9fb1 mantine-ActionIcon-loader" aria-hidden="true"><span
-                                  class="m-b34414df m-5ae2e3c mantine-Loader-root"
-                                  style="--loader-size: calc(var(--ai-size) * 0.55); --loader-color: var(--ai-color);"></span></span><span
-                                class="m-8d3afb97 mantine-ActionIcon-icon"><svg xmlns="http://www.w3.org/2000/svg"
-                                  width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                                  stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-                                  class="tabler-icon tabler-icon-copy"
-                                  style="width: calc(1rem * var(--mantine-scale)); height: calc(1rem * var(--mantine-scale));">
-                                  <path
-                                    d="M8 8m0 2a2 2 0 0 1 2 -2h8a2 2 0 0 1 2 2v8a2 2 0 0 1 -2 2h-8a2 2 0 0 1 -2 -2z">
-                                  </path>
-                                  <path d="M16 8v-2a2 2 0 0 0 -2 -2h-8a2 2 0 0 0 -2 2v8a2 2 0 0 0 2 2h2"></path>
-                                </svg></span></button></div>
-                        </div>
-                      </div>
-                    </td>
-                    <td class="px-2 py-2.5 align-top">$101.4K</td>
-                    <td class="px-2 py-2.5 align-top">$0.02881</td>
-                    <td class="px-2 py-2.5 align-top">$0.0271</td>
-                  </tr>
+                  </tr> -->
+
                 </tbody>
               </table>
             </div>
@@ -1582,202 +527,210 @@
       <div class="m-d2b315db m-9df02822 mantine-Spotlight-root" data-scrollable="true"
         style="--modal-size: calc(37.5rem * var(--mantine-scale)); --modal-y-offset: calc(5rem * var(--mantine-scale)); --spotlight-max-height: calc(21.875rem * var(--mantine-scale)); --mb-z-index: 9999; --mb-padding: 0rem;">
         <div class="mantine-Spotlight-overlay m-9814e45f mantine-Overlay-root" data-fixed="true"
-        style="--overlay-bg: rgba(0, 0, 0, 0.35); --overlay-filter: blur(calc(0.4375rem * var(--mantine-scale))); --overlay-z-index: 9999; transition-property: opacity; transition-duration: 200ms; transition-timing-function: ease; opacity: 1;">
-      </div>
-      <div class="m-60c222c7 m-1f958f16 mantine-Spotlight-inner">
-        <section id="popup-search-section" class="m-fd1ab0aa m-3cd250e0 m-54c44539 mantine-Spotlight-content m-1b7284a3 mantine-Paper-root"
-          role="dialog" tabindex="-1" aria-modal="true" aria-describedby="mantine-4cnctubcp-body"
-          style="transition-property: transform, opacity; transition-duration: 200ms; transition-timing-function: ease; transform-origin: center center; opacity: 1; transform: scale(1);">
-          <div class="m-5df29311 m-d2abce9b mantine-Spotlight-body" id="mantine-4cnctubcp-body">
-            <div class="m-6c018570 mantine-Input-wrapper" data-variant="default" data-size="md"
-              data-with-left-section="true"
-              style="--input-height: var(--input-height-md); --input-fz: var(--mantine-font-size-md); --input-left-section-pointer-events: none; --input-right-section-pointer-events: none;">
-              <div data-position="left" class="m-82577fc2 mantine-Input-section"><svg
-                  xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none"
-                  stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-                  class="tabler-icon tabler-icon-search">
-                  <path d="M10 10m-7 0a7 7 0 1 0 14 0a7 7 0 1 0 -14 0"></path>
-                  <path d="M21 21l-6 -6"></path>
-                </svg></div><input class="m-f366a061 mantine-Spotlight-search m-8fb7ebe7 mantine-Input-input"
-                data-variant="default" placeholder="Search tokens..." data-autofocus="true" autocomplete="off"
-                autosave="off" autocorrect="off" aria-invalid="false" value="">
+          style="--overlay-bg: rgba(0, 0, 0, 0.35); --overlay-filter: blur(calc(0.4375rem * var(--mantine-scale))); --overlay-z-index: 9999; transition-property: opacity; transition-duration: 200ms; transition-timing-function: ease; opacity: 1;">
+        </div>
+        <div class="m-60c222c7 m-1f958f16 mantine-Spotlight-inner">
+          <section id="popup-search-section"
+            class="m-fd1ab0aa m-3cd250e0 m-54c44539 mantine-Spotlight-content m-1b7284a3 mantine-Paper-root"
+            role="dialog" tabindex="-1" aria-modal="true" aria-describedby="mantine-4cnctubcp-body"
+            style="transition-property: transform, opacity; transition-duration: 200ms; transition-timing-function: ease; transform-origin: center center; opacity: 1; transform: scale(1);">
+            <div class="m-5df29311 m-d2abce9b mantine-Spotlight-body" id="mantine-4cnctubcp-body">
+              <div class="m-6c018570 mantine-Input-wrapper" data-variant="default" data-size="md"
+                data-with-left-section="true"
+                style="--input-height: var(--input-height-md); --input-fz: var(--mantine-font-size-md); --input-left-section-pointer-events: none; --input-right-section-pointer-events: none;">
+                <div data-position="left" class="m-82577fc2 mantine-Input-section"><svg
+                    xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                    class="tabler-icon tabler-icon-search">
+                    <path d="M10 10m-7 0a7 7 0 1 0 14 0a7 7 0 1 0 -14 0"></path>
+                    <path d="M21 21l-6 -6"></path>
+                  </svg></div><input class="m-f366a061 mantine-Spotlight-search m-8fb7ebe7 mantine-Input-input"
+                  data-variant="default" placeholder="Search tokens..." data-autofocus="true" autocomplete="off"
+                  autosave="off" autocorrect="off" aria-invalid="false" value="">
+              </div>
+              <div class="m-4081bf90 mantine-Group-root"
+                style="--group-gap: calc(0.0625rem * var(--mantine-scale)); --group-align: center; --group-justify: flex-start; --group-wrap: nowrap; padding-right: calc(0.5rem * var(--mantine-scale)); padding-left: calc(0.5rem * var(--mantine-scale));">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" height="16px" width="16px"
+                  viewBox="0 0 24 24" color="#FF775F">
+                  <path
+                    d="M17.0881 9.42254C16.4368 8.90717 15.8155 8.35512 15.3012 7.71336C12.3755 4.06357 13.8912 1 13.8912 1C8.46026 3.18334 7.22337 6.64895 7.16462 9.22981L7.1675 9.2572C7.1675 9.2572 7.21498 10.7365 7.90791 12.3625C8.12481 12.8713 7.88299 13.4666 7.33195 13.6199C6.87638 13.7465 6.40822 13.5317 6.21571 13.1314C5.90413 12.4831 5.49262 11.4521 5.6109 10.7249C4.75064 11.817 4.1815 13.1452 4.03542 14.6184C3.65092 18.4924 6.43759 22.0879 10.4208 22.8488C14.9906 23.7217 19.3121 20.7182 19.9269 16.3623C20.3117 13.6367 19.1498 11.0538 17.0881 9.42254ZM14.3578 17.7393C14.3289 17.776 13.5893 18.6597 12.3501 18.7517C12.2829 18.7547 12.2124 18.7577 12.1452 18.7577C11.2902 18.7577 10.4226 18.3682 9.56103 17.5951L9.37219 17.4262L9.61243 17.3372C9.62843 17.3312 11.2742 16.7236 11.6778 15.4077C11.8155 14.9629 11.7707 14.4566 11.553 13.9842C11.2905 13.4075 10.7845 11.9564 11.7453 10.9041L11.9309 10.7015L12.0206 10.9561C12.0238 10.9714 12.6034 12.5911 13.9741 13.4379C14.3871 13.6957 14.6977 14.0086 14.8931 14.3644C15.2959 15.1132 15.533 16.3065 14.3578 17.7393Z">
+                  </path>
+                </svg>
+                <p class="mantine-focus-auto m-b6d8b162 mantine-Text-root"
+                  style="padding-right: calc(0.375rem * var(--mantine-scale)); padding-left: calc(0.375rem * var(--mantine-scale)); padding-top: calc(0.25rem * var(--mantine-scale)); padding-bottom: calc(0.25rem * var(--mantine-scale)); opacity: 0.5; font-size: var(--mantine-font-size-xs);">
+                  Social Trending</p>
+              </div><button
+                class="mantine-focus-auto SearchTokenDetailSpotlight_action_item__vD0IY m-d49bb8ef mantine-Spotlight-action m-87cf2631 mantine-UnstyledButton-root"
+                type="button" data-action="true" tabindex="-1">
+                <div class="m-4081bf90 mantine-Group-root"
+                  style="--group-gap: var(--mantine-spacing-md); --group-align: center; --group-justify: flex-start; --group-wrap: nowrap; width: 100%;">
+                  <div class="m-e5262200 mantine-Indicator-root"
+                    style="--indicator-color: var(--mantine-color-gray-filled); --indicator-size: calc(0.75rem * var(--mantine-scale)); --indicator-z-index: 10; --indicator-top: calc(0.25rem * var(--mantine-scale)); --indicator-right: calc(0.25rem * var(--mantine-scale)); --indicator-translate-x: 50%; --indicator-translate-y: -50%;">
+                    <div class="TokenLogo_indicator__N1X7W m-760d1fb1 mantine-Indicator-indicator"
+                      data-with-label="true" data-with-border="true"><img class="m-9e117634 mantine-Image-root"
+                        src="./source/ethereum.png"
+                        style="width: calc(0.625rem * var(--mantine-scale)); height: calc(0.625rem * var(--mantine-scale));">
+                    </div>
+                    <div class="m-f85678b6 mantine-Avatar-root"
+                      style="--avatar-size: calc(1.375rem * var(--mantine-scale)); --avatar-radius: var(--mantine-radius-xl);">
+                      <img class="m-11f8ac07 mantine-Avatar-image" src="./source/30171.png">
+                    </div>
+                  </div>
+                  <div style="flex: 1 1 0%;">
+                    <p class="mantine-focus-auto m-b6d8b162 mantine-Text-root">ENA</p>
+                    <p class="mantine-focus-auto m-b6d8b162 mantine-Text-root" data-size="xs"
+                      style="--text-fz: var(--mantine-font-size-xs); --text-lh: var(--mantine-line-height-xs); opacity: 0.6;">
+                      0x57e1…6061</p>
+                  </div>
+                </div>
+              </button><button
+                class="mantine-focus-auto SearchTokenDetailSpotlight_action_item__vD0IY m-d49bb8ef mantine-Spotlight-action m-87cf2631 mantine-UnstyledButton-root"
+                type="button" data-action="true" tabindex="-1">
+                <div class="m-4081bf90 mantine-Group-root"
+                  style="--group-gap: var(--mantine-spacing-md); --group-align: center; --group-justify: flex-start; --group-wrap: nowrap; width: 100%;">
+                  <div class="m-e5262200 mantine-Indicator-root"
+                    style="--indicator-color: var(--mantine-color-gray-filled); --indicator-size: calc(0.75rem * var(--mantine-scale)); --indicator-z-index: 10; --indicator-top: calc(0.25rem * var(--mantine-scale)); --indicator-right: calc(0.25rem * var(--mantine-scale)); --indicator-translate-x: 50%; --indicator-translate-y: -50%;">
+                    <div class="TokenLogo_indicator__N1X7W m-760d1fb1 mantine-Indicator-indicator"
+                      data-with-label="true" data-with-border="true"><img class="m-9e117634 mantine-Image-root"
+                        src="./source/ethereum.png"
+                        style="width: calc(0.625rem * var(--mantine-scale)); height: calc(0.625rem * var(--mantine-scale));">
+                    </div>
+                    <div class="m-f85678b6 mantine-Avatar-root"
+                      style="--avatar-size: calc(1.375rem * var(--mantine-scale)); --avatar-radius: var(--mantine-radius-xl);">
+                      <img class="m-11f8ac07 mantine-Avatar-image" src="./source/29555.png">
+                    </div>
+                  </div>
+                  <div style="flex: 1 1 0%;">
+                    <p class="mantine-focus-auto m-b6d8b162 mantine-Text-root">PORTAL</p>
+                    <p class="mantine-focus-auto m-b6d8b162 mantine-Text-root" data-size="xs"
+                      style="--text-fz: var(--mantine-font-size-xs); --text-lh: var(--mantine-line-height-xs); opacity: 0.6;">
+                      0x1bbe…1fed</p>
+                  </div>
+                </div>
+              </button><button
+                class="mantine-focus-auto SearchTokenDetailSpotlight_action_item__vD0IY m-d49bb8ef mantine-Spotlight-action m-87cf2631 mantine-UnstyledButton-root"
+                type="button" data-action="true" tabindex="-1">
+                <div class="m-4081bf90 mantine-Group-root"
+                  style="--group-gap: var(--mantine-spacing-md); --group-align: center; --group-justify: flex-start; --group-wrap: nowrap; width: 100%;">
+                  <div class="m-e5262200 mantine-Indicator-root"
+                    style="--indicator-color: var(--mantine-color-gray-filled); --indicator-size: calc(0.75rem * var(--mantine-scale)); --indicator-z-index: 10; --indicator-top: calc(0.25rem * var(--mantine-scale)); --indicator-right: calc(0.25rem * var(--mantine-scale)); --indicator-translate-x: 50%; --indicator-translate-y: -50%;">
+                    <div class="TokenLogo_indicator__N1X7W m-760d1fb1 mantine-Indicator-indicator"
+                      data-with-label="true" data-with-border="true"><img class="m-9e117634 mantine-Image-root"
+                        src="./source/ethereum.png"
+                        style="width: calc(0.625rem * var(--mantine-scale)); height: calc(0.625rem * var(--mantine-scale));">
+                    </div>
+                    <div class="m-f85678b6 mantine-Avatar-root"
+                      style="--avatar-size: calc(1.375rem * var(--mantine-scale)); --avatar-radius: var(--mantine-radius-xl);">
+                      <img class="m-11f8ac07 mantine-Avatar-image" src="./source/31008.png">
+                    </div>
+                  </div>
+                  <div style="flex: 1 1 0%;">
+                    <p class="mantine-focus-auto m-b6d8b162 mantine-Text-root">THREE</p>
+                    <p class="mantine-focus-auto m-b6d8b162 mantine-Text-root" data-size="xs"
+                      style="--text-fz: var(--mantine-font-size-xs); --text-lh: var(--mantine-line-height-xs); opacity: 0.6;">
+                      0xa059…f419</p>
+                  </div>
+                </div>
+              </button><button
+                class="mantine-focus-auto SearchTokenDetailSpotlight_action_item__vD0IY m-d49bb8ef mantine-Spotlight-action m-87cf2631 mantine-UnstyledButton-root"
+                type="button" data-action="true" tabindex="-1">
+                <div class="m-4081bf90 mantine-Group-root"
+                  style="--group-gap: var(--mantine-spacing-md); --group-align: center; --group-justify: flex-start; --group-wrap: nowrap; width: 100%;">
+                  <div class="m-e5262200 mantine-Indicator-root"
+                    style="--indicator-color: var(--mantine-color-gray-filled); --indicator-size: calc(0.75rem * var(--mantine-scale)); --indicator-z-index: 10; --indicator-top: calc(0.25rem * var(--mantine-scale)); --indicator-right: calc(0.25rem * var(--mantine-scale)); --indicator-translate-x: 50%; --indicator-translate-y: -50%;">
+                    <div class="TokenLogo_indicator__N1X7W m-760d1fb1 mantine-Indicator-indicator"
+                      data-with-label="true" data-with-border="true"><img class="m-9e117634 mantine-Image-root"
+                        src="./source/ethereum.png"
+                        style="width: calc(0.625rem * var(--mantine-scale)); height: calc(0.625rem * var(--mantine-scale));">
+                    </div>
+                    <div class="m-f85678b6 mantine-Avatar-root"
+                      style="--avatar-size: calc(1.375rem * var(--mantine-scale)); --avatar-radius: var(--mantine-radius-xl);">
+                      <img class="m-11f8ac07 mantine-Avatar-image" src="./source/10729.png">
+                    </div>
+                  </div>
+                  <div style="flex: 1 1 0%;">
+                    <p class="mantine-focus-auto m-b6d8b162 mantine-Text-root">UFO</p>
+                    <p class="mantine-focus-auto m-b6d8b162 mantine-Text-root" data-size="xs"
+                      style="--text-fz: var(--mantine-font-size-xs); --text-lh: var(--mantine-line-height-xs); opacity: 0.6;">
+                      0x249e…dc3b</p>
+                  </div>
+                </div>
+              </button><button
+                class="mantine-focus-auto SearchTokenDetailSpotlight_action_item__vD0IY m-d49bb8ef mantine-Spotlight-action m-87cf2631 mantine-UnstyledButton-root"
+                type="button" data-action="true" tabindex="-1">
+                <div class="m-4081bf90 mantine-Group-root"
+                  style="--group-gap: var(--mantine-spacing-md); --group-align: center; --group-justify: flex-start; --group-wrap: nowrap; width: 100%;">
+                  <div class="m-e5262200 mantine-Indicator-root"
+                    style="--indicator-color: var(--mantine-color-gray-filled); --indicator-size: calc(0.75rem * var(--mantine-scale)); --indicator-z-index: 10; --indicator-top: calc(0.25rem * var(--mantine-scale)); --indicator-right: calc(0.25rem * var(--mantine-scale)); --indicator-translate-x: 50%; --indicator-translate-y: -50%;">
+                    <div class="TokenLogo_indicator__N1X7W m-760d1fb1 mantine-Indicator-indicator"
+                      data-with-label="true" data-with-border="true"><img class="m-9e117634 mantine-Image-root"
+                        src="./source/ethereum.png"
+                        style="width: calc(0.625rem * var(--mantine-scale)); height: calc(0.625rem * var(--mantine-scale));">
+                    </div>
+                    <div class="m-f85678b6 mantine-Avatar-root"
+                      style="--avatar-size: calc(1.375rem * var(--mantine-scale)); --avatar-radius: var(--mantine-radius-xl);">
+                      <img class="m-11f8ac07 mantine-Avatar-image" src="./source/7461.png">
+                    </div>
+                  </div>
+                  <div style="flex: 1 1 0%;">
+                    <p class="mantine-focus-auto m-b6d8b162 mantine-Text-root">PDA</p>
+                    <p class="mantine-focus-auto m-b6d8b162 mantine-Text-root" data-size="xs"
+                      style="--text-fz: var(--mantine-font-size-xs); --text-lh: var(--mantine-line-height-xs); opacity: 0.6;">
+                      0x0d3c…3a2b</p>
+                  </div>
+                </div>
+              </button><button
+                class="mantine-focus-auto SearchTokenDetailSpotlight_action_item__vD0IY m-d49bb8ef mantine-Spotlight-action m-87cf2631 mantine-UnstyledButton-root"
+                type="button" data-action="true" tabindex="-1">
+                <div class="m-4081bf90 mantine-Group-root"
+                  style="--group-gap: var(--mantine-spacing-md); --group-align: center; --group-justify: flex-start; --group-wrap: nowrap; width: 100%;">
+                  <div class="m-e5262200 mantine-Indicator-root"
+                    style="--indicator-color: var(--mantine-color-gray-filled); --indicator-size: calc(0.75rem * var(--mantine-scale)); --indicator-z-index: 10; --indicator-top: calc(0.25rem * var(--mantine-scale)); --indicator-right: calc(0.25rem * var(--mantine-scale)); --indicator-translate-x: 50%; --indicator-translate-y: -50%;">
+                    <div class="TokenLogo_indicator__N1X7W m-760d1fb1 mantine-Indicator-indicator"
+                      data-with-label="true" data-with-border="true"><img class="m-9e117634 mantine-Image-root"
+                        src="./source/ethereum.png"
+                        style="width: calc(0.625rem * var(--mantine-scale)); height: calc(0.625rem * var(--mantine-scale));">
+                    </div>
+                    <div class="m-f85678b6 mantine-Avatar-root"
+                      style="--avatar-size: calc(1.375rem * var(--mantine-scale)); --avatar-radius: var(--mantine-radius-xl);">
+                      <img class="m-11f8ac07 mantine-Avatar-image" src="./source/18679.png">
+                    </div>
+                  </div>
+                  <div style="flex: 1 1 0%;">
+                    <p class="mantine-focus-auto m-b6d8b162 mantine-Text-root">XCN</p>
+                    <p class="mantine-focus-auto m-b6d8b162 mantine-Text-root" data-size="xs"
+                      style="--text-fz: var(--mantine-font-size-xs); --text-lh: var(--mantine-line-height-xs); opacity: 0.6;">
+                      0xa2cd…fb18</p>
+                  </div>
+                </div>
+              </button><button
+                class="mantine-focus-auto SearchTokenDetailSpotlight_action_item__vD0IY m-d49bb8ef mantine-Spotlight-action m-87cf2631 mantine-UnstyledButton-root"
+                type="button" data-action="true" tabindex="-1">
+                <div class="m-4081bf90 mantine-Group-root"
+                  style="--group-gap: var(--mantine-spacing-md); --group-align: center; --group-justify: flex-start; --group-wrap: nowrap; width: 100%;">
+                  <div class="m-e5262200 mantine-Indicator-root"
+                    style="--indicator-color: var(--mantine-color-gray-filled); --indicator-size: calc(0.75rem * var(--mantine-scale)); --indicator-z-index: 10; --indicator-top: calc(0.25rem * var(--mantine-scale)); --indicator-right: calc(0.25rem * var(--mantine-scale)); --indicator-translate-x: 50%; --indicator-translate-y: -50%;">
+                    <div class="TokenLogo_indicator__N1X7W m-760d1fb1 mantine-Indicator-indicator"
+                      data-with-label="true" data-with-border="true"><img class="m-9e117634 mantine-Image-root"
+                        src="./source/ethereum.png"
+                        style="width: calc(0.625rem * var(--mantine-scale)); height: calc(0.625rem * var(--mantine-scale));">
+                    </div>
+                    <div class="m-f85678b6 mantine-Avatar-root"
+                      style="--avatar-size: calc(1.375rem * var(--mantine-scale)); --avatar-radius: var(--mantine-radius-xl);">
+                      <img class="m-11f8ac07 mantine-Avatar-image" src="./source/30053.png">
+                    </div>
+                  </div>
+                  <div style="flex: 1 1 0%;">
+                    <p class="mantine-focus-auto m-b6d8b162 mantine-Text-root">MDAI</p>
+                    <p class="mantine-focus-auto m-b6d8b162 mantine-Text-root" data-size="xs"
+                      style="--text-fz: var(--mantine-font-size-xs); --text-lh: var(--mantine-line-height-xs); opacity: 0.6;">
+                      0xb549…ff97</p>
+                  </div>
+                </div>
+              </button>
             </div>
-            <div class="m-4081bf90 mantine-Group-root"
-              style="--group-gap: calc(0.0625rem * var(--mantine-scale)); --group-align: center; --group-justify: flex-start; --group-wrap: nowrap; padding-right: calc(0.5rem * var(--mantine-scale)); padding-left: calc(0.5rem * var(--mantine-scale));">
-              <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" height="16px" width="16px"
-                viewBox="0 0 24 24" color="#FF775F">
-                <path
-                  d="M17.0881 9.42254C16.4368 8.90717 15.8155 8.35512 15.3012 7.71336C12.3755 4.06357 13.8912 1 13.8912 1C8.46026 3.18334 7.22337 6.64895 7.16462 9.22981L7.1675 9.2572C7.1675 9.2572 7.21498 10.7365 7.90791 12.3625C8.12481 12.8713 7.88299 13.4666 7.33195 13.6199C6.87638 13.7465 6.40822 13.5317 6.21571 13.1314C5.90413 12.4831 5.49262 11.4521 5.6109 10.7249C4.75064 11.817 4.1815 13.1452 4.03542 14.6184C3.65092 18.4924 6.43759 22.0879 10.4208 22.8488C14.9906 23.7217 19.3121 20.7182 19.9269 16.3623C20.3117 13.6367 19.1498 11.0538 17.0881 9.42254ZM14.3578 17.7393C14.3289 17.776 13.5893 18.6597 12.3501 18.7517C12.2829 18.7547 12.2124 18.7577 12.1452 18.7577C11.2902 18.7577 10.4226 18.3682 9.56103 17.5951L9.37219 17.4262L9.61243 17.3372C9.62843 17.3312 11.2742 16.7236 11.6778 15.4077C11.8155 14.9629 11.7707 14.4566 11.553 13.9842C11.2905 13.4075 10.7845 11.9564 11.7453 10.9041L11.9309 10.7015L12.0206 10.9561C12.0238 10.9714 12.6034 12.5911 13.9741 13.4379C14.3871 13.6957 14.6977 14.0086 14.8931 14.3644C15.2959 15.1132 15.533 16.3065 14.3578 17.7393Z">
-                </path>
-              </svg>
-              <p class="mantine-focus-auto m-b6d8b162 mantine-Text-root"
-                style="padding-right: calc(0.375rem * var(--mantine-scale)); padding-left: calc(0.375rem * var(--mantine-scale)); padding-top: calc(0.25rem * var(--mantine-scale)); padding-bottom: calc(0.25rem * var(--mantine-scale)); opacity: 0.5; font-size: var(--mantine-font-size-xs);">
-                Social Trending</p>
-            </div><button
-              class="mantine-focus-auto SearchTokenDetailSpotlight_action_item__vD0IY m-d49bb8ef mantine-Spotlight-action m-87cf2631 mantine-UnstyledButton-root"
-              type="button" data-action="true" tabindex="-1">
-              <div class="m-4081bf90 mantine-Group-root"
-                style="--group-gap: var(--mantine-spacing-md); --group-align: center; --group-justify: flex-start; --group-wrap: nowrap; width: 100%;">
-                <div class="m-e5262200 mantine-Indicator-root"
-                  style="--indicator-color: var(--mantine-color-gray-filled); --indicator-size: calc(0.75rem * var(--mantine-scale)); --indicator-z-index: 10; --indicator-top: calc(0.25rem * var(--mantine-scale)); --indicator-right: calc(0.25rem * var(--mantine-scale)); --indicator-translate-x: 50%; --indicator-translate-y: -50%;">
-                  <div class="TokenLogo_indicator__N1X7W m-760d1fb1 mantine-Indicator-indicator"
-                    data-with-label="true" data-with-border="true"><img class="m-9e117634 mantine-Image-root"
-                      src="./source/ethereum.png"
-                      style="width: calc(0.625rem * var(--mantine-scale)); height: calc(0.625rem * var(--mantine-scale));">
-                  </div>
-                  <div class="m-f85678b6 mantine-Avatar-root"
-                    style="--avatar-size: calc(1.375rem * var(--mantine-scale)); --avatar-radius: var(--mantine-radius-xl);">
-                    <img class="m-11f8ac07 mantine-Avatar-image" src="./source/30171.png"></div>
-                </div>
-                <div style="flex: 1 1 0%;">
-                  <p class="mantine-focus-auto m-b6d8b162 mantine-Text-root">ENA</p>
-                  <p class="mantine-focus-auto m-b6d8b162 mantine-Text-root" data-size="xs"
-                    style="--text-fz: var(--mantine-font-size-xs); --text-lh: var(--mantine-line-height-xs); opacity: 0.6;">
-                    0x57e1…6061</p>
-                </div>
-              </div>
-            </button><button
-              class="mantine-focus-auto SearchTokenDetailSpotlight_action_item__vD0IY m-d49bb8ef mantine-Spotlight-action m-87cf2631 mantine-UnstyledButton-root"
-              type="button" data-action="true" tabindex="-1">
-              <div class="m-4081bf90 mantine-Group-root"
-                style="--group-gap: var(--mantine-spacing-md); --group-align: center; --group-justify: flex-start; --group-wrap: nowrap; width: 100%;">
-                <div class="m-e5262200 mantine-Indicator-root"
-                  style="--indicator-color: var(--mantine-color-gray-filled); --indicator-size: calc(0.75rem * var(--mantine-scale)); --indicator-z-index: 10; --indicator-top: calc(0.25rem * var(--mantine-scale)); --indicator-right: calc(0.25rem * var(--mantine-scale)); --indicator-translate-x: 50%; --indicator-translate-y: -50%;">
-                  <div class="TokenLogo_indicator__N1X7W m-760d1fb1 mantine-Indicator-indicator"
-                    data-with-label="true" data-with-border="true"><img class="m-9e117634 mantine-Image-root"
-                      src="./source/ethereum.png"
-                      style="width: calc(0.625rem * var(--mantine-scale)); height: calc(0.625rem * var(--mantine-scale));">
-                  </div>
-                  <div class="m-f85678b6 mantine-Avatar-root"
-                    style="--avatar-size: calc(1.375rem * var(--mantine-scale)); --avatar-radius: var(--mantine-radius-xl);">
-                    <img class="m-11f8ac07 mantine-Avatar-image" src="./source/29555.png"></div>
-                </div>
-                <div style="flex: 1 1 0%;">
-                  <p class="mantine-focus-auto m-b6d8b162 mantine-Text-root">PORTAL</p>
-                  <p class="mantine-focus-auto m-b6d8b162 mantine-Text-root" data-size="xs"
-                    style="--text-fz: var(--mantine-font-size-xs); --text-lh: var(--mantine-line-height-xs); opacity: 0.6;">
-                    0x1bbe…1fed</p>
-                </div>
-              </div>
-            </button><button
-              class="mantine-focus-auto SearchTokenDetailSpotlight_action_item__vD0IY m-d49bb8ef mantine-Spotlight-action m-87cf2631 mantine-UnstyledButton-root"
-              type="button" data-action="true" tabindex="-1">
-              <div class="m-4081bf90 mantine-Group-root"
-                style="--group-gap: var(--mantine-spacing-md); --group-align: center; --group-justify: flex-start; --group-wrap: nowrap; width: 100%;">
-                <div class="m-e5262200 mantine-Indicator-root"
-                  style="--indicator-color: var(--mantine-color-gray-filled); --indicator-size: calc(0.75rem * var(--mantine-scale)); --indicator-z-index: 10; --indicator-top: calc(0.25rem * var(--mantine-scale)); --indicator-right: calc(0.25rem * var(--mantine-scale)); --indicator-translate-x: 50%; --indicator-translate-y: -50%;">
-                  <div class="TokenLogo_indicator__N1X7W m-760d1fb1 mantine-Indicator-indicator"
-                    data-with-label="true" data-with-border="true"><img class="m-9e117634 mantine-Image-root"
-                      src="./source/ethereum.png"
-                      style="width: calc(0.625rem * var(--mantine-scale)); height: calc(0.625rem * var(--mantine-scale));">
-                  </div>
-                  <div class="m-f85678b6 mantine-Avatar-root"
-                    style="--avatar-size: calc(1.375rem * var(--mantine-scale)); --avatar-radius: var(--mantine-radius-xl);">
-                    <img class="m-11f8ac07 mantine-Avatar-image" src="./source/31008.png"></div>
-                </div>
-                <div style="flex: 1 1 0%;">
-                  <p class="mantine-focus-auto m-b6d8b162 mantine-Text-root">THREE</p>
-                  <p class="mantine-focus-auto m-b6d8b162 mantine-Text-root" data-size="xs"
-                    style="--text-fz: var(--mantine-font-size-xs); --text-lh: var(--mantine-line-height-xs); opacity: 0.6;">
-                    0xa059…f419</p>
-                </div>
-              </div>
-            </button><button
-              class="mantine-focus-auto SearchTokenDetailSpotlight_action_item__vD0IY m-d49bb8ef mantine-Spotlight-action m-87cf2631 mantine-UnstyledButton-root"
-              type="button" data-action="true" tabindex="-1">
-              <div class="m-4081bf90 mantine-Group-root"
-                style="--group-gap: var(--mantine-spacing-md); --group-align: center; --group-justify: flex-start; --group-wrap: nowrap; width: 100%;">
-                <div class="m-e5262200 mantine-Indicator-root"
-                  style="--indicator-color: var(--mantine-color-gray-filled); --indicator-size: calc(0.75rem * var(--mantine-scale)); --indicator-z-index: 10; --indicator-top: calc(0.25rem * var(--mantine-scale)); --indicator-right: calc(0.25rem * var(--mantine-scale)); --indicator-translate-x: 50%; --indicator-translate-y: -50%;">
-                  <div class="TokenLogo_indicator__N1X7W m-760d1fb1 mantine-Indicator-indicator"
-                    data-with-label="true" data-with-border="true"><img class="m-9e117634 mantine-Image-root"
-                      src="./source/ethereum.png"
-                      style="width: calc(0.625rem * var(--mantine-scale)); height: calc(0.625rem * var(--mantine-scale));">
-                  </div>
-                  <div class="m-f85678b6 mantine-Avatar-root"
-                    style="--avatar-size: calc(1.375rem * var(--mantine-scale)); --avatar-radius: var(--mantine-radius-xl);">
-                    <img class="m-11f8ac07 mantine-Avatar-image" src="./source/10729.png"></div>
-                </div>
-                <div style="flex: 1 1 0%;">
-                  <p class="mantine-focus-auto m-b6d8b162 mantine-Text-root">UFO</p>
-                  <p class="mantine-focus-auto m-b6d8b162 mantine-Text-root" data-size="xs"
-                    style="--text-fz: var(--mantine-font-size-xs); --text-lh: var(--mantine-line-height-xs); opacity: 0.6;">
-                    0x249e…dc3b</p>
-                </div>
-              </div>
-            </button><button
-              class="mantine-focus-auto SearchTokenDetailSpotlight_action_item__vD0IY m-d49bb8ef mantine-Spotlight-action m-87cf2631 mantine-UnstyledButton-root"
-              type="button" data-action="true" tabindex="-1">
-              <div class="m-4081bf90 mantine-Group-root"
-                style="--group-gap: var(--mantine-spacing-md); --group-align: center; --group-justify: flex-start; --group-wrap: nowrap; width: 100%;">
-                <div class="m-e5262200 mantine-Indicator-root"
-                  style="--indicator-color: var(--mantine-color-gray-filled); --indicator-size: calc(0.75rem * var(--mantine-scale)); --indicator-z-index: 10; --indicator-top: calc(0.25rem * var(--mantine-scale)); --indicator-right: calc(0.25rem * var(--mantine-scale)); --indicator-translate-x: 50%; --indicator-translate-y: -50%;">
-                  <div class="TokenLogo_indicator__N1X7W m-760d1fb1 mantine-Indicator-indicator"
-                    data-with-label="true" data-with-border="true"><img class="m-9e117634 mantine-Image-root"
-                      src="./source/ethereum.png"
-                      style="width: calc(0.625rem * var(--mantine-scale)); height: calc(0.625rem * var(--mantine-scale));">
-                  </div>
-                  <div class="m-f85678b6 mantine-Avatar-root"
-                    style="--avatar-size: calc(1.375rem * var(--mantine-scale)); --avatar-radius: var(--mantine-radius-xl);">
-                    <img class="m-11f8ac07 mantine-Avatar-image" src="./source/7461.png"></div>
-                </div>
-                <div style="flex: 1 1 0%;">
-                  <p class="mantine-focus-auto m-b6d8b162 mantine-Text-root">PDA</p>
-                  <p class="mantine-focus-auto m-b6d8b162 mantine-Text-root" data-size="xs"
-                    style="--text-fz: var(--mantine-font-size-xs); --text-lh: var(--mantine-line-height-xs); opacity: 0.6;">
-                    0x0d3c…3a2b</p>
-                </div>
-              </div>
-            </button><button
-              class="mantine-focus-auto SearchTokenDetailSpotlight_action_item__vD0IY m-d49bb8ef mantine-Spotlight-action m-87cf2631 mantine-UnstyledButton-root"
-              type="button" data-action="true" tabindex="-1">
-              <div class="m-4081bf90 mantine-Group-root"
-                style="--group-gap: var(--mantine-spacing-md); --group-align: center; --group-justify: flex-start; --group-wrap: nowrap; width: 100%;">
-                <div class="m-e5262200 mantine-Indicator-root"
-                  style="--indicator-color: var(--mantine-color-gray-filled); --indicator-size: calc(0.75rem * var(--mantine-scale)); --indicator-z-index: 10; --indicator-top: calc(0.25rem * var(--mantine-scale)); --indicator-right: calc(0.25rem * var(--mantine-scale)); --indicator-translate-x: 50%; --indicator-translate-y: -50%;">
-                  <div class="TokenLogo_indicator__N1X7W m-760d1fb1 mantine-Indicator-indicator"
-                    data-with-label="true" data-with-border="true"><img class="m-9e117634 mantine-Image-root"
-                      src="./source/ethereum.png"
-                      style="width: calc(0.625rem * var(--mantine-scale)); height: calc(0.625rem * var(--mantine-scale));">
-                  </div>
-                  <div class="m-f85678b6 mantine-Avatar-root"
-                    style="--avatar-size: calc(1.375rem * var(--mantine-scale)); --avatar-radius: var(--mantine-radius-xl);">
-                    <img class="m-11f8ac07 mantine-Avatar-image" src="./source/18679.png"></div>
-                </div>
-                <div style="flex: 1 1 0%;">
-                  <p class="mantine-focus-auto m-b6d8b162 mantine-Text-root">XCN</p>
-                  <p class="mantine-focus-auto m-b6d8b162 mantine-Text-root" data-size="xs"
-                    style="--text-fz: var(--mantine-font-size-xs); --text-lh: var(--mantine-line-height-xs); opacity: 0.6;">
-                    0xa2cd…fb18</p>
-                </div>
-              </div>
-            </button><button
-              class="mantine-focus-auto SearchTokenDetailSpotlight_action_item__vD0IY m-d49bb8ef mantine-Spotlight-action m-87cf2631 mantine-UnstyledButton-root"
-              type="button" data-action="true" tabindex="-1">
-              <div class="m-4081bf90 mantine-Group-root"
-                style="--group-gap: var(--mantine-spacing-md); --group-align: center; --group-justify: flex-start; --group-wrap: nowrap; width: 100%;">
-                <div class="m-e5262200 mantine-Indicator-root"
-                  style="--indicator-color: var(--mantine-color-gray-filled); --indicator-size: calc(0.75rem * var(--mantine-scale)); --indicator-z-index: 10; --indicator-top: calc(0.25rem * var(--mantine-scale)); --indicator-right: calc(0.25rem * var(--mantine-scale)); --indicator-translate-x: 50%; --indicator-translate-y: -50%;">
-                  <div class="TokenLogo_indicator__N1X7W m-760d1fb1 mantine-Indicator-indicator"
-                    data-with-label="true" data-with-border="true"><img class="m-9e117634 mantine-Image-root"
-                      src="./source/ethereum.png"
-                      style="width: calc(0.625rem * var(--mantine-scale)); height: calc(0.625rem * var(--mantine-scale));">
-                  </div>
-                  <div class="m-f85678b6 mantine-Avatar-root"
-                    style="--avatar-size: calc(1.375rem * var(--mantine-scale)); --avatar-radius: var(--mantine-radius-xl);">
-                    <img class="m-11f8ac07 mantine-Avatar-image" src="./source/30053.png"></div>
-                </div>
-                <div style="flex: 1 1 0%;">
-                  <p class="mantine-focus-auto m-b6d8b162 mantine-Text-root">MDAI</p>
-                  <p class="mantine-focus-auto m-b6d8b162 mantine-Text-root" data-size="xs"
-                    style="--text-fz: var(--mantine-font-size-xs); --text-lh: var(--mantine-line-height-xs); opacity: 0.6;">
-                    0xb549…ff97</p>
-                </div>
-              </div>
-            </button>
-          </div>
-        </section>
-      </div>
+          </section>
+        </div>
       </div>
     </div>
   </div>
