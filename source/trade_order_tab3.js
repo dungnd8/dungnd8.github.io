@@ -80,6 +80,7 @@ xhttp.onreadystatechange = function() {
             </tr>
             `
             const row = $('#table-trade-order').append(tr)
+            document.querySelector("#icon-loader").style.display = "none"
             i += 1
         }
      }

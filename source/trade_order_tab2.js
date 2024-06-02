@@ -20,21 +20,20 @@ function getColor(type) {
 }
 
 function getColorPnl(pnl) {
+    if (pnl == '-') return
     if (pnl > 0) {
         return "green"
     }
     else return "red"
 }
 
-function calcPnl(type, entry, price) {
-    if (type == "LONG") {
-        return Math.round(- (entry - price) * 100 / entry)
-    }
-    else return Math.round((entry - price) * 100 / entry)
+function getPnl(pnl) {
+  if (pnl == '-') return "-"
+  else return pnl + "%"
 }
 
 function getStatus(status) {
-    if (status == "START") return "---"
+    if (status == "START") return "-----"
     else return status
 }
 
@@ -54,7 +53,12 @@ xhttp.onreadystatechange = function() {
             if (data[i].is_follow) {
                 orderIdFollow.push(data[i].order_id)
             }
-            var pnl = calcPnl(data[i].type, data[i].entry, 0.5)
+            var price = data[i].price
+            var pnl = Math.round(data[i].pnl * 100 * 100) / 100;
+            if (price == 0) {
+              price = '-'
+              pnl = '-'
+            }
             const tr =`
             <tr class="bg-transparent border-b dark:border-[#353535]">
             <td class="pl-2 pr-0 text-xs pt-3.5 align-top">${i+1}</td>
@@ -84,12 +88,13 @@ xhttp.onreadystatechange = function() {
               </div>
             </td>
             <td class="px-2 py-2.5 align-top" style="color: ${getColor(data[i].type)}"><span>${data[i].entry}</span></td>
-            <td class="px-2 py-2.5 align-top"><span>${0.5}</span></td>
-            <td class="px-2 py-2.5 align-top" style="color: ${getColorPnl(pnl)}"><span>${pnl}%</span></td>
+            <td class="px-2 py-2.5 align-top"><span>${price}</span></td>
+            <td class="px-2 py-2.5 align-top" style="color: ${getColorPnl(pnl)}"><span>${getPnl(pnl)}%</span></td>
             <td class="px-2 py-2.5 align-top"><span>${getStatus(data[i].status)}</span></td>
             </tr>
             `
             const row = $('#table-trade-order').append(tr)
+            document.querySelector("#icon-loader").style.display = "none"
         }
      }
 };

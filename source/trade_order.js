@@ -19,7 +19,8 @@ function getColor(type) {
 }
 
 function getColorPnl(pnl) {
-  if (pnl > 0) {
+  if (pnl == '-') return
+  if (pnl >= 0) {
     return "green";
   } else return "red";
 }
@@ -35,10 +36,9 @@ function getIcon(is_follow) {
   else return iconNotFollow;
 }
 
-function calcPnl(type, entry, price) {
-  if (type == "LONG") {
-    return Math.round((-(entry - price) * 100) / entry);
-  } else return Math.round(((entry - price) * 100) / entry);
+function getPnl(pnl) {
+  if (pnl == '-') return "-"
+  else return pnl + "%"
 }
 
 const user_id = Telegram.WebApp.initDataUnsafe.user.id
@@ -65,7 +65,10 @@ function follow(order_id) {
     xhttp.onreadystatechange = function () {};
     xhttp.open(
       "POST",
-      "https://chainstation.io/bot/unfollow-trade-order/" + user_id + "/" + order_id,
+      "https://chainstation.io/bot/unfollow-trade-order/" +
+        user_id +
+        "/" +
+        order_id,
       true
     );
     xhttp.setRequestHeader("Content-type", "application/json");
@@ -90,7 +93,10 @@ function follow(order_id) {
     xhttp.onreadystatechange = function () {};
     xhttp.open(
       "POST",
-      "https://chainstation.io/bot/follow-trade-order/"  + user_id + "/" +  order_id,
+      "https://chainstation.io/bot/follow-trade-order/" +
+        user_id +
+        "/" +
+        order_id,
       true
     );
     xhttp.setRequestHeader("Content-type", "application/json");
@@ -111,7 +117,12 @@ xhttp.onreadystatechange = function () {
       if (data[i].is_follow) {
         orderIdFollow.push(data[i].order_id);
       }
-      var pnl = calcPnl(data[i].type, data[i].entry, 0.5);
+      var price = data[i].price
+      var pnl = Math.round(data[i].pnl * 100 * 100) / 100;
+      if (price == 0) {
+        price = '-'
+        pnl = '-'
+      }
       const tr = `
             <tr class="bg-transparent border-b dark:border-[#353535]">
             <td class="pl-2 pr-0 text-xs pt-3.5 align-top">${i + 1}</td>
@@ -136,7 +147,9 @@ xhttp.onreadystatechange = function () {
                 }</span>
                   <div class="flex items-end pt-[1px]">
                   <span 
-                      onclick="window.open('${data[i].link_message}', '_blank');"
+                      onclick="window.open('${
+                        data[i].link_message
+                      }', '_blank');"
                       class="text-xs text-gray-500 dark:text-gray-400" style="color: blue;text-decoration:underline;">
                       ${data[i].order_id}
                     </span>
@@ -172,13 +185,14 @@ xhttp.onreadystatechange = function () {
             <td class="px-2 py-2.5 align-top" style="color: ${getColor(
               data[i].type
             )}"><span>${data[i].entry}</span></td>
-            <td class="px-2 py-2.5 align-top"><span>${0.5}</span></td>
+            <td class="px-2 py-2.5 align-top" id="price-${data[i].order_id}"><span>${price}</span></td>
             <td class="px-2 py-2.5 align-top" style="color: ${getColorPnl(
               pnl
-            )}"><span>${pnl}%</span></td>
+            )}"><span>${getPnl(pnl)}</span></td>
             </tr>
             `;
       const row = $("#table-trade-order").append(tr);
+      document.querySelector("#icon-loader").style.display = "none"
     }
   }
 };
@@ -186,4 +200,3 @@ xhttp.onreadystatechange = function () {
 xhttp.open("GET", "https://chainstation.io/bot/all-trade-order-latest/" + user_id, true);
 xhttp.setRequestHeader("Content-type", "application/json");
 xhttp.send("Your JSON Data Here");
-

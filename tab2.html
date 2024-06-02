@@ -51,6 +51,21 @@
   </script>
   <script src="./source/polyfills-c67a75d1b6f99dc8.js.download" nomodule=""></script>
   <style>
+    .loader {
+      border: 4px solid #f3f3f3; /* Light grey */
+      border-top: 4px solid #083f64; /* Blue */
+      border-radius: 50%;
+      width: 24px;
+      height: 24px;
+      animation: spin 2s linear infinite;
+      margin: auto;
+      margin-top: 16px;
+    }
+
+    @keyframes spin {
+      0% { transform: rotate(0deg); }
+      100% { transform: rotate(360deg); }
+    }
     ::-webkit-scrollbar {
       border-radius: 5px !important;
       border: 3px solid transparent !important;
@@ -417,6 +432,11 @@
                 </tbody>
               </table>
             </div>
+          
+            <div id="icon-loader">
+              <div class="loader"></div>
+            </div>
+
           </div>
           <div class="m-b0c91715 mantine-Tabs-panel" data-orientation="horizontal" role="tabpanel"
             id="mantine-chtw6drlf-panel-hot_social_24h" aria-labelledby="mantine-chtw6drlf-tab-hot_social_24h"
