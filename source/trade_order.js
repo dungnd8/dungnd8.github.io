@@ -50,6 +50,10 @@ function follow(order_id) {
   if (orderIdFollow.includes(order_id)) {
     $(`#${order_id}`).html(
       `<svg xmlns="http://www.w3.org/2000/svg"
+        fill="none" stroke="currentColor"
+        stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+        class="tabler-icon tabler-icon-copy"
+        style="width: calc(1rem * var(--mantine-scale)); height: calc(1rem * var(--mantine-scale));"
             viewBox="0 0 576 512">
             <path fill="#ebe534"
             d="${iconNotFollow}"/>
@@ -71,6 +75,10 @@ function follow(order_id) {
   } else {
     $(`#${order_id}`).html(
       `<svg xmlns="http://www.w3.org/2000/svg"
+        fill="none" stroke="currentColor"
+        stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+        class="tabler-icon tabler-icon-copy"
+        style="width: calc(1rem * var(--mantine-scale)); height: calc(1rem * var(--mantine-scale));"
             viewBox="0 0 576 512">
             <path fill="#ebe534"
             d="${iconFollow}"/>
@@ -143,10 +151,13 @@ xhttp.onreadystatechange = function () {
                           style="--loader-size: calc(var(--ai-size) * 0.55); --loader-color: var(--ai-color);"></span></span>
                           <span id="${data[i].order_id}"
                             class="m-8d3afb97 mantine-ActionIcon-icon">
-                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor"
+                                <svg xmlns="http://www.w3.org/2000/svg" 
+                                
+                                fill="none" stroke="currentColor"
                                 stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
                                 class="tabler-icon tabler-icon-copy"
                                 style="width: calc(1rem * var(--mantine-scale)); height: calc(1rem * var(--mantine-scale));"
+                                
                                 viewBox="0 0 576 512">
                                 <path 
                                 fill="#ebe534"
