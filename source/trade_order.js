@@ -130,7 +130,7 @@ xhttp.onreadystatechange = function () {
                   <span 
                       onclick="window.open('${data[i].link_message}', '_blank');"
                       class="text-xs text-gray-500 dark:text-gray-400" style="color: blue;text-decoration:underline;">
-                      ${data[i].order_id}
+                      sdfsdfsdf
                     </span>
                       <button
                         onClick=follow("${data[i].order_id}")
@@ -146,6 +146,7 @@ xhttp.onreadystatechange = function () {
                                 <svg xmlns="http://www.w3.org/2000/svg"
                                 viewBox="0 0 576 512">
                                 <path 
+                                fill="#ebe534"
                                 d="${getIcon(data[i].is_follow)}"/>
                                 </svg>
                         </span>
