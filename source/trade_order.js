@@ -130,7 +130,7 @@ xhttp.onreadystatechange = function () {
                   <span 
                       onclick="window.open('${data[i].link_message}', '_blank');"
                       class="text-xs text-gray-500 dark:text-gray-400" style="color: blue;text-decoration:underline;">
-                      sdfsdfsdf
+                      ${data[i].order_id}
                     </span>
                       <button
                         onClick=follow("${data[i].order_id}")
