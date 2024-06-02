@@ -33,7 +33,7 @@ function getPnl(pnl) {
 }
 
 function getStatus(status) {
-    if (status == "START") return "-----"
+    if (status == "START") return "---"
     else return status
 }
 
@@ -89,7 +89,7 @@ xhttp.onreadystatechange = function() {
             </td>
             <td class="px-2 py-2.5 align-top" style="color: ${getColor(data[i].type)}"><span>${data[i].entry}</span></td>
             <td class="px-2 py-2.5 align-top"><span>${price}</span></td>
-            <td class="px-2 py-2.5 align-top" style="color: ${getColorPnl(pnl)}"><span>${getPnl(pnl)}%</span></td>
+            <td class="px-2 py-2.5 align-top" style="color: ${getColorPnl(pnl)}"><span>${getPnl(pnl)}</span></td>
             <td class="px-2 py-2.5 align-top"><span>${getStatus(data[i].status)}</span></td>
             </tr>
             `
