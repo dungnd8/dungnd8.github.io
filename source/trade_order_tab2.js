@@ -5,7 +5,7 @@
 //              alert(this.responseText);
 //          }
 //     };
-//     xhttp.open("GET", "https://chainstation.io/bot/all-trade-order-24h", true);
+//     xhttp.open("GET", "https://chainstation.io/bot/all-trade-order-latest", true);
 //     xhttp.setRequestHeader("Content-type", "application/json");
 //     xhttp.send("Your JSON Data Here");
 // }
@@ -14,7 +14,7 @@
 
 function getColor(type) {
     if (type == "LONG") {
-        return "blue"
+        return "green"
     }
     else return "red"
 }
@@ -56,9 +56,9 @@ xhttp.onreadystatechange = function() {
             }
             var pnl = calcPnl(data[i].type, data[i].entry, 0.5)
             const tr =`
-            <tr onclick="window.open('${data[i].link_message}', '_blank');" class="bg-transparent border-b dark:border-[#353535]">
+            <tr class="bg-transparent border-b dark:border-[#353535]">
             <td class="pl-2 pr-0 text-xs pt-3.5 align-top">${i+1}</td>
-            <td class="px-2 py-2.5 align-top">
+            <td onclick="window.open('${data[i].link_message}', '_blank');" class="px-2 py-2.5 align-top">
               <!-- <div class="cursor-pointer items-start m-4081bf90 mantine-Group-root"
                 style="--group-gap: calc(0.0625rem * var(--mantine-scale)); --group-align: center; --group-justify: flex-start; --group-wrap: nowrap; width: calc(6.25rem * var(--mantine-scale));">
                 <div class="mr-2 mt-[2px]">
@@ -76,6 +76,7 @@ xhttp.onreadystatechange = function() {
                 </div> -->
                 <div class="mr-4"><span class="max-w-[90px] w-[90px] truncate block font-semibold">${data[i].from_token}</span>
                   <div class="flex items-end pt-[1px]"><span
+                  style="color: blue;text-decoration:underline;"
                       class="text-xs text-gray-500 dark:text-gray-400">${data[i].order_id}</span>
                     </div>
                 </div>
@@ -92,6 +93,6 @@ xhttp.onreadystatechange = function() {
      }
 };
 
-xhttp.open("GET", "https://chainstation.io/bot/follow-trade-order-24h/" + user_id, true);
+xhttp.open("GET", "https://chainstation.io/bot/follow-trade-order-latest/" + user_id, true);
 xhttp.setRequestHeader("Content-type", "application/json");
 xhttp.send("Your JSON Data Here");
