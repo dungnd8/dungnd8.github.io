@@ -145,7 +145,7 @@ xhttp.onreadystatechange = function () {
                             class="m-8d3afb97 mantine-ActionIcon-icon">
                                 <svg xmlns="http://www.w3.org/2000/svg"
                                 viewBox="0 0 576 512">
-                                <path fill="#ebe534"
+                                <path 
                                 d="${getIcon(data[i].is_follow)}"/>
                                 </svg>
                         </span>
