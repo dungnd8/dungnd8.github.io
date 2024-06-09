@@ -37,6 +37,10 @@ function getStatus(status) {
     else return status
 }
 
+function get_order_id(token, order_id){
+  return order_id.replace(token, "")
+}
+
 const user_id = Telegram.WebApp.initDataUnsafe.user.id
 const username = Telegram.WebApp.initDataUnsafe.user.username
 
@@ -82,7 +86,7 @@ xhttp.onreadystatechange = function() {
                   <div class="flex items-end pt-[1px]"><span
                   style="color: blue;text-decoration:underline;"
                   onclick="window.open('${data[i].link_message}', '_blank');" 
-                      class="text-xs text-gray-500 dark:text-gray-400">${data[i].order_id}</span>
+                      class="text-xs text-gray-500 dark:text-gray-400">${get_order_id(data[i].from_token, data[i].order_id)}</span>
                     </div>
                 </div>
               </div>

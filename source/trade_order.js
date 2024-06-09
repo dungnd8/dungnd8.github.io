@@ -106,6 +106,10 @@ function follow(order_id) {
   }
 }
 
+function get_order_id(token, order_id){
+  return order_id.replace(token, "")
+}
+
 var orderIdFollow = [];
 var xhttp = new XMLHttpRequest();
 xhttp.onreadystatechange = function () {
@@ -151,7 +155,7 @@ xhttp.onreadystatechange = function () {
                         data[i].link_message
                       }', '_blank');"
                       class="text-xs text-gray-500 dark:text-gray-400" style="color: blue;text-decoration:underline;">
-                      ${data[i].order_id}
+                      ${get_order_id(data[i].from_token, data[i].order_id)}
                     </span>
                       <button
                         onClick=follow("${data[i].order_id}")
