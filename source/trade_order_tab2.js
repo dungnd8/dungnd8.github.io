@@ -52,7 +52,7 @@ xhttp.onreadystatechange = function() {
      if (this.readyState == 4 && this.status == 200) {
         var result = JSON.parse(this.response);
         var data = result.data
-        console.log(data.length)
+        document.querySelector("#icon-loader").style.display = "none"
         for (let i=0; i < data.length; i++) {
             if (data[i].is_follow) {
                 orderIdFollow.push(data[i].order_id)
@@ -98,7 +98,6 @@ xhttp.onreadystatechange = function() {
             </tr>
             `
             const row = $('#table-trade-order').append(tr)
-            document.querySelector("#icon-loader").style.display = "none"
         }
      }
 };

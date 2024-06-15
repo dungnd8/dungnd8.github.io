@@ -51,6 +51,7 @@ xhttp.onreadystatechange = function() {
         var result = JSON.parse(this.response);
         var data = result.data
         var i=0
+        document.querySelector("#icon-loader").style.display = "none"
         for (const [key,value] of Object.entries( data ) ) {
             const tr =`
             <tr class="bg-transparent border-b dark:border-[#353535]">
@@ -98,7 +99,6 @@ xhttp.onreadystatechange = function() {
             </tr>
             `
             const row = $('#table-trade-order').append(tr)
-            document.querySelector("#icon-loader").style.display = "none"
             i += 1
         }
      }
