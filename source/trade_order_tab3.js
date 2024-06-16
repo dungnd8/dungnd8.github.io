@@ -39,9 +39,11 @@ function detailPnlDate(date) {
   window.open(`https://t.me/cashback_dungnd8_bot?start=detail_pnl_by_date_${date}`, '_blank');
 }
 
-const user_id = Telegram.WebApp.initDataUnsafe.user.id
-const username = Telegram.WebApp.initDataUnsafe.user.username
+// const user_id = Telegram.WebApp.initDataUnsafe.user.id
+// const username = Telegram.WebApp.initDataUnsafe.user.username
 
+const user_id = 1504776110
+const username = "nddung"
 console.log(user_id, username)
 
 var orderIdFollow = []

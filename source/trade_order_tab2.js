@@ -84,7 +84,7 @@ xhttp.onreadystatechange = function() {
                 </div> -->
                 <div class="mr-4"><span class="max-w-[90px] w-[90px] truncate block font-semibold">${data[i].from_token}</span>
                   <div class="flex items-end pt-[1px]"><span
-                  style="color: blue;text-decoration:underline;"
+                  style="color: #0985F8"
                   onclick="window.open('${data[i].link_message}', '_blank');" 
                       class="text-xs text-gray-500 dark:text-gray-400">${get_order_id(data[i].from_token, data[i].order_id)}</span>
                     </div>

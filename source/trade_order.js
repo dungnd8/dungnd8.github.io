@@ -154,7 +154,7 @@ xhttp.onreadystatechange = function () {
                       onclick="window.open('${
                         data[i].link_message
                       }', '_blank');"
-                      class="text-xs text-gray-500 dark:text-gray-400" style="color: blue;text-decoration:underline;">
+                      class="text-xs text-gray-500 dark:text-gray-400" style="color: #0985F8">
                       ${get_order_id(data[i].from_token, data[i].order_id)}
                     </span>
                       <button
