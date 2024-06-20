@@ -14,16 +14,16 @@
 
 function getColor(type) {
     if (type == "LONG") {
-        return "green"
+        return "#03FF68"
     }
-    else return "red"
+    else return ""
 }
 
 function getColorPnl(pnl) {
     if (pnl > 0) {
-        return "green"
+        return "#03FF68"
     }
-    else return "red"
+    else return "#FF0303"
 }
 
 function calcPnl(value) {
@@ -41,6 +41,9 @@ function detailPnlDate(date) {
 
 const user_id = Telegram.WebApp.initDataUnsafe.user.id
 const username = Telegram.WebApp.initDataUnsafe.user.username
+
+// const user_id = 1504776110
+// const username = ""
 
 console.log(user_id, username)
 
@@ -72,7 +75,7 @@ xhttp.onreadystatechange = function() {
                       <img class="m-11f8ac07 mantine-Avatar-image" src="./source/1975.png"></div>
                   </div>
                 </div> -->
-                <div class="mr-4"><span class="max-w-[90px] w-[90px] truncate block font-semibold">${key}</span>
+                <div class="mr-4"><span class="max-w-[90px] w-[90px] truncate block font-semibold" style="color: white">${key}</span>
                   <div class="flex items-end pt-[1px]"><span
                   style="color: blue;text-decoration:underline;"
                       class="text-xs text-gray-500 dark:text-gray-400"></span>
@@ -87,8 +90,7 @@ xhttp.onreadystatechange = function() {
                 fill="none" stroke="currentColor"
                 stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
                 class="tabler-icon tabler-icon-copy"
-                style="width: calc(1rem * var(--mantine-scale)); height: calc(1rem * var(--mantine-scale));"
-                
+                style="width: calc(1rem * var(--mantine-scale)); height: calc(1rem * var(--mantine-scale)); background-color: white"
                 viewBox="0 0 1000 1000">
                 <path 
                 fill="#0f0f0f"

@@ -1,30 +1,16 @@
-// function UserAction() {
-//     var xhttp = new XMLHttpRequest();
-//     xhttp.onreadystatechange = function() {
-//          if (this.readyState == 4 && this.status == 200) {
-//              alert(this.responseText);
-//          }
-//     };
-//     xhttp.open("GET", "https://chainstation.io/bot/all-trade-order-latest", true);
-//     xhttp.setRequestHeader("Content-type", "application/json");
-//     xhttp.send("Your JSON Data Here");
-// }
-
-// userAction()
-
 function getColor(type) {
     if (type == "LONG") {
-        return "green"
+        return "#03FF68"
     }
-    else return "red"
+    else return "#FF0303"
 }
 
 function getColorPnl(pnl) {
     if (pnl == '-') return
     if (pnl > 0) {
-        return "green"
+        return "#03FF68"
     }
-    else return "red"
+    else return "#FF0303"
 }
 
 function getPnl(pnl) {
@@ -43,6 +29,9 @@ function get_order_id(token, order_id){
 
 const user_id = Telegram.WebApp.initDataUnsafe.user.id
 const username = Telegram.WebApp.initDataUnsafe.user.username
+
+// const user_id = 1504776110
+// const username = ""
 
 console.log(user_id, username)
 
@@ -66,7 +55,7 @@ xhttp.onreadystatechange = function() {
             const tr =`
             <tr class="bg-transparent border-b dark:border-[#353535]">
             <td class="pl-2 pr-0 text-xs pt-3.5 align-top">${i+1}</td>
-            <td class="px-2 py-2.5 align-top">
+            <td class="py-2.5 align-top" style="padding-left: 0.5rem">
               <!-- <div class="cursor-pointer items-start m-4081bf90 mantine-Group-root"
                 style="--group-gap: calc(0.0625rem * var(--mantine-scale)); --group-align: center; --group-justify: flex-start; --group-wrap: nowrap; width: calc(6.25rem * var(--mantine-scale));">
                 <div class="mr-2 mt-[2px]">
@@ -82,7 +71,7 @@ xhttp.onreadystatechange = function() {
                       <img class="m-11f8ac07 mantine-Avatar-image" src="./source/1975.png"></div>
                   </div>
                 </div> -->
-                <div class="mr-4"><span class="max-w-[90px] w-[90px] truncate block font-semibold">${data[i].from_token}</span>
+                <div class="mr-2"><span class="max-w-[90px] w-[90px] truncate block font-semibold" style="color: white">${data[i].from_token}</span>
                   <div class="flex items-end pt-[1px]"><span
                   style="color: #0985F8"
                   onclick="window.open('${data[i].link_message}', '_blank');" 
@@ -92,9 +81,9 @@ xhttp.onreadystatechange = function() {
               </div>
             </td>
             <td class="px-2 py-2.5 align-top" style="color: ${getColor(data[i].type)}"><span>${data[i].entry}</span></td>
-            <td class="px-2 py-2.5 align-top"><span>${price}</span></td>
+            <td class="px-2 py-2.5 align-top" style="color:white"><span>${price}</span></td>
             <td class="px-2 py-2.5 align-top" style="color: ${getColorPnl(pnl)}"><span>${getPnl(pnl)}</span></td>
-            <td class="px-2 py-2.5 align-top"><span>${getStatus(data[i].status)}</span></td>
+            <td class="px-2 py-2.5 align-top" style="color:white"><span>${getStatus(data[i].status)}</span></td>
             </tr>
             `
             const row = $('#table-trade-order').append(tr)

@@ -1,28 +1,14 @@
-// function UserAction() {
-//     var xhttp = new XMLHttpRequest();
-//     xhttp.onreadystatechange = function() {
-//          if (this.readyState == 4 && this.status == 200) {
-//              alert(this.responseText);
-//          }
-//     };
-//     xhttp.open("GET", "https://chainstation.io/bot/all-trade-order-latest", true);
-//     xhttp.setRequestHeader("Content-type", "application/json");
-//     xhttp.send("Your JSON Data Here");
-// }
-
-// userAction()
-
 function getColor(type) {
   if (type == "LONG") {
-    return "green";
-  } else return "red";
+    return "#03FF68";
+  } else return "#FF0303";
 }
 
 function getColorPnl(pnl) {
   if (pnl == '-') return
   if (pnl >= 0) {
-    return "green";
-  } else return "red";
+    return "#03FF68";
+  } else return "#FF0303";
 }
 
 var iconNotFollow =
@@ -36,6 +22,11 @@ function getIcon(is_follow) {
   else return iconNotFollow;
 }
 
+function getOpacityFollow(is_follow) {
+  if (is_follow) return 1;
+  else return 0.5
+}
+
 function getPnl(pnl) {
   if (pnl == '-') return "-"
   else return pnl + "%"
@@ -43,6 +34,9 @@ function getPnl(pnl) {
 
 const user_id = Telegram.WebApp.initDataUnsafe.user.id
 const username = Telegram.WebApp.initDataUnsafe.user.username
+
+// const user_id = 1504776110
+// const username = ""
 
 console.log(user_id, username)
 
@@ -55,8 +49,9 @@ function follow(order_id) {
         class="tabler-icon tabler-icon-copy"
         style="width: calc(1rem * var(--mantine-scale)); height: calc(1rem * var(--mantine-scale));"
             viewBox="0 0 576 512">
-            <path fill="#ebe534"
-            d="${iconNotFollow}"/>
+            <path fill="#FFC107"
+            opacity="${getOpacityFollow(false)}"
+            d="${getIcon(true)}"/>
             </svg>
         `
     );
@@ -83,8 +78,9 @@ function follow(order_id) {
         class="tabler-icon tabler-icon-copy"
         style="width: calc(1rem * var(--mantine-scale)); height: calc(1rem * var(--mantine-scale));"
             viewBox="0 0 576 512">
-            <path fill="#ebe534"
-            d="${iconFollow}"/>
+            <path fill="#FFC107"
+            opacity="${getOpacityFollow(true)}"
+            d="${getIcon(true)}"/>
             </svg>
         `
     );
@@ -146,7 +142,7 @@ xhttp.onreadystatechange = function () {
                       <img class="m-11f8ac07 mantine-Avatar-image" src="./source/1975.png"></div>
                   </div>
                 </div> -->
-                <div class="mr-4"><span class="max-w-[90px] w-[90px] truncate block font-semibold">${
+                <div class="mr-4"><span class="max-w-[90px] w-[90px] truncate block font-semibold" style="color: white">${
                   data[i].from_token
                 }</span>
                   <div class="flex items-end pt-[1px]">
@@ -161,11 +157,13 @@ xhttp.onreadystatechange = function () {
                         onClick=follow("${data[i].order_id}")
                         class="mantine-focus-auto mantine-active inline min-w-0 min-h-0 w-[16px] h-[18px] border-t-[2px] border-t-transparent m-8d3f4000 mantine-ActionIcon-root m-87cf2631 mantine-UnstyledButton-root"
                         data-variant="subtle" type="button"
-                        style="--ai-bg: transparent; --ai-hover: var(--mantine-color-gray-light-hover); --ai-color: var(--mantine-color-gray-light-color); --ai-bd: calc(0.0625rem * var(--mantine-scale)) solid transparent;">
-                        <span
-                            class="m-302b9fb1 mantine-ActionIcon-loader" aria-hidden="true"><span
-                          class="m-b34414df m-5ae2e3c mantine-Loader-root"
-                          style="--loader-size: calc(var(--ai-size) * 0.55); --loader-color: var(--ai-color);"></span></span>
+                        style="--ai-bg: transparent; 
+                        --ai-hover: var(--mantine-color-gray-light-hover); 
+                        --ai-color: var(--mantine-color-gray-light-color); 
+                        --ai-bd: calc(0.0625rem * var(--mantine-scale)) solid transparent;
+                        margin-left: calc(0.5rem * var(--mantine-scale));
+                        margin-bottom: calc(0.0625rem * var(--mantine-scale))
+                        ">
                           <span id="${data[i].order_id}"
                             class="m-8d3afb97 mantine-ActionIcon-icon">
                                 <svg xmlns="http://www.w3.org/2000/svg" 
@@ -177,8 +175,9 @@ xhttp.onreadystatechange = function () {
                                 
                                 viewBox="0 0 576 512">
                                 <path 
-                                fill="#ebe534"
-                                d="${getIcon(data[i].is_follow)}"/>
+                                fill="#FFC107",
+                                opacity="${getOpacityFollow(data[i].is_follow)}"
+                                d="${getIcon(true)}"/>
                                 </svg>
                         </span>
                         </button>
@@ -189,7 +188,7 @@ xhttp.onreadystatechange = function () {
             <td class="px-2 py-2.5 align-top" style="color: ${getColor(
               data[i].type
             )}"><span>${data[i].entry}</span></td>
-            <td class="px-2 py-2.5 align-top" id="price-${data[i].order_id}"><span>${price}</span></td>
+            <td class="px-2 py-2.5 align-top" id="price-${data[i].order_id}" style="color:white"><span>${price}</span></td>
             <td class="px-2 py-2.5 align-top" style="color: ${getColorPnl(
               pnl
             )}"><span>${getPnl(pnl)}</span></td>

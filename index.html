@@ -1,60 +1,36 @@
 <!DOCTYPE html>
-<html lang="en" class="__variable_aaf875" data-mantine-color-scheme="light" style="">
+<html lang="en" class="__variable_aaf875" data-mantine-color-scheme="light">
 
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
-  <link rel="preload" href="./source/c9a5bc6a7c948fb0-s.p.woff2" as="font"
-    crossorigin="" type="font/woff2">
+  <link href='https://fonts.googleapis.com/css?family=Inter' rel='stylesheet'>
   <link rel="stylesheet" href="./source/b85b6cc481876145.css" data-precedence="next">
   <link rel="stylesheet" href="./source/4f0df9bc60c84d19.css" data-precedence="next">
   <link rel="stylesheet" href="./source/04fd263b2cf2ad5e.css" data-precedence="next">
   <link rel="stylesheet" href="./source/3f488efa161fb693.css" data-precedence="next">
-  <!-- <link rel="preload" as="script" fetchpriority="low" href="./source/webpack-7ff6b4314aeb1332.js.download">
-  <script src="./source/fd9d1056-f537e75cdb320879.js.download" async=""></script>
-  <script src="./source/2472-745c9950e9b0f6da.js.download" async=""></script>
-  <script src="./source/main-app-80af34b574d073e3.js.download" async=""></script>
-  <script src="./source/2539-a877698f302a993d.js.download" async=""></script>
-  <script src="./source/3415-96cad558702bd239.js.download" async=""></script>
-  <script src="./source/7365-6a543d62ad08137d.js.download" async=""></script>
-  <script src="./source/1193-74861961635ec573.js.download" async=""></script>
-  <script src="./source/6277-7a7e22f65f3d0262.js.download" async=""></script>
-  <script src="./source/1004-0e21e7576fdfcec4.js.download" async=""></script>
-  <script src="./source/2847-6e77e3a29f4c9b86.js.download" async=""></script>
-  <script src="./source/layout-454a716ef9cee975.js.download" async=""></script>
-  <script src="./source/3177-cac86d74c0391de4.js.download" async=""></script>
-  <script src="./source/7554-020d6fab91d13ec0.js.download" async=""></script>
-  <script src="./source/1158-440dac4c8824bf59.js.download" async=""></script>
-  <script src="./source/3310-6acd40535b3f082c.js.download" async=""></script>
-  <script src="./source/9771-a983048440a0d392.js.download" async=""></script>
-  <script src="./source/7387-4f24aaaab3ab0a99.js.download" async=""></script>
-  <script src="./source/8946-d515fcdb4fa1287c.js.download" async=""></script>
-  <script src="./source/5688-7b35ebef938cf8d7.js.download" async=""></script>
-  <script src="./source/2461-e71f3064e2ecf48a.js.download" async=""></script>
-  <script src="./source/4444-46c48f4717991826.js.download" async=""></script>
-  <script src="./source/5275-60ca6fe8cd8b4e0c.js.download" async=""></script>
-  <script src="./source/page-06b090403b2b70d6.js.download" async=""></script> -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   <script src="https://telegram.org/js/telegram-web-app.js"></script>
   <script src="./source/script.js"></script>
   <script src="./source/trade_order.js"></script>
-
-  <!-- <link rel="preload" href="./source/script.js" as="script"> -->
-  <title>Icrypto App</title>
+  <title>HC PREMIUM</title>
   <meta name="description" content="Explore on-chain insights with our iCrypto AI bot">
   <meta name="next-size-adjust">
-  <script data-mantine-script="true">try {
-      var _colorScheme = window.localStorage.getItem("mantine-color-scheme-value");
+  <script data-mantine-script="true">
+    try {
+      // var _colorScheme = window.localStorage.getItem("mantine-color-scheme-value");
+      var _colorScheme = "dark";
       var colorScheme = _colorScheme === "light" || _colorScheme === "dark" || _colorScheme === "auto" ? _colorScheme : "auto";
       var computedColorScheme = colorScheme !== "auto" ? colorScheme : window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
       document.documentElement.setAttribute("data-mantine-color-scheme", computedColorScheme);
     } catch (e) { }
   </script>
-  <!-- <script src="./source/polyfills-c67a75d1b6f99dc8.js.download" nomodule=""></script> -->
   <style>
     .loader {
-      border: 4px solid #f3f3f3; /* Light grey */
-      border-top: 4px solid #083f64; /* Blue */
+      border: 4px solid #f3f3f3;
+      /* Light grey */
+      border-top: 4px solid #083f64;
+      /* Blue */
       border-radius: 50%;
       width: 24px;
       height: 24px;
@@ -64,9 +40,15 @@
     }
 
     @keyframes spin {
-      0% { transform: rotate(0deg); }
-      100% { transform: rotate(360deg); }
+      0% {
+        transform: rotate(0deg);
+      }
+
+      100% {
+        transform: rotate(360deg);
+      }
     }
+
     ::-webkit-scrollbar {
       border-radius: 5px !important;
       border: 3px solid transparent !important;
@@ -88,6 +70,10 @@
 
     ::-webkit-scrollbar-thumb:hover {
       background-color: rgba(0, 0, 0, 0.478431) !important;
+    }
+    
+    body {
+      font-family: 'Inter'
     }
   </style>
 </head>
@@ -305,35 +291,33 @@
                     data-variant="default" data-orientation="horizontal" type="button" role="tab"
                     id="mantine-chtw6drlf-tab-accumulated_sm" aria-selected="true" tabindex="0"
                     aria-controls="mantine-chtw6drlf-panel-accumulated_sm" data-active="true"
-                    style="margin-right: calc(0.5rem * var(--mantine-scale)); margin-left: calc(0.5rem * var(--mantine-scale)); padding-right: 0rem; padding-left: 0rem; padding-top: calc(0.5rem * var(--mantine-scale)); padding-bottom: calc(0.5rem * var(--mantine-scale));"><span
+                    style="margin-right: calc(0.5rem * var(--mantine-scale)); margin-left: calc(0.5rem * var(--mantine-scale));  padding-top: calc(0.5rem * var(--mantine-scale)); padding-bottom: calc(0.5rem * var(--mantine-scale))"><span
                       class="mantine-Tabs-tabLabel">
                       <p class="mantine-focus-auto m-b6d8b162 mantine-Text-root" data-size="sm"
                         style="--text-fz: var(--mantine-font-size-sm); --text-lh: var(--mantine-line-height-sm); font-weight: 500;">
                         AI trading</p>
-                    </span></button><button
-                    onclick="location.href='./tab2.html';"
+                    </span></button><button onclick="location.href='./tab2.html';"
                     class="mantine-focus-auto m-539e827b styles_tabItem__YY5Pq m-4ec4dce6 mantine-Tabs-tab m-87cf2631 mantine-UnstyledButton-root"
                     data-variant="default" data-orientation="horizontal" type="button" role="tab"
                     id="mantine-chtw6drlf-tab-gem_sdt" aria-selected="false" tabindex="-1"
                     aria-controls="mantine-chtw6drlf-panel-gem_sdt"
-                    style="margin-right: calc(0.5rem * var(--mantine-scale)); margin-left: calc(0.5rem * var(--mantine-scale)); padding-right: 0rem; padding-left: 0rem; padding-top: calc(0.5rem * var(--mantine-scale)); padding-bottom: calc(0.5rem * var(--mantine-scale));"><span
+                    style="margin-right: calc(0.5rem * var(--mantine-scale)); margin-left: calc(0.5rem * var(--mantine-scale));  padding-top: calc(0.5rem * var(--mantine-scale)); padding-bottom: calc(0.5rem * var(--mantine-scale));"><span
                       class="mantine-Tabs-tabLabel">
                       <p class="mantine-focus-auto m-b6d8b162 mantine-Text-root" data-size="sm"
                         style="--text-fz: var(--mantine-font-size-sm); --text-lh: var(--mantine-line-height-sm); font-weight: 500;">
                         Your watchlist</p>
-                    </span></button><button
-                    onclick="location.href='./tab3.html';"
+                    </span></button><button onclick="location.href='./tab3.html';"
                     class="mantine-focus-auto m-539e827b styles_tabItem__YY5Pq m-4ec4dce6 mantine-Tabs-tab m-87cf2631 mantine-UnstyledButton-root"
                     data-variant="default" data-orientation="horizontal" type="button" role="tab"
                     id="mantine-chtw6drlf-tab-unusual_cex_flows" aria-selected="false" tabindex="-1"
                     aria-controls="mantine-chtw6drlf-panel-unusual_cex_flows"
-                    style="margin-right: calc(0.5rem * var(--mantine-scale)); margin-left: calc(0.5rem * var(--mantine-scale)); padding-right: 0rem; padding-left: 0rem; padding-top: calc(0.5rem * var(--mantine-scale)); padding-bottom: calc(0.5rem * var(--mantine-scale));"><span
+                    style="margin-right: calc(0.5rem * var(--mantine-scale)); margin-left: calc(0.5rem * var(--mantine-scale));  padding-top: calc(0.5rem * var(--mantine-scale)); padding-bottom: calc(0.5rem * var(--mantine-scale));"><span
                       class="mantine-Tabs-tabLabel">
                       <p class="mantine-focus-auto m-b6d8b162 mantine-Text-root" data-size="sm"
                         style="--text-fz: var(--mantine-font-size-sm); --text-lh: var(--mantine-line-height-sm); font-weight: 500;">
                         Your PnL</p>
                     </span></button>
-                    <!-- <button
+                  <!-- <button
                     onclick="location.href='./tab4.html';"
                     class="mantine-focus-auto m-539e827b styles_tabItem__YY5Pq m-4ec4dce6 mantine-Tabs-tab m-87cf2631 mantine-UnstyledButton-root"
                     data-variant="default" data-orientation="horizontal" type="button" role="tab"
@@ -345,7 +329,7 @@
                         style="--text-fz: var(--mantine-font-size-sm); --text-lh: var(--mantine-line-height-sm); font-weight: 500;">
                         Hot Social</p>
                     </span></button> -->
-                  </div>
+                </div>
               </div>
             </div>
             <div data-orientation="horizontal" data-state="hidden" class="m-c44ba933 mantine-ScrollArea-scrollbar"
@@ -361,9 +345,10 @@
               aria-controls="mantine-0zw9ewyz6-dropdown" id="mantine-0zw9ewyz6-target"
               style="gap: calc(0.25rem * var(--mantine-scale)); align-items: center; justify-content: flex-start; flex-flow: wrap;">
               <p class="mantine-focus-auto m-b6d8b162 mantine-Text-root" data-size="xs"
-                style="--text-fz: var(--mantine-font-size-xs); --text-lh: var(--mantine-line-height-xs);">Hot 24H (Lệnh trong 24H giờ qua)</p><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14"
-                viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                stroke-linejoin="round" class="tabler-icon tabler-icon-info-circle">
+                style="--text-fz: var(--mantine-font-size-xs); --text-lh: var(--mantine-line-height-xs);">Hot 24H (Lệnh
+                trong 24H giờ qua)</p><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24"
+                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                class="tabler-icon tabler-icon-info-circle">
                 <path d="M3 12a9 9 0 1 0 18 0a9 9 0 0 0 -18 0"></path>
                 <path d="M12 9h.01"></path>
                 <path d="M11 12h1v4h1"></path>
@@ -373,16 +358,16 @@
           <div class="m-b0c91715 mantine-Tabs-panel" data-orientation="horizontal" role="tabpanel"
             id="mantine-chtw6drlf-panel-accumulated_sm" aria-labelledby="mantine-chtw6drlf-tab-accumulated_sm"
             style="padding-bottom: calc(3.25rem * var(--mantine-scale));">
-            
+
             <div class="overflow-auto">
               <table class="min-w-full text-sm text-left rtl:text-right styles_table__U5uS_">
                 <thead class="sticky top-0 text-xs bg-transparent">
                   <tr>
                     <th class="pl-2 pr-0 font-normal font-semibold opacity-50">#</th>
-                    <th class="px-2 py-3 font-semibold opacity-50">Token</th>
-                    <th class="px-2 py-3 font-semibold opacity-50">Entry</th>
-                    <th class="px-2 py-3 font-semibold opacity-50">Price</th>
-                    <th class="px-2 py-3 font-semibold opacity-50">PnL</th>
+                    <th class="px-2 py-3 font-semibold">Token</th>
+                    <th class="px-2 py-3 font-semibold">Entry</th>
+                    <th class="px-2 py-3 font-semibold">Price</th>
+                    <th class="px-2 py-3 font-semibold">PnL</th>
                   </tr>
                 </thead>
                 <tbody id="table-trade-order">
@@ -771,202 +756,210 @@
       <div class="m-d2b315db m-9df02822 mantine-Spotlight-root" data-scrollable="true"
         style="--modal-size: calc(37.5rem * var(--mantine-scale)); --modal-y-offset: calc(5rem * var(--mantine-scale)); --spotlight-max-height: calc(21.875rem * var(--mantine-scale)); --mb-z-index: 9999; --mb-padding: 0rem;">
         <div class="mantine-Spotlight-overlay m-9814e45f mantine-Overlay-root" data-fixed="true"
-        style="--overlay-bg: rgba(0, 0, 0, 0.35); --overlay-filter: blur(calc(0.4375rem * var(--mantine-scale))); --overlay-z-index: 9999; transition-property: opacity; transition-duration: 200ms; transition-timing-function: ease; opacity: 1;">
-      </div>
-      <div class="m-60c222c7 m-1f958f16 mantine-Spotlight-inner">
-        <section id="popup-search-section" class="m-fd1ab0aa m-3cd250e0 m-54c44539 mantine-Spotlight-content m-1b7284a3 mantine-Paper-root"
-          role="dialog" tabindex="-1" aria-modal="true" aria-describedby="mantine-4cnctubcp-body"
-          style="transition-property: transform, opacity; transition-duration: 200ms; transition-timing-function: ease; transform-origin: center center; opacity: 1; transform: scale(1);">
-          <div class="m-5df29311 m-d2abce9b mantine-Spotlight-body" id="mantine-4cnctubcp-body">
-            <div class="m-6c018570 mantine-Input-wrapper" data-variant="default" data-size="md"
-              data-with-left-section="true"
-              style="--input-height: var(--input-height-md); --input-fz: var(--mantine-font-size-md); --input-left-section-pointer-events: none; --input-right-section-pointer-events: none;">
-              <div data-position="left" class="m-82577fc2 mantine-Input-section"><svg
-                  xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none"
-                  stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-                  class="tabler-icon tabler-icon-search">
-                  <path d="M10 10m-7 0a7 7 0 1 0 14 0a7 7 0 1 0 -14 0"></path>
-                  <path d="M21 21l-6 -6"></path>
-                </svg></div><input class="m-f366a061 mantine-Spotlight-search m-8fb7ebe7 mantine-Input-input"
-                data-variant="default" placeholder="Search tokens..." data-autofocus="true" autocomplete="off"
-                autosave="off" autocorrect="off" aria-invalid="false" value="">
+          style="--overlay-bg: rgba(0, 0, 0, 0.35); --overlay-filter: blur(calc(0.4375rem * var(--mantine-scale))); --overlay-z-index: 9999; transition-property: opacity; transition-duration: 200ms; transition-timing-function: ease; opacity: 1;">
+        </div>
+        <div class="m-60c222c7 m-1f958f16 mantine-Spotlight-inner">
+          <section id="popup-search-section"
+            class="m-fd1ab0aa m-3cd250e0 m-54c44539 mantine-Spotlight-content m-1b7284a3 mantine-Paper-root"
+            role="dialog" tabindex="-1" aria-modal="true" aria-describedby="mantine-4cnctubcp-body"
+            style="transition-property: transform, opacity; transition-duration: 200ms; transition-timing-function: ease; transform-origin: center center; opacity: 1; transform: scale(1);">
+            <div class="m-5df29311 m-d2abce9b mantine-Spotlight-body" id="mantine-4cnctubcp-body">
+              <div class="m-6c018570 mantine-Input-wrapper" data-variant="default" data-size="md"
+                data-with-left-section="true"
+                style="--input-height: var(--input-height-md); --input-fz: var(--mantine-font-size-md); --input-left-section-pointer-events: none; --input-right-section-pointer-events: none;">
+                <div data-position="left" class="m-82577fc2 mantine-Input-section"><svg
+                    xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                    class="tabler-icon tabler-icon-search">
+                    <path d="M10 10m-7 0a7 7 0 1 0 14 0a7 7 0 1 0 -14 0"></path>
+                    <path d="M21 21l-6 -6"></path>
+                  </svg></div><input class="m-f366a061 mantine-Spotlight-search m-8fb7ebe7 mantine-Input-input"
+                  data-variant="default" placeholder="Search tokens..." data-autofocus="true" autocomplete="off"
+                  autosave="off" autocorrect="off" aria-invalid="false" value="">
+              </div>
+              <div class="m-4081bf90 mantine-Group-root"
+                style="--group-gap: calc(0.0625rem * var(--mantine-scale)); --group-align: center; --group-justify: flex-start; --group-wrap: nowrap; padding-right: calc(0.5rem * var(--mantine-scale)); padding-left: calc(0.5rem * var(--mantine-scale));">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" height="16px" width="16px"
+                  viewBox="0 0 24 24" color="#FF775F">
+                  <path
+                    d="M17.0881 9.42254C16.4368 8.90717 15.8155 8.35512 15.3012 7.71336C12.3755 4.06357 13.8912 1 13.8912 1C8.46026 3.18334 7.22337 6.64895 7.16462 9.22981L7.1675 9.2572C7.1675 9.2572 7.21498 10.7365 7.90791 12.3625C8.12481 12.8713 7.88299 13.4666 7.33195 13.6199C6.87638 13.7465 6.40822 13.5317 6.21571 13.1314C5.90413 12.4831 5.49262 11.4521 5.6109 10.7249C4.75064 11.817 4.1815 13.1452 4.03542 14.6184C3.65092 18.4924 6.43759 22.0879 10.4208 22.8488C14.9906 23.7217 19.3121 20.7182 19.9269 16.3623C20.3117 13.6367 19.1498 11.0538 17.0881 9.42254ZM14.3578 17.7393C14.3289 17.776 13.5893 18.6597 12.3501 18.7517C12.2829 18.7547 12.2124 18.7577 12.1452 18.7577C11.2902 18.7577 10.4226 18.3682 9.56103 17.5951L9.37219 17.4262L9.61243 17.3372C9.62843 17.3312 11.2742 16.7236 11.6778 15.4077C11.8155 14.9629 11.7707 14.4566 11.553 13.9842C11.2905 13.4075 10.7845 11.9564 11.7453 10.9041L11.9309 10.7015L12.0206 10.9561C12.0238 10.9714 12.6034 12.5911 13.9741 13.4379C14.3871 13.6957 14.6977 14.0086 14.8931 14.3644C15.2959 15.1132 15.533 16.3065 14.3578 17.7393Z">
+                  </path>
+                </svg>
+                <p class="mantine-focus-auto m-b6d8b162 mantine-Text-root"
+                  style="padding-right: calc(0.375rem * var(--mantine-scale)); padding-left: calc(0.375rem * var(--mantine-scale)); padding-top: calc(0.25rem * var(--mantine-scale)); padding-bottom: calc(0.25rem * var(--mantine-scale)); opacity: 0.5; font-size: var(--mantine-font-size-xs);">
+                  Social Trending</p>
+              </div><button
+                class="mantine-focus-auto SearchTokenDetailSpotlight_action_item__vD0IY m-d49bb8ef mantine-Spotlight-action m-87cf2631 mantine-UnstyledButton-root"
+                type="button" data-action="true" tabindex="-1">
+                <div class="m-4081bf90 mantine-Group-root"
+                  style="--group-gap: var(--mantine-spacing-md); --group-align: center; --group-justify: flex-start; --group-wrap: nowrap; width: 100%;">
+                  <div class="m-e5262200 mantine-Indicator-root"
+                    style="--indicator-color: var(--mantine-color-gray-filled); --indicator-size: calc(0.75rem * var(--mantine-scale)); --indicator-z-index: 10; --indicator-top: calc(0.25rem * var(--mantine-scale)); --indicator-right: calc(0.25rem * var(--mantine-scale)); --indicator-translate-x: 50%; --indicator-translate-y: -50%;">
+                    <div class="TokenLogo_indicator__N1X7W m-760d1fb1 mantine-Indicator-indicator"
+                      data-with-label="true" data-with-border="true"><img class="m-9e117634 mantine-Image-root"
+                        src="./source/ethereum.png"
+                        style="width: calc(0.625rem * var(--mantine-scale)); height: calc(0.625rem * var(--mantine-scale));">
+                    </div>
+                    <div class="m-f85678b6 mantine-Avatar-root"
+                      style="--avatar-size: calc(1.375rem * var(--mantine-scale)); --avatar-radius: var(--mantine-radius-xl);">
+                      <img class="m-11f8ac07 mantine-Avatar-image" src="./source/30171.png">
+                    </div>
+                  </div>
+                  <div style="flex: 1 1 0%;">
+                    <p class="mantine-focus-auto m-b6d8b162 mantine-Text-root">ENA</p>
+                    <p class="mantine-focus-auto m-b6d8b162 mantine-Text-root" data-size="xs"
+                      style="--text-fz: var(--mantine-font-size-xs); --text-lh: var(--mantine-line-height-xs); opacity: 0.6;">
+                      0x57e1…6061</p>
+                  </div>
+                </div>
+              </button><button
+                class="mantine-focus-auto SearchTokenDetailSpotlight_action_item__vD0IY m-d49bb8ef mantine-Spotlight-action m-87cf2631 mantine-UnstyledButton-root"
+                type="button" data-action="true" tabindex="-1">
+                <div class="m-4081bf90 mantine-Group-root"
+                  style="--group-gap: var(--mantine-spacing-md); --group-align: center; --group-justify: flex-start; --group-wrap: nowrap; width: 100%;">
+                  <div class="m-e5262200 mantine-Indicator-root"
+                    style="--indicator-color: var(--mantine-color-gray-filled); --indicator-size: calc(0.75rem * var(--mantine-scale)); --indicator-z-index: 10; --indicator-top: calc(0.25rem * var(--mantine-scale)); --indicator-right: calc(0.25rem * var(--mantine-scale)); --indicator-translate-x: 50%; --indicator-translate-y: -50%;">
+                    <div class="TokenLogo_indicator__N1X7W m-760d1fb1 mantine-Indicator-indicator"
+                      data-with-label="true" data-with-border="true"><img class="m-9e117634 mantine-Image-root"
+                        src="./source/ethereum.png"
+                        style="width: calc(0.625rem * var(--mantine-scale)); height: calc(0.625rem * var(--mantine-scale));">
+                    </div>
+                    <div class="m-f85678b6 mantine-Avatar-root"
+                      style="--avatar-size: calc(1.375rem * var(--mantine-scale)); --avatar-radius: var(--mantine-radius-xl);">
+                      <img class="m-11f8ac07 mantine-Avatar-image" src="./source/29555.png">
+                    </div>
+                  </div>
+                  <div style="flex: 1 1 0%;">
+                    <p class="mantine-focus-auto m-b6d8b162 mantine-Text-root">PORTAL</p>
+                    <p class="mantine-focus-auto m-b6d8b162 mantine-Text-root" data-size="xs"
+                      style="--text-fz: var(--mantine-font-size-xs); --text-lh: var(--mantine-line-height-xs); opacity: 0.6;">
+                      0x1bbe…1fed</p>
+                  </div>
+                </div>
+              </button><button
+                class="mantine-focus-auto SearchTokenDetailSpotlight_action_item__vD0IY m-d49bb8ef mantine-Spotlight-action m-87cf2631 mantine-UnstyledButton-root"
+                type="button" data-action="true" tabindex="-1">
+                <div class="m-4081bf90 mantine-Group-root"
+                  style="--group-gap: var(--mantine-spacing-md); --group-align: center; --group-justify: flex-start; --group-wrap: nowrap; width: 100%;">
+                  <div class="m-e5262200 mantine-Indicator-root"
+                    style="--indicator-color: var(--mantine-color-gray-filled); --indicator-size: calc(0.75rem * var(--mantine-scale)); --indicator-z-index: 10; --indicator-top: calc(0.25rem * var(--mantine-scale)); --indicator-right: calc(0.25rem * var(--mantine-scale)); --indicator-translate-x: 50%; --indicator-translate-y: -50%;">
+                    <div class="TokenLogo_indicator__N1X7W m-760d1fb1 mantine-Indicator-indicator"
+                      data-with-label="true" data-with-border="true"><img class="m-9e117634 mantine-Image-root"
+                        src="./source/ethereum.png"
+                        style="width: calc(0.625rem * var(--mantine-scale)); height: calc(0.625rem * var(--mantine-scale));">
+                    </div>
+                    <div class="m-f85678b6 mantine-Avatar-root"
+                      style="--avatar-size: calc(1.375rem * var(--mantine-scale)); --avatar-radius: var(--mantine-radius-xl);">
+                      <img class="m-11f8ac07 mantine-Avatar-image" src="./source/31008.png">
+                    </div>
+                  </div>
+                  <div style="flex: 1 1 0%;">
+                    <p class="mantine-focus-auto m-b6d8b162 mantine-Text-root">THREE</p>
+                    <p class="mantine-focus-auto m-b6d8b162 mantine-Text-root" data-size="xs"
+                      style="--text-fz: var(--mantine-font-size-xs); --text-lh: var(--mantine-line-height-xs); opacity: 0.6;">
+                      0xa059…f419</p>
+                  </div>
+                </div>
+              </button><button
+                class="mantine-focus-auto SearchTokenDetailSpotlight_action_item__vD0IY m-d49bb8ef mantine-Spotlight-action m-87cf2631 mantine-UnstyledButton-root"
+                type="button" data-action="true" tabindex="-1">
+                <div class="m-4081bf90 mantine-Group-root"
+                  style="--group-gap: var(--mantine-spacing-md); --group-align: center; --group-justify: flex-start; --group-wrap: nowrap; width: 100%;">
+                  <div class="m-e5262200 mantine-Indicator-root"
+                    style="--indicator-color: var(--mantine-color-gray-filled); --indicator-size: calc(0.75rem * var(--mantine-scale)); --indicator-z-index: 10; --indicator-top: calc(0.25rem * var(--mantine-scale)); --indicator-right: calc(0.25rem * var(--mantine-scale)); --indicator-translate-x: 50%; --indicator-translate-y: -50%;">
+                    <div class="TokenLogo_indicator__N1X7W m-760d1fb1 mantine-Indicator-indicator"
+                      data-with-label="true" data-with-border="true"><img class="m-9e117634 mantine-Image-root"
+                        src="./source/ethereum.png"
+                        style="width: calc(0.625rem * var(--mantine-scale)); height: calc(0.625rem * var(--mantine-scale));">
+                    </div>
+                    <div class="m-f85678b6 mantine-Avatar-root"
+                      style="--avatar-size: calc(1.375rem * var(--mantine-scale)); --avatar-radius: var(--mantine-radius-xl);">
+                      <img class="m-11f8ac07 mantine-Avatar-image" src="./source/10729.png">
+                    </div>
+                  </div>
+                  <div style="flex: 1 1 0%;">
+                    <p class="mantine-focus-auto m-b6d8b162 mantine-Text-root">UFO</p>
+                    <p class="mantine-focus-auto m-b6d8b162 mantine-Text-root" data-size="xs"
+                      style="--text-fz: var(--mantine-font-size-xs); --text-lh: var(--mantine-line-height-xs); opacity: 0.6;">
+                      0x249e…dc3b</p>
+                  </div>
+                </div>
+              </button><button
+                class="mantine-focus-auto SearchTokenDetailSpotlight_action_item__vD0IY m-d49bb8ef mantine-Spotlight-action m-87cf2631 mantine-UnstyledButton-root"
+                type="button" data-action="true" tabindex="-1">
+                <div class="m-4081bf90 mantine-Group-root"
+                  style="--group-gap: var(--mantine-spacing-md); --group-align: center; --group-justify: flex-start; --group-wrap: nowrap; width: 100%;">
+                  <div class="m-e5262200 mantine-Indicator-root"
+                    style="--indicator-color: var(--mantine-color-gray-filled); --indicator-size: calc(0.75rem * var(--mantine-scale)); --indicator-z-index: 10; --indicator-top: calc(0.25rem * var(--mantine-scale)); --indicator-right: calc(0.25rem * var(--mantine-scale)); --indicator-translate-x: 50%; --indicator-translate-y: -50%;">
+                    <div class="TokenLogo_indicator__N1X7W m-760d1fb1 mantine-Indicator-indicator"
+                      data-with-label="true" data-with-border="true"><img class="m-9e117634 mantine-Image-root"
+                        src="./source/ethereum.png"
+                        style="width: calc(0.625rem * var(--mantine-scale)); height: calc(0.625rem * var(--mantine-scale));">
+                    </div>
+                    <div class="m-f85678b6 mantine-Avatar-root"
+                      style="--avatar-size: calc(1.375rem * var(--mantine-scale)); --avatar-radius: var(--mantine-radius-xl);">
+                      <img class="m-11f8ac07 mantine-Avatar-image" src="./source/7461.png">
+                    </div>
+                  </div>
+                  <div style="flex: 1 1 0%;">
+                    <p class="mantine-focus-auto m-b6d8b162 mantine-Text-root">PDA</p>
+                    <p class="mantine-focus-auto m-b6d8b162 mantine-Text-root" data-size="xs"
+                      style="--text-fz: var(--mantine-font-size-xs); --text-lh: var(--mantine-line-height-xs); opacity: 0.6;">
+                      0x0d3c…3a2b</p>
+                  </div>
+                </div>
+              </button><button
+                class="mantine-focus-auto SearchTokenDetailSpotlight_action_item__vD0IY m-d49bb8ef mantine-Spotlight-action m-87cf2631 mantine-UnstyledButton-root"
+                type="button" data-action="true" tabindex="-1">
+                <div class="m-4081bf90 mantine-Group-root"
+                  style="--group-gap: var(--mantine-spacing-md); --group-align: center; --group-justify: flex-start; --group-wrap: nowrap; width: 100%;">
+                  <div class="m-e5262200 mantine-Indicator-root"
+                    style="--indicator-color: var(--mantine-color-gray-filled); --indicator-size: calc(0.75rem * var(--mantine-scale)); --indicator-z-index: 10; --indicator-top: calc(0.25rem * var(--mantine-scale)); --indicator-right: calc(0.25rem * var(--mantine-scale)); --indicator-translate-x: 50%; --indicator-translate-y: -50%;">
+                    <div class="TokenLogo_indicator__N1X7W m-760d1fb1 mantine-Indicator-indicator"
+                      data-with-label="true" data-with-border="true"><img class="m-9e117634 mantine-Image-root"
+                        src="./source/ethereum.png"
+                        style="width: calc(0.625rem * var(--mantine-scale)); height: calc(0.625rem * var(--mantine-scale));">
+                    </div>
+                    <div class="m-f85678b6 mantine-Avatar-root"
+                      style="--avatar-size: calc(1.375rem * var(--mantine-scale)); --avatar-radius: var(--mantine-radius-xl);">
+                      <img class="m-11f8ac07 mantine-Avatar-image" src="./source/18679.png">
+                    </div>
+                  </div>
+                  <div style="flex: 1 1 0%;">
+                    <p class="mantine-focus-auto m-b6d8b162 mantine-Text-root">XCN</p>
+                    <p class="mantine-focus-auto m-b6d8b162 mantine-Text-root" data-size="xs"
+                      style="--text-fz: var(--mantine-font-size-xs); --text-lh: var(--mantine-line-height-xs); opacity: 0.6;">
+                      0xa2cd…fb18</p>
+                  </div>
+                </div>
+              </button><button
+                class="mantine-focus-auto SearchTokenDetailSpotlight_action_item__vD0IY m-d49bb8ef mantine-Spotlight-action m-87cf2631 mantine-UnstyledButton-root"
+                type="button" data-action="true" tabindex="-1">
+                <div class="m-4081bf90 mantine-Group-root"
+                  style="--group-gap: var(--mantine-spacing-md); --group-align: center; --group-justify: flex-start; --group-wrap: nowrap; width: 100%;">
+                  <div class="m-e5262200 mantine-Indicator-root"
+                    style="--indicator-color: var(--mantine-color-gray-filled); --indicator-size: calc(0.75rem * var(--mantine-scale)); --indicator-z-index: 10; --indicator-top: calc(0.25rem * var(--mantine-scale)); --indicator-right: calc(0.25rem * var(--mantine-scale)); --indicator-translate-x: 50%; --indicator-translate-y: -50%;">
+                    <div class="TokenLogo_indicator__N1X7W m-760d1fb1 mantine-Indicator-indicator"
+                      data-with-label="true" data-with-border="true"><img class="m-9e117634 mantine-Image-root"
+                        src="./source/ethereum.png"
+                        style="width: calc(0.625rem * var(--mantine-scale)); height: calc(0.625rem * var(--mantine-scale));">
+                    </div>
+                    <div class="m-f85678b6 mantine-Avatar-root"
+                      style="--avatar-size: calc(1.375rem * var(--mantine-scale)); --avatar-radius: var(--mantine-radius-xl);">
+                      <img class="m-11f8ac07 mantine-Avatar-image" src="./source/30053.png">
+                    </div>
+                  </div>
+                  <div style="flex: 1 1 0%;">
+                    <p class="mantine-focus-auto m-b6d8b162 mantine-Text-root">MDAI</p>
+                    <p class="mantine-focus-auto m-b6d8b162 mantine-Text-root" data-size="xs"
+                      style="--text-fz: var(--mantine-font-size-xs); --text-lh: var(--mantine-line-height-xs); opacity: 0.6;">
+                      0xb549…ff97</p>
+                  </div>
+                </div>
+              </button>
             </div>
-            <div class="m-4081bf90 mantine-Group-root"
-              style="--group-gap: calc(0.0625rem * var(--mantine-scale)); --group-align: center; --group-justify: flex-start; --group-wrap: nowrap; padding-right: calc(0.5rem * var(--mantine-scale)); padding-left: calc(0.5rem * var(--mantine-scale));">
-              <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" height="16px" width="16px"
-                viewBox="0 0 24 24" color="#FF775F">
-                <path
-                  d="M17.0881 9.42254C16.4368 8.90717 15.8155 8.35512 15.3012 7.71336C12.3755 4.06357 13.8912 1 13.8912 1C8.46026 3.18334 7.22337 6.64895 7.16462 9.22981L7.1675 9.2572C7.1675 9.2572 7.21498 10.7365 7.90791 12.3625C8.12481 12.8713 7.88299 13.4666 7.33195 13.6199C6.87638 13.7465 6.40822 13.5317 6.21571 13.1314C5.90413 12.4831 5.49262 11.4521 5.6109 10.7249C4.75064 11.817 4.1815 13.1452 4.03542 14.6184C3.65092 18.4924 6.43759 22.0879 10.4208 22.8488C14.9906 23.7217 19.3121 20.7182 19.9269 16.3623C20.3117 13.6367 19.1498 11.0538 17.0881 9.42254ZM14.3578 17.7393C14.3289 17.776 13.5893 18.6597 12.3501 18.7517C12.2829 18.7547 12.2124 18.7577 12.1452 18.7577C11.2902 18.7577 10.4226 18.3682 9.56103 17.5951L9.37219 17.4262L9.61243 17.3372C9.62843 17.3312 11.2742 16.7236 11.6778 15.4077C11.8155 14.9629 11.7707 14.4566 11.553 13.9842C11.2905 13.4075 10.7845 11.9564 11.7453 10.9041L11.9309 10.7015L12.0206 10.9561C12.0238 10.9714 12.6034 12.5911 13.9741 13.4379C14.3871 13.6957 14.6977 14.0086 14.8931 14.3644C15.2959 15.1132 15.533 16.3065 14.3578 17.7393Z">
-                </path>
-              </svg>
-              <p class="mantine-focus-auto m-b6d8b162 mantine-Text-root"
-                style="padding-right: calc(0.375rem * var(--mantine-scale)); padding-left: calc(0.375rem * var(--mantine-scale)); padding-top: calc(0.25rem * var(--mantine-scale)); padding-bottom: calc(0.25rem * var(--mantine-scale)); opacity: 0.5; font-size: var(--mantine-font-size-xs);">
-                Social Trending</p>
-            </div><button
-              class="mantine-focus-auto SearchTokenDetailSpotlight_action_item__vD0IY m-d49bb8ef mantine-Spotlight-action m-87cf2631 mantine-UnstyledButton-root"
-              type="button" data-action="true" tabindex="-1">
-              <div class="m-4081bf90 mantine-Group-root"
-                style="--group-gap: var(--mantine-spacing-md); --group-align: center; --group-justify: flex-start; --group-wrap: nowrap; width: 100%;">
-                <div class="m-e5262200 mantine-Indicator-root"
-                  style="--indicator-color: var(--mantine-color-gray-filled); --indicator-size: calc(0.75rem * var(--mantine-scale)); --indicator-z-index: 10; --indicator-top: calc(0.25rem * var(--mantine-scale)); --indicator-right: calc(0.25rem * var(--mantine-scale)); --indicator-translate-x: 50%; --indicator-translate-y: -50%;">
-                  <div class="TokenLogo_indicator__N1X7W m-760d1fb1 mantine-Indicator-indicator"
-                    data-with-label="true" data-with-border="true"><img class="m-9e117634 mantine-Image-root"
-                      src="./source/ethereum.png"
-                      style="width: calc(0.625rem * var(--mantine-scale)); height: calc(0.625rem * var(--mantine-scale));">
-                  </div>
-                  <div class="m-f85678b6 mantine-Avatar-root"
-                    style="--avatar-size: calc(1.375rem * var(--mantine-scale)); --avatar-radius: var(--mantine-radius-xl);">
-                    <img class="m-11f8ac07 mantine-Avatar-image" src="./source/30171.png"></div>
-                </div>
-                <div style="flex: 1 1 0%;">
-                  <p class="mantine-focus-auto m-b6d8b162 mantine-Text-root">ENA</p>
-                  <p class="mantine-focus-auto m-b6d8b162 mantine-Text-root" data-size="xs"
-                    style="--text-fz: var(--mantine-font-size-xs); --text-lh: var(--mantine-line-height-xs); opacity: 0.6;">
-                    0x57e1…6061</p>
-                </div>
-              </div>
-            </button><button
-              class="mantine-focus-auto SearchTokenDetailSpotlight_action_item__vD0IY m-d49bb8ef mantine-Spotlight-action m-87cf2631 mantine-UnstyledButton-root"
-              type="button" data-action="true" tabindex="-1">
-              <div class="m-4081bf90 mantine-Group-root"
-                style="--group-gap: var(--mantine-spacing-md); --group-align: center; --group-justify: flex-start; --group-wrap: nowrap; width: 100%;">
-                <div class="m-e5262200 mantine-Indicator-root"
-                  style="--indicator-color: var(--mantine-color-gray-filled); --indicator-size: calc(0.75rem * var(--mantine-scale)); --indicator-z-index: 10; --indicator-top: calc(0.25rem * var(--mantine-scale)); --indicator-right: calc(0.25rem * var(--mantine-scale)); --indicator-translate-x: 50%; --indicator-translate-y: -50%;">
-                  <div class="TokenLogo_indicator__N1X7W m-760d1fb1 mantine-Indicator-indicator"
-                    data-with-label="true" data-with-border="true"><img class="m-9e117634 mantine-Image-root"
-                      src="./source/ethereum.png"
-                      style="width: calc(0.625rem * var(--mantine-scale)); height: calc(0.625rem * var(--mantine-scale));">
-                  </div>
-                  <div class="m-f85678b6 mantine-Avatar-root"
-                    style="--avatar-size: calc(1.375rem * var(--mantine-scale)); --avatar-radius: var(--mantine-radius-xl);">
-                    <img class="m-11f8ac07 mantine-Avatar-image" src="./source/29555.png"></div>
-                </div>
-                <div style="flex: 1 1 0%;">
-                  <p class="mantine-focus-auto m-b6d8b162 mantine-Text-root">PORTAL</p>
-                  <p class="mantine-focus-auto m-b6d8b162 mantine-Text-root" data-size="xs"
-                    style="--text-fz: var(--mantine-font-size-xs); --text-lh: var(--mantine-line-height-xs); opacity: 0.6;">
-                    0x1bbe…1fed</p>
-                </div>
-              </div>
-            </button><button
-              class="mantine-focus-auto SearchTokenDetailSpotlight_action_item__vD0IY m-d49bb8ef mantine-Spotlight-action m-87cf2631 mantine-UnstyledButton-root"
-              type="button" data-action="true" tabindex="-1">
-              <div class="m-4081bf90 mantine-Group-root"
-                style="--group-gap: var(--mantine-spacing-md); --group-align: center; --group-justify: flex-start; --group-wrap: nowrap; width: 100%;">
-                <div class="m-e5262200 mantine-Indicator-root"
-                  style="--indicator-color: var(--mantine-color-gray-filled); --indicator-size: calc(0.75rem * var(--mantine-scale)); --indicator-z-index: 10; --indicator-top: calc(0.25rem * var(--mantine-scale)); --indicator-right: calc(0.25rem * var(--mantine-scale)); --indicator-translate-x: 50%; --indicator-translate-y: -50%;">
-                  <div class="TokenLogo_indicator__N1X7W m-760d1fb1 mantine-Indicator-indicator"
-                    data-with-label="true" data-with-border="true"><img class="m-9e117634 mantine-Image-root"
-                      src="./source/ethereum.png"
-                      style="width: calc(0.625rem * var(--mantine-scale)); height: calc(0.625rem * var(--mantine-scale));">
-                  </div>
-                  <div class="m-f85678b6 mantine-Avatar-root"
-                    style="--avatar-size: calc(1.375rem * var(--mantine-scale)); --avatar-radius: var(--mantine-radius-xl);">
-                    <img class="m-11f8ac07 mantine-Avatar-image" src="./source/31008.png"></div>
-                </div>
-                <div style="flex: 1 1 0%;">
-                  <p class="mantine-focus-auto m-b6d8b162 mantine-Text-root">THREE</p>
-                  <p class="mantine-focus-auto m-b6d8b162 mantine-Text-root" data-size="xs"
-                    style="--text-fz: var(--mantine-font-size-xs); --text-lh: var(--mantine-line-height-xs); opacity: 0.6;">
-                    0xa059…f419</p>
-                </div>
-              </div>
-            </button><button
-              class="mantine-focus-auto SearchTokenDetailSpotlight_action_item__vD0IY m-d49bb8ef mantine-Spotlight-action m-87cf2631 mantine-UnstyledButton-root"
-              type="button" data-action="true" tabindex="-1">
-              <div class="m-4081bf90 mantine-Group-root"
-                style="--group-gap: var(--mantine-spacing-md); --group-align: center; --group-justify: flex-start; --group-wrap: nowrap; width: 100%;">
-                <div class="m-e5262200 mantine-Indicator-root"
-                  style="--indicator-color: var(--mantine-color-gray-filled); --indicator-size: calc(0.75rem * var(--mantine-scale)); --indicator-z-index: 10; --indicator-top: calc(0.25rem * var(--mantine-scale)); --indicator-right: calc(0.25rem * var(--mantine-scale)); --indicator-translate-x: 50%; --indicator-translate-y: -50%;">
-                  <div class="TokenLogo_indicator__N1X7W m-760d1fb1 mantine-Indicator-indicator"
-                    data-with-label="true" data-with-border="true"><img class="m-9e117634 mantine-Image-root"
-                      src="./source/ethereum.png"
-                      style="width: calc(0.625rem * var(--mantine-scale)); height: calc(0.625rem * var(--mantine-scale));">
-                  </div>
-                  <div class="m-f85678b6 mantine-Avatar-root"
-                    style="--avatar-size: calc(1.375rem * var(--mantine-scale)); --avatar-radius: var(--mantine-radius-xl);">
-                    <img class="m-11f8ac07 mantine-Avatar-image" src="./source/10729.png"></div>
-                </div>
-                <div style="flex: 1 1 0%;">
-                  <p class="mantine-focus-auto m-b6d8b162 mantine-Text-root">UFO</p>
-                  <p class="mantine-focus-auto m-b6d8b162 mantine-Text-root" data-size="xs"
-                    style="--text-fz: var(--mantine-font-size-xs); --text-lh: var(--mantine-line-height-xs); opacity: 0.6;">
-                    0x249e…dc3b</p>
-                </div>
-              </div>
-            </button><button
-              class="mantine-focus-auto SearchTokenDetailSpotlight_action_item__vD0IY m-d49bb8ef mantine-Spotlight-action m-87cf2631 mantine-UnstyledButton-root"
-              type="button" data-action="true" tabindex="-1">
-              <div class="m-4081bf90 mantine-Group-root"
-                style="--group-gap: var(--mantine-spacing-md); --group-align: center; --group-justify: flex-start; --group-wrap: nowrap; width: 100%;">
-                <div class="m-e5262200 mantine-Indicator-root"
-                  style="--indicator-color: var(--mantine-color-gray-filled); --indicator-size: calc(0.75rem * var(--mantine-scale)); --indicator-z-index: 10; --indicator-top: calc(0.25rem * var(--mantine-scale)); --indicator-right: calc(0.25rem * var(--mantine-scale)); --indicator-translate-x: 50%; --indicator-translate-y: -50%;">
-                  <div class="TokenLogo_indicator__N1X7W m-760d1fb1 mantine-Indicator-indicator"
-                    data-with-label="true" data-with-border="true"><img class="m-9e117634 mantine-Image-root"
-                      src="./source/ethereum.png"
-                      style="width: calc(0.625rem * var(--mantine-scale)); height: calc(0.625rem * var(--mantine-scale));">
-                  </div>
-                  <div class="m-f85678b6 mantine-Avatar-root"
-                    style="--avatar-size: calc(1.375rem * var(--mantine-scale)); --avatar-radius: var(--mantine-radius-xl);">
-                    <img class="m-11f8ac07 mantine-Avatar-image" src="./source/7461.png"></div>
-                </div>
-                <div style="flex: 1 1 0%;">
-                  <p class="mantine-focus-auto m-b6d8b162 mantine-Text-root">PDA</p>
-                  <p class="mantine-focus-auto m-b6d8b162 mantine-Text-root" data-size="xs"
-                    style="--text-fz: var(--mantine-font-size-xs); --text-lh: var(--mantine-line-height-xs); opacity: 0.6;">
-                    0x0d3c…3a2b</p>
-                </div>
-              </div>
-            </button><button
-              class="mantine-focus-auto SearchTokenDetailSpotlight_action_item__vD0IY m-d49bb8ef mantine-Spotlight-action m-87cf2631 mantine-UnstyledButton-root"
-              type="button" data-action="true" tabindex="-1">
-              <div class="m-4081bf90 mantine-Group-root"
-                style="--group-gap: var(--mantine-spacing-md); --group-align: center; --group-justify: flex-start; --group-wrap: nowrap; width: 100%;">
-                <div class="m-e5262200 mantine-Indicator-root"
-                  style="--indicator-color: var(--mantine-color-gray-filled); --indicator-size: calc(0.75rem * var(--mantine-scale)); --indicator-z-index: 10; --indicator-top: calc(0.25rem * var(--mantine-scale)); --indicator-right: calc(0.25rem * var(--mantine-scale)); --indicator-translate-x: 50%; --indicator-translate-y: -50%;">
-                  <div class="TokenLogo_indicator__N1X7W m-760d1fb1 mantine-Indicator-indicator"
-                    data-with-label="true" data-with-border="true"><img class="m-9e117634 mantine-Image-root"
-                      src="./source/ethereum.png"
-                      style="width: calc(0.625rem * var(--mantine-scale)); height: calc(0.625rem * var(--mantine-scale));">
-                  </div>
-                  <div class="m-f85678b6 mantine-Avatar-root"
-                    style="--avatar-size: calc(1.375rem * var(--mantine-scale)); --avatar-radius: var(--mantine-radius-xl);">
-                    <img class="m-11f8ac07 mantine-Avatar-image" src="./source/18679.png"></div>
-                </div>
-                <div style="flex: 1 1 0%;">
-                  <p class="mantine-focus-auto m-b6d8b162 mantine-Text-root">XCN</p>
-                  <p class="mantine-focus-auto m-b6d8b162 mantine-Text-root" data-size="xs"
-                    style="--text-fz: var(--mantine-font-size-xs); --text-lh: var(--mantine-line-height-xs); opacity: 0.6;">
-                    0xa2cd…fb18</p>
-                </div>
-              </div>
-            </button><button
-              class="mantine-focus-auto SearchTokenDetailSpotlight_action_item__vD0IY m-d49bb8ef mantine-Spotlight-action m-87cf2631 mantine-UnstyledButton-root"
-              type="button" data-action="true" tabindex="-1">
-              <div class="m-4081bf90 mantine-Group-root"
-                style="--group-gap: var(--mantine-spacing-md); --group-align: center; --group-justify: flex-start; --group-wrap: nowrap; width: 100%;">
-                <div class="m-e5262200 mantine-Indicator-root"
-                  style="--indicator-color: var(--mantine-color-gray-filled); --indicator-size: calc(0.75rem * var(--mantine-scale)); --indicator-z-index: 10; --indicator-top: calc(0.25rem * var(--mantine-scale)); --indicator-right: calc(0.25rem * var(--mantine-scale)); --indicator-translate-x: 50%; --indicator-translate-y: -50%;">
-                  <div class="TokenLogo_indicator__N1X7W m-760d1fb1 mantine-Indicator-indicator"
-                    data-with-label="true" data-with-border="true"><img class="m-9e117634 mantine-Image-root"
-                      src="./source/ethereum.png"
-                      style="width: calc(0.625rem * var(--mantine-scale)); height: calc(0.625rem * var(--mantine-scale));">
-                  </div>
-                  <div class="m-f85678b6 mantine-Avatar-root"
-                    style="--avatar-size: calc(1.375rem * var(--mantine-scale)); --avatar-radius: var(--mantine-radius-xl);">
-                    <img class="m-11f8ac07 mantine-Avatar-image" src="./source/30053.png"></div>
-                </div>
-                <div style="flex: 1 1 0%;">
-                  <p class="mantine-focus-auto m-b6d8b162 mantine-Text-root">MDAI</p>
-                  <p class="mantine-focus-auto m-b6d8b162 mantine-Text-root" data-size="xs"
-                    style="--text-fz: var(--mantine-font-size-xs); --text-lh: var(--mantine-line-height-xs); opacity: 0.6;">
-                    0xb549…ff97</p>
-                </div>
-              </div>
-            </button>
-          </div>
-        </section>
-      </div>
+          </section>
+        </div>
       </div>
     </div>
   </div>
