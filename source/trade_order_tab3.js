@@ -46,7 +46,7 @@ xhttp.onreadystatechange = function() {
             <tr class="bg-transparent border-b dark:border-[#353535]">
             <td class="pl-2 pr-0 text-xs pt-3.5 align-top">${i+1}</td>
             <td class="px-2 py-2.5 align-top">
-                <div class="mr-4">
+                <div class="mr-2">
                 <span class="max-w-[90px] w-[90px] block font-semibold" style="color: white">${key}</span>
                   <div class="flex items-end pt-[1px]"><span
                   style="color: blue;text-decoration:underline;"
